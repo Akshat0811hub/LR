@@ -3,22 +3,22 @@ const WhyPartner = () => {
     {
       title: "Our Goals",
       text: "Deliver durable prefab structures with precision, speed and quality.",
-      icon: "🎯",
+      
     },
     {
       title: "Our Mission",
       text: "To provide reliable industrial fabrication and turnkey solutions.",
-      icon: "⚙️",
+      
     },
     {
       title: "Our Clients",
       text: "Trusted by industrial, commercial and infrastructure clients.",
-      icon: "🤝",
+      
     },
     {
       title: "Our Vision",
       text: "To become a leading name in modular construction and solar systems.",
-      icon: "🚀",
+      
     },
   ];
 
