@@ -1,24 +1,29 @@
+import targetIcon from "../../assets/icons/target.png";
+import questionIcon from "../../assets/icons/question.png";
+import usersIcon from "../../assets/icons/users.png";
+import globeIcon from "../../assets/icons/globe.png";
+
 const WhyPartner = () => {
   const items = [
     {
       title: "Our Goals",
       text: "Deliver durable prefab structures with precision, speed and quality.",
-      
+      icon: targetIcon,
     },
     {
       title: "Our Mission",
       text: "To provide reliable industrial fabrication and turnkey solutions.",
-      
+      icon: questionIcon,
     },
     {
       title: "Our Clients",
       text: "Trusted by industrial, commercial and infrastructure clients.",
-      
+      icon: usersIcon,
     },
     {
       title: "Our Vision",
       text: "To become a leading name in modular construction and solar systems.",
-      
+      icon: globeIcon,
     },
   ];
 
@@ -34,9 +39,11 @@ const WhyPartner = () => {
       </div>
 
       <div className="why-grid">
-        {items.map((item, index) => (
-          <div className="why-card" key={index}>
-            <div className="why-icon">{item.icon}</div>
+        {items.map((item) => (
+          <div className="why-card" key={item.title}>
+            <div className="why-icon">
+              <img src={item.icon} alt={item.title} />
+            </div>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </div>
