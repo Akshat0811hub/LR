@@ -58,6 +58,21 @@
   gap: 12px;
 }
 
+.brand {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a.active {
+  color: #263f69;
+  font-weight: 700;
+}
+
 .brand-icon {
   width: 48px;
   height: 48px;

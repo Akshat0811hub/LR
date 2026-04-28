@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "../../styles/Slider.module.css";
 
 const slides = [
   {
@@ -38,35 +39,31 @@ const InnovationSlider = () => {
   }, []);
 
   return (
-    <section className="innovation-section reveal">
-      <div className="section-head">
+    <section className={styles["innovation-section"]}>
+      <div className={styles["section-head"]}>
         <div>
-          <span className="tag">• Innovation</span>
+          <span className={styles.tag}>• Innovation</span>
           <h2>
             Powering Innovation In <span>Every Structure</span>
           </h2>
         </div>
 
-        <div className="slider-controls">
-          <button type="button" onClick={prevSlide}>
-            ←
-          </button>
-          <button type="button" onClick={nextSlide}>
-            →
-          </button>
+        <div className={styles["slider-controls"]}>
+          <button type="button" onClick={prevSlide}>←</button>
+          <button type="button" onClick={nextSlide}>→</button>
         </div>
       </div>
 
-      <div className="slider-wrap">
+      <div className={styles["slider-wrap"]}>
         {slides.map((slide, index) => (
           <div
-            className={`innovation-card ${
-              index === active ? "active-slide" : ""
+            className={`${styles["innovation-card"]} ${
+              index === active ? styles["active-slide"] : ""
             }`}
             key={slide.title}
           >
             <img src={slide.img} alt={slide.title} />
-            <div className="innovation-content">
+            <div className={styles["innovation-content"]}>
               <h3>{slide.title}</h3>
               <p>{slide.text}</p>
               <button type="button">View Details →</button>
@@ -75,12 +72,14 @@ const InnovationSlider = () => {
         ))}
       </div>
 
-      <div className="slider-dots">
+      <div className={styles["slider-dots"]}>
         {slides.map((slide, index) => (
           <span
             key={slide.title}
             onClick={() => setActive(index)}
-            className={index === active ? "dot active-dot" : "dot"}
+            className={`${styles.dot} ${
+              index === active ? styles["active-dot"] : ""
+            }`}
           ></span>
         ))}
       </div>

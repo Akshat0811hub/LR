@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../../styles/FAQ.module.css";
 
 const FAQ = () => {
   const faqs = [
@@ -23,26 +24,28 @@ const FAQ = () => {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="faq-section">
-      <div className="faq-left">
-        <span className="tag">• FAQ</span>
+    <section className={styles["faq-section"]}>
+      <div className={styles["faq-left"]}>
+        <span className={styles.tag}>• FAQ</span>
         <h2>
           Frequently Asked <span>Questions</span>
         </h2>
 
-        <div className="faq-list">
+        <div className={styles["faq-list"]}>
           {faqs.map((item, index) => (
             <div
-              className={`faq-box ${open === index ? "open" : ""}`}
+              className={`${styles["faq-box"]} ${
+                open === index ? styles.open : ""
+              }`}
               key={index}
               onClick={() => setOpen(open === index ? null : index)}
             >
-              <div className="faq-question">
+              <div className={styles["faq-question"]}>
                 <h4>{item.q}</h4>
                 <span>{open === index ? "−" : "+"}</span>
               </div>
 
-              <div className="faq-answer">
+              <div className={styles["faq-answer"]}>
                 <p>{item.a}</p>
               </div>
             </div>
@@ -50,7 +53,7 @@ const FAQ = () => {
         </div>
       </div>
 
-      <div className="faq-right">
+      <div className={styles["faq-right"]}>
         <img
           src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80"
           alt="industrial work"

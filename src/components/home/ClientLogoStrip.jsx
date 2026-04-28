@@ -1,3 +1,5 @@
+import styles from "../../styles/ClientStrip.module.css";
+
 const ClientLogoStrip = () => {
   const logos = [
     "HETERO",
@@ -9,10 +11,10 @@ const ClientLogoStrip = () => {
   ];
 
   return (
-    <section className="client-strip">
-      <div className="logo-track">
+    <section className={styles["client-strip"]}>
+      <div className={styles["logo-track"]}>
         {[...logos, ...logos].map((logo, index) => (
-          <div className="client-logo" key={index}>
+          <div className={styles["client-logo"]} key={index}>
             {logo}
           </div>
         ))}

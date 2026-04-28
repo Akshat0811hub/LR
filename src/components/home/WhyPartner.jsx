@@ -1,3 +1,5 @@
+import styles from "../../styles/Why.module.css";
+
 import targetIcon from "../../assets/icons/target.png";
 import questionIcon from "../../assets/icons/question.png";
 import usersIcon from "../../assets/icons/users.png";
@@ -28,20 +30,20 @@ const WhyPartner = () => {
   ];
 
   return (
-    <section className="why-section">
-      <div className="section-head center">
+    <section className={styles["why-section"]}>
+      <div className={`${styles["section-head"]} ${styles.center}`}>
         <div>
-          <span className="tag">• Why Choose Us</span>
+          <span className={styles.tag}>• Why Choose Us</span>
           <h2>
             Why Partner With <span>L&R Green India?</span>
           </h2>
         </div>
       </div>
 
-      <div className="why-grid">
+      <div className={styles["why-grid"]}>
         {items.map((item) => (
-          <div className="why-card" key={item.title}>
-            <div className="why-icon">
+          <div className={styles["why-card"]} key={item.title}>
+            <div className={styles["why-icon"]}>
               <img src={item.icon} alt={item.title} />
             </div>
             <h3>{item.title}</h3>
@@ -50,18 +52,18 @@ const WhyPartner = () => {
         ))}
       </div>
 
-      <div className="technical-section">
-        <div className="technical-text">
-          <span className="tag">• Technical Excellence</span>
+      <div className={styles["technical-section"]}>
+        <div className={styles["technical-text"]}>
+          <span className={styles.tag}>• Technical Excellence</span>
           <h2>Precision Engineering For Modern Infrastructure</h2>
           <p>
             We combine advanced fabrication, skilled manpower and quality-driven
             production to deliver strong, reliable and future-ready structures.
           </p>
-          <button className="primary-btn">Explore More →</button>
+          <button className={styles["primary-btn"]}>Explore More →</button>
         </div>
 
-        <div className="technical-grid">
+        <div className={styles["technical-grid"]}>
           <img
             src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80"
             alt="factory"

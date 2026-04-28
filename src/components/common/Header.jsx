@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "../../styles/Header.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="site-header">
@@ -23,18 +26,47 @@ const Header = () => {
       </div>
 
       <nav className="navbar">
-        <div className="brand">
+        <Link to="/" className="brand" onClick={closeMenu}>
           <div className="brand-icon">LR</div>
           <h2>L & R Enterprises</h2>
-        </div>
+        </Link>
 
         <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
-          <li className="active">Home</li>
-          <li>About Us</li>
-          <li>Our Products⌄</li>
-          <li>Products</li>
-          <li>Media⌄</li>
-          <li>Contact Us</li>
+          <li>
+            <NavLink to="/" onClick={closeMenu}>
+              Home
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/about" onClick={closeMenu}>
+              About Us
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/products" onClick={closeMenu}>
+              Our Products⌄
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/products" onClick={closeMenu}>
+              Products
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/media" onClick={closeMenu}>
+              Media⌄
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/contact" onClick={closeMenu}>
+              Contact Us
+            </NavLink>
+          </li>
         </ul>
 
         <button className="dark-btn desktop-btn">Get Touch</button>

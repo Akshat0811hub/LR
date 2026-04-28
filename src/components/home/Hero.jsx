@@ -1,9 +1,9 @@
+import styles from "../../styles/Hero.module.css";
+
 const Hero = () => {
   return (
-    <section className="hero-section">
-      <div className="hero-overlay"></div>
-
-      <div className="hero-content">
+    <section className={styles["hero-section"]}>
+      <div className={styles["hero-content"]}>
         <h1>
           L&R GREEN INDIA PVT LTD <br />
           PRECISION FABRICATION
@@ -15,19 +15,19 @@ const Hero = () => {
           Established in 2015, New Delhi.
         </p>
 
-        <button className="primary-btn">
+        <button className={styles["primary-btn"]}>
           All Category <span>→</span>
         </button>
       </div>
 
-      <div className="hero-building">
+      <div className={styles["hero-building"]}>
         <img
           src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80"
           alt="industrial building"
         />
       </div>
 
-      <div className="stats-card">
+      <div className={styles["stats-card"]}>
         <div>
           <h3>500+</h3>
           <p>Completed Projects</p>
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <h2 className="hero-watermark">PRE ENGINEERED BUILD AND SOLAR</h2>
+      <h2 className={styles["hero-watermark"]}>PRE ENGINEERED BUILD AND SOLAR</h2>
     </section>
   );
 };

@@ -10,7 +10,7 @@ import InnovationSlider from "../components/home/InnovationSlider";
 import FAQ from "../components/home/FAQ";
 import ContactCTA from "../components/home/ContactCTA";
 
-import "../styles/Home.css";
+import "../styles/Global.css";
 
 const Home = () => {
   return (
