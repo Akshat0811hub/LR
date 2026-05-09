@@ -33,39 +33,40 @@ const Header = () => {
 
         <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
           <li>
-            <NavLink to="/" onClick={closeMenu}>
-              Home
-            </NavLink>
+            <NavLink to="/" onClick={closeMenu}>Home</NavLink>
           </li>
 
           <li>
-            <NavLink to="/about" onClick={closeMenu}>
-              About Us
-            </NavLink>
+            <NavLink to="/about" onClick={closeMenu}>About Us</NavLink>
           </li>
 
-          <li>
-            <NavLink to="/products" onClick={closeMenu}>
-              Our Products⌄
+          {/* Products Dropdown */}
+          <li className="dropdown">
+            <NavLink to="/products" className="dropdown-toggle" onClick={closeMenu}>
+              Our Products <span className="arrow">⌄</span>
             </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/products" onClick={closeMenu}>
-              Products
-            </NavLink>
+            <ul className="dropdown-menu">
+              <li>
+                <NavLink to="/factory-building" onClick={closeMenu}>Factory Building</NavLink>
+              </li>
+              <li>
+                <NavLink to="/warehouse" onClick={closeMenu}>Warehouse</NavLink>
+              </li>
+              {/* Naya link yahan add kiya gaya hai */}
+              <li>
+                <NavLink to="/industrial-sheds" onClick={closeMenu}>Industrial Sheds</NavLink>
+              </li>
+            </ul>
           </li>
 
           <li>
             <NavLink to="/media" onClick={closeMenu}>
-              Media⌄
+              Media <span className="arrow">⌄</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/contact" onClick={closeMenu}>
-              Contact Us
-            </NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>Contact Us</NavLink>
           </li>
         </ul>
 

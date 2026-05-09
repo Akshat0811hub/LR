@@ -2,6 +2,9 @@ import styles from "../styles/AboutPage.module.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 
+import workImg from "../assets/aboutus-work.jpeg";
+import processBg from "../assets/process-bg.jpeg";
+
 const About = () => {
   const journey = [
     {
@@ -101,7 +104,9 @@ const About = () => {
               Leading Manufacturer Of Prefabricated Structures, Mild Steel
               Containers & Prefabricated Cabins From New Delhi, India.
             </h4>
-            <button>Contact us <span>→</span></button>
+            <button>
+              Contact us <span>→</span>
+            </button>
           </div>
 
           <div className={styles.heroMiniCard}>
@@ -132,7 +137,9 @@ const About = () => {
 
           <div className={styles.introText}>
             <span className={styles.badge}>• About us</span>
-            <h2>10 Years of <span>Structural</span></h2>
+            <h2>
+              10 Years of <span>Structural</span>
+            </h2>
             <p>
               L&R Green India Pvt Ltd is a New Delhi-based manufacturer
               specializing in prefabricated structures, mild steel containers,
@@ -141,17 +148,21 @@ const About = () => {
               building solutions across India.
             </p>
             <p>
-              Our extensive product range includes Prefab Site Office Structures,
-              Pre Engineered Building Structures, Poultry Farm Sheds,
-              Prefabricated Warehouse Sheds, Prefabricated Farm Houses, and
-              Prefabricated Control Rooms.
+              Our extensive product range includes Prefab Site Office
+              Structures, Pre Engineered Building Structures, Poultry Farm
+              Sheds, Prefabricated Warehouse Sheds, Prefabricated Farm Houses,
+              and Prefabricated Control Rooms.
             </p>
-            <button>Get Contact <span>↗</span></button>
+            <button>
+              Get Contact <span>↗</span>
+            </button>
           </div>
         </section>
 
         <section className={styles.journey}>
-          <h2>Our <span>Journey</span></h2>
+          <h2>
+            Our <span>Journey</span>
+          </h2>
 
           <div className={styles.timeline}>
             {journey.map((item, index) => (
@@ -199,8 +210,18 @@ const About = () => {
           <h1>ENTERPRISES</h1>
         </section>
 
-        <section className={styles.process}>
-          <h2>Our <span>Process</span></h2>
+        <section
+          className={styles.process}
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.86), rgba(255,255,255,0.86)), url(${processBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h2>
+            Our <span>Process</span>
+          </h2>
 
           <div className={styles.processGrid}>
             {process.map((item) => (
@@ -261,18 +282,14 @@ const About = () => {
               </div>
             </div>
 
-            <img
-              src="https://images.unsplash.com/photo-1581092162384-8987c1d64926?auto=format&fit=crop&w=900&q=80"
-              alt="Work"
-            />
+            <img src={workImg} alt="Work" />
           </div>
         </section>
 
         <section className={styles.commitment}>
           <div>
             <h2>
-              Strength, Quality <br />
-              & Commitment
+              Strength, Quality <br />& Commitment
             </h2>
             <p>
               At L & R Enterprises, we are committed to delivering high-quality
@@ -298,7 +315,9 @@ const About = () => {
                 We Offer
               </h2>
             </div>
-            <button>View All <span>↗</span></button>
+            <button>
+              View All <span>↗</span>
+            </button>
           </div>
 
           <div className={styles.productGrid}>
@@ -346,8 +365,8 @@ const About = () => {
                   {index === 1 && (
                     <p>
                       Yes, all our structures and containers can be customized
-                      based on your requirements, including size, design, layout,
-                      and functionality.
+                      based on your requirements, including size, design,
+                      layout, and functionality.
                     </p>
                   )}
                 </div>
