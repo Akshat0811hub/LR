@@ -10,6 +10,7 @@
   background-position: center;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .heroContent {
@@ -47,7 +48,7 @@
 
 .heroMiniCard {
   position: absolute;
-  right: 38px;
+  right: 20px;
   bottom: 80px;
   width: 220px;
   background: #fff;

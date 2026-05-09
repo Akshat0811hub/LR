@@ -5,7 +5,9 @@ import About from "./pages/About";
 import FactoryBuilding from "./pages/FactoryBuilding";
 import Warehouse from "./pages/Warehouse";
 // Naya page yahan import karein
-import IndustrialSheds from "./pages/IndustrialSheds"; 
+import IndustrialSheds from "./pages/IndustrialSheds";
+import ColdRoom from "./pages/ColdRoom";
+import MsContainer from "./pages/MsContainer";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/warehouse" element={<Warehouse />} />
         {/* Naya route yahan add karein */}
         <Route path="/industrial-sheds" element={<IndustrialSheds />} />
+        <Route path="/cold-room" element={<ColdRoom />} />
+        <Route path="/ms-containers" element={<MsContainer />} />
       </Routes>
     </BrowserRouter>
   );

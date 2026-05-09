@@ -1,6 +1,6 @@
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-import styles from "../styles/FactoryBuilding.module.css"; 
+import styles from "../styles/IndustrialShed.module.css"; 
 
 const projects = [
   {
