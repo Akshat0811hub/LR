@@ -9,6 +9,8 @@ import ExecutiveMsContainer from "./pages/ExecutiveMsContainer";
 import LRValueContainer from "./pages/LRValueContainer";
 import HingeMsContainer from "./pages/HingeMsContainer";
 import PUFContainer from "./pages/PUFContainer";
+import PrefabLabour from "./pages/PrefabLabour";
+import PrefabSiteOffice from "./pages/PrefabSiteOffice";
 // Naya page yahan import karein
 import IndustrialSheds from "./pages/IndustrialSheds";
 import ColdRoom from "./pages/ColdRoom";
@@ -31,6 +33,8 @@ function App() {
         <Route path="/home-containers" element={<LRValueContainer />} />
         <Route path="/hinge-containers" element={<HingeMsContainer />} />
         <Route path="/premium-ms-containers" element={<PremiumMsContainer />} />
+        <Route path="/labour-accommodation" element={<PrefabLabour />} />
+        <Route path="/site-office" element={<PrefabSiteOffice />} />
         {/* Naya route yahan add karein */}
         <Route path="/industrial-sheds" element={<IndustrialSheds />} />
         <Route path="/cold-room" element={<ColdRoom />} />
