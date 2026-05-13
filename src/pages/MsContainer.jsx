@@ -1,5 +1,6 @@
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
+import { useNavigate } from "react-router-dom";
 import styles from "../styles/MsContainer.module.css";
 
 const containerTypes = [
@@ -87,6 +88,7 @@ const faqs = [
 ];
 
 const MsContainer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -158,7 +160,15 @@ const MsContainer = () => {
               <div className={styles.typeBody}>
                 <h4>{c.title}</h4>
                 <p>{c.desc}</p>
-                <button className={styles.btnKnow}>Know More</button>
+                {c.title === "Premium Series Containers" ? (
+                  <button className={styles.btnKnow} onClick={() => navigate("/puf-containers")}>Know More</button>
+                ) : c.title === "Executive Series Containers" ? (
+                  <button className={styles.btnKnow} onClick={() => navigate("/executive-containers")}>Know More</button>
+                ) : c.title === "L&R Value Series Containers" ? (
+                  <button className={styles.btnKnow} onClick={() => navigate("/lr-value-containers")}>Know More</button>
+                ) : (
+                  <button className={styles.btnKnow}>Know More</button>
+                )}
               </div>
             </div>
           ))}

@@ -4,6 +4,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import FactoryBuilding from "./pages/FactoryBuilding";
 import Warehouse from "./pages/Warehouse";
+import PremiumMsContainer from "./pages/PremiumMsContainer";
+import ExecutiveMsContainer from "./pages/ExecutiveMsContainer";
+import LRValueContainer from "./pages/LRValueContainer";
+import HingeMsContainer from "./pages/HingeMsContainer";
+import PUFContainer from "./pages/PUFContainer";
 // Naya page yahan import karein
 import IndustrialSheds from "./pages/IndustrialSheds";
 import ColdRoom from "./pages/ColdRoom";
@@ -16,7 +21,16 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/factory-building" element={<FactoryBuilding />} />
+        <Route
+          path="/executive-containers"
+          element={<ExecutiveMsContainer />}
+        />
+        <Route path="/lr-value-containers" element={<LRValueContainer />} />
         <Route path="/warehouse" element={<Warehouse />} />
+        <Route path="/puf-containers" element={<PUFContainer />} />
+        <Route path="/home-containers" element={<LRValueContainer />} />
+        <Route path="/hinge-containers" element={<HingeMsContainer />} />
+        <Route path="/premium-ms-containers" element={<PremiumMsContainer />} />
         {/* Naya route yahan add karein */}
         <Route path="/industrial-sheds" element={<IndustrialSheds />} />
         <Route path="/cold-room" element={<ColdRoom />} />
