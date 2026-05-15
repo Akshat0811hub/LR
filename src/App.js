@@ -15,6 +15,8 @@ import PrefabSiteOffice from "./pages/PrefabSiteOffice";
 import IndustrialSheds from "./pages/IndustrialSheds";
 import ColdRoom from "./pages/ColdRoom";
 import MsContainer from "./pages/MsContainer";
+import ControlPanelRoomPage from "./pages/ControlPanelRoomPage";
+import CleanRoomPage from "./pages/CleanRoomPage";
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
         <Route path="/industrial-sheds" element={<IndustrialSheds />} />
         <Route path="/cold-room" element={<ColdRoom />} />
         <Route path="/ms-containers" element={<MsContainer />} />
+        <Route path="/control-rooms" element={<ControlPanelRoomPage />} />
+        <Route path="/clean-rooms" element={<CleanRoomPage />} />
       </Routes>
     </BrowserRouter>
   );
