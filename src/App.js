@@ -12,6 +12,7 @@ import PUFContainer from "./pages/PUFContainer";
 import PrefabLabour from "./pages/PrefabLabour";
 import PrefabSiteOffice from "./pages/PrefabSiteOffice";
 // Naya page yahan import karein
+import PrefabSandwichPanels from "./pages/PrefabSandwichPanels";
 import PrefabDryWall from "./pages/PrefabDryWall";
 import PrefabStaffCanteens from "./pages/PrefabStaffCanteens";
 import PrefabMushroom from "./pages/PrefabMushroom";
@@ -22,6 +23,7 @@ import MsContainer from "./pages/MsContainer";
 import ControlPanelRoomPage from "./pages/ControlPanelRoomPage";
 import CleanRoomPage from "./pages/CleanRoomPage";
 import PrefabRailwayShelters from "./pages/PrefabRailwayShelters";
+import PufSandwich from "./pages/pufsandwich";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
         <Route path="/control-rooms" element={<ControlPanelRoomPage />} />
         <Route path="/clean-rooms" element={<CleanRoomPage />} />
         <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
+        <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
+        <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
       </Routes>
     </BrowserRouter>
   );

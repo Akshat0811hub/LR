@@ -335,10 +335,7 @@ const PrefabRailwayShelters = () => {
           </div>
           <div className={styles.structGrid}>
             {structFeatures.map((feat, i) => (
-              <div
-                key={i}
-                className={styles.structCard}
-              >
+              <div key={i} className={styles.structCard}>
                 <div className={styles.structIconWrap}>{feat.icon}</div>
                 <h4>{feat.title}</h4>
                 <p>{feat.desc}</p>
