@@ -24,6 +24,8 @@ import ControlPanelRoomPage from "./pages/ControlPanelRoomPage";
 import CleanRoomPage from "./pages/CleanRoomPage";
 import PrefabRailwayShelters from "./pages/PrefabRailwayShelters";
 import PufSandwich from "./pages/pufsandwich";
+import WallPufPanels from "./pages/WallPufPanels";
+import RoofPufPanels from "./pages/RoofPufPanels";
 
 function App() {
   return (
@@ -57,6 +59,8 @@ function App() {
         <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
         <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
         <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
+        <Route path="/wall-puf-panels" element={<WallPufPanels />} />
+        <Route path="/roof-puf-panels" element={<RoofPufPanels />} />
       </Routes>
     </BrowserRouter>
   );
