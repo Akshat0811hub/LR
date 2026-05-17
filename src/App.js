@@ -21,6 +21,7 @@ import ColdRoom from "./pages/ColdRoom";
 import MsContainer from "./pages/MsContainer";
 import ControlPanelRoomPage from "./pages/ControlPanelRoomPage";
 import CleanRoomPage from "./pages/CleanRoomPage";
+import PrefabRailwayShelters from "./pages/PrefabRailwayShelters";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path="/ms-containers" element={<MsContainer />} />
         <Route path="/control-rooms" element={<ControlPanelRoomPage />} />
         <Route path="/clean-rooms" element={<CleanRoomPage />} />
+        <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
       </Routes>
     </BrowserRouter>
   );
