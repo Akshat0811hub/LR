@@ -38,6 +38,7 @@
   font-size: 13px;
   letter-spacing: 0.2px;
   white-space: nowrap;
+  border-bottom-right-radius: 28px;
 }
 
 .top-info {
@@ -45,6 +46,12 @@
   gap: 28px;
   align-items: center;
   padding: 0 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .top-social {
@@ -56,8 +63,19 @@
   gap: 18px;
   align-items: center;
   border-bottom-left-radius: 28px;
+  border-top-left-radius: 28px;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.top-social a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.top-social a:hover {
+  opacity: 0.8;
 }
 
 /* ══════════════════════════════════
@@ -82,22 +100,18 @@
   flex-shrink: 0;
 }
 
-.brand-icon {
+.brand-icon-circle {
   width: 48px;
   height: 48px;
-  border: 4px solid #10284f;
-  border-radius: 50%;
   display: grid;
   place-items: center;
-  font-weight: 800;
-  color: #10284f;
-  font-size: 13px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.brand:hover .brand-icon {
-  transform: scale(1.04);
-  box-shadow: 0 6px 18px rgba(16, 40, 79, 0.14);
+.brand:hover .brand-icon-circle {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 10px rgba(16, 40, 79, 0.2));
 }
 
 .brand h2 {

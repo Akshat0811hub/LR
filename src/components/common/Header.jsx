@@ -59,22 +59,57 @@ const Header = () => {
         <div className="top-label">L&amp;R GREEN INDIA PVT LTD</div>
 
         <div className="top-info">
-          <span>✉ Info.Lr1995@gmail.com</span>
-          <span>☎ +91-8595351363 ; 9758813668</span>
+          <span className="info-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Info.Lr1995@gmail.com
+          </span>
+          <span className="info-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            +91-8595351363 ; 9758813668
+          </span>
         </div>
 
         <div className="top-social">
-          <span>f</span>
-          <span>in</span>
-          <span>𝕏</span>
-          <span>◎</span>
+          <a href="#fb" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.65l.35-4H14V7a1 1 0 0 1 1-1h3V2z"/>
+            </svg>
+          </a>
+          <a href="#linkedin" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+            </svg>
+          </a>
+          <a href="#twitter" aria-label="Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+            </svg>
+          </a>
+          <a href="#instagram" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
         </div>
       </div>
 
       {/* Navbar */}
       <nav className="navbar">
         <Link to="/" className="brand" onClick={closeMenu}>
-          <div className="brand-icon">LR</div>
+          <div className="brand-icon-circle">
+            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="23" cy="23" r="21" stroke="#1a3a6b" strokeWidth="2.5" fill="none"/>
+              <path d="M23 5 A18 18 0 0 1 41 23" stroke="#2b6cb0" strokeWidth="3" strokeLinecap="round" fill="none"/>
+              <text x="23" y="28" textAnchor="middle" fill="#1a3a6b" fontSize="15px" fontFamily="sans-serif" fontWeight="900">LR</text>
+            </svg>
+          </div>
           <h2>L &amp; R Enterprises</h2>
         </Link>
 
@@ -325,7 +360,7 @@ const Header = () => {
           </li>
         </ul>
 
-        <button className="dark-btn desktop-btn">Get In Touch</button>
+        <button className="dark-btn desktop-btn">Get Touch</button>
 
         <button
           className="menu-btn"
