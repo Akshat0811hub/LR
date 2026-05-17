@@ -12,6 +12,8 @@ import PUFContainer from "./pages/PUFContainer";
 import PrefabLabour from "./pages/PrefabLabour";
 import PrefabSiteOffice from "./pages/PrefabSiteOffice";
 // Naya page yahan import karein
+import PrefabDryWall from "./pages/PrefabDryWall";
+import PrefabStaffCanteens from "./pages/PrefabStaffCanteens";
 import PrefabMushroom from "./pages/PrefabMushroom";
 import PrefabIndustrialEnclosures from "./pages/PrefabIndustrialEnclosures";
 import IndustrialSheds from "./pages/IndustrialSheds";
@@ -40,6 +42,8 @@ function App() {
         <Route path="/labour-accommodation" element={<PrefabLabour />} />
         <Route path="/site-office" element={<PrefabSiteOffice />} />
         {/* Naya route yahan add karein */}
+        <Route path="/prefab-staff-canteens" element={<PrefabStaffCanteens />} />
+        <Route path="/prefab-dry-wall" element={<PrefabDryWall />} />
         <Route path="/prefab-mushroom" element={<PrefabMushroom />} />
         <Route path="/prefab-industrial-enclosures" element={<PrefabIndustrialEnclosures />} />
         <Route path="/industrial-sheds" element={<IndustrialSheds />} />
