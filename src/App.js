@@ -30,6 +30,12 @@ import EpsPanels from "./pages/EpsPanels";
 import RockwoolPanels from "./pages/RockwoolPanels";
 import GlasswoolPanels from "./pages/GlasswoolPanels";
 import RooftopResidential from "./pages/RooftopResidential";
+import RooftopPartyLounge from "./pages/RooftopPartyLounge";
+import RooftopGuestRooms from "./pages/RooftopGuestRooms";
+import RooftopServantRooms from "./pages/RooftopServantRooms";
+import PrefabResidentialHouse from "./pages/PrefabResidentialHouse";
+import LgsfLuxuryLounges from "./pages/LgsfLuxuryLounges";
+import LgsfShowroom from "./pages/LgsfShowroom";
 
 function App() {
   return (
@@ -69,6 +75,12 @@ function App() {
         <Route path="/rockwool-panels" element={<RockwoolPanels />} />
         <Route path="/glasswool-panels" element={<GlasswoolPanels />} />
         <Route path="/rooftop-residential-flats" element={<RooftopResidential />} />
+        <Route path="/rooftop-party-lounge" element={<RooftopPartyLounge />} />
+        <Route path="/rooftop-guest-rooms" element={<RooftopGuestRooms />} />
+        <Route path="/rooftop-servant-rooms" element={<RooftopServantRooms />} />
+        <Route path="/prefab-residential-house" element={<PrefabResidentialHouse />} />
+        <Route path="/lgsf-luxury-lounges" element={<LgsfLuxuryLounges />} />
+        <Route path="/lgsf-showroom" element={<LgsfShowroom />} />
       </Routes>
     </BrowserRouter>
   );
