@@ -4,7 +4,7 @@ import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopResidential.module.css";
 
 const RooftopResidential = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+  const [openFaq, setOpenFaq] = useState(1);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,47 +13,51 @@ const RooftopResidential = () => {
   const faqs = [
     {
       id: 0,
-      q: "Will a rooftop prefab room damage my existing building?",
-      a: "No, our structures are engineered to be ultra-lightweight using structural steel and insulated panels, exerting minimal load on existing pillars and foundations.",
+      q: "What are prefabricated rooftop residential flats?",
+      a: "They are modern, modular living units constructed on the roofs of existing buildings using lightweight steel frames and insulated panels.",
     },
     {
       id: 1,
-      q: "Are these rooms safe during storms and heavy rain?",
-      a: "Yes, they are structurally designed to withstand high wind velocities and feature multi-layered water flashing for 100% leak protection.",
+      q: "Are rooftop prefab flats safe for existing buildings?",
+      a: "Yes, they are designed with lightweight steel structures and proper engineering checks to ensure minimal load and complete safety.",
     },
     {
       id: 2,
-      q: "How long does it take to install a rooftop room?",
-      a: "A standard 10x12 ft or 12x15 ft room is completely assembled and finished on-site in as little as 5 to 7 days.",
+      q: "How long does installation take?",
+      a: "Installation typically takes a few weeks, depending on the scale and custom elements of the rooftop flat layout.",
     },
     {
       id: 3,
-      q: "Do I need a concrete base on my roof?",
-      a: "No, we build a heavy-duty steel base grid that sits on rubber pads directly on your roof, preserving your waterproofing and tiling.",
+      q: "Can these units be customized?",
+      a: "Yes, you can fully customize the modular flat layouts, kitchen/bathroom configuration, balconies, and choose glass façade designs.",
     },
     {
       id: 4,
-      q: "Are these rooms warm in summer and cold in winter?",
-      a: "On the contrary, the walls and roof are made of high-performance insulated sandwich panels (PUF/EPS) which prevent heat transfer, ensuring excellent climate control.",
+      q: "Are prefabricated rooftop flats permanent?",
+      a: "They are highly durable and long-lasting, designed to endure severe weather, but they can be fully dismantled, modified, or relocated if needed.",
     },
   ];
 
   const categories = [
     {
-      title: "Home Office",
-      desc: "Quiet, custom workspaces built with glass window views, electric fittings, and absolute soundproofing.",
+      title: "Modular Flat Layouts",
+      desc: "Flexible floor plans designed to match different space requirements, allowing efficient use of rooftop areas for compact or spacious residential units.",
+      img: "/Images/life1.jpg",
     },
     {
-      title: "Guest Room",
-      desc: "Complete premium guest room layouts with attached washrooms, insulated wall panels, and high-quality doors.",
+      title: "Balcony or Terrace Integration",
+      desc: "Option to add private balconies or open terrace spaces, enhancing comfort, ventilation, and lifestyle experience.",
+      img: "/Images/life2.png",
     },
     {
-      title: "Terrace Lounge",
-      desc: "Open-view glass partitions, sleek wood finish panels, and modern roofs for a premium terrace look.",
+      title: "Kitchen & Bathroom Setup",
+      desc: "Fully planned plumbing and utility connections for functional kitchens and modern bathroom installations.",
+      img: "/Images/life3.png",
     },
     {
-      title: "Multi-Purpose Room",
-      desc: "Flexible designs that can change from a gym, play room, or storage cabinet as your needs evolve.",
+      title: "Glass Façade Design",
+      desc: "Modern glass façade options that enhance natural light, improve aesthetics, and give the rooftop unit a premium architectural look while maintaining strength and durability.",
+      img: "/Images/life4.jpg",
     },
   ];
 
@@ -65,7 +69,10 @@ const RooftopResidential = () => {
       <section
         className={styles.heroSec}
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/Images/flat.jpg')",
         }}
       >
         <div className={styles.heroOverlay} />
@@ -76,8 +83,9 @@ const RooftopResidential = () => {
             ROOMS FOR RESIDENTIAL FLATS
           </h1>
           <p className={styles.subtitle}>
-            Transform unused rooftop spaces into modern, functional rooms with lightweight, insulated,
-            and fully customized prefabricated rooms designed for ultimate comfort and durability.
+            Transform unused rooftops into modern residential spaces with
+            lightweight, durable, and fully engineered prefab structures
+            designed for safety, comfort, and speed.
           </p>
           <button
             className={styles.btnPrimary}
@@ -116,32 +124,47 @@ const RooftopResidential = () => {
               <span>Building Potential</span>
             </h2>
             <div className={styles.divider} />
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft} />
+
+            <div className={styles.modernImageWrap}>
               <div
-                className={styles.placeholderImg}
+                className={styles.mainModernImg}
                 style={{
-                  backgroundImage: "url('')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundImage: "url('/Images/building.jpg')",
+                }}
+              />
+
+              <div
+                className={styles.floatingImg}
+                style={{
+                  backgroundImage: "url('/Images/building2.jpg')",
                 }}
               />
             </div>
           </div>
           <div className={styles.textCol}>
             <p>
-              Rooftop prefabricated rooms (also known as roof rooms or penthouse cabins) are modular
-              living spaces designed to be built directly on top of existing residential flats or commercial
-              roofs. Engineered with lightweight structural steel frames and high-insulation PUF/EPS walls,
-              these rooms expand your usable space without putting excessive structural load on your building.
+              As urban land becomes increasingly limited, making efficient use
+              of existing structures has become essential. Rooftop expansion
+              offers a practical and intelligent solution to create additional
+              residential flats without the need for relocation or full-scale
+              reconstruction. It allows property owners to utilize unused
+              rooftop space and convert it into fully functional living units,
+              adding both value and usability to the building.
             </p>
             <p>
-              Ideal for creating home offices, guest bedrooms, gyms, lounges, or terrace canteens, rooftop
-              prefab structures offer a clean, rapid-installation alternative to brick construction. They are
-              weatherproof, completely leak-proof, and designed to look premium while keeping the interior
-              cool in summers and warm in winters.
+              L&R Green India Pvt Ltd provides advanced prefabricated rooftop
+              structures designed with a strong focus on safety, speed, and
+              long-term durability. These systems are engineered to integrate
+              smoothly with existing buildings while requiring minimal
+              structural modifications. With lightweight construction and
+              precision engineering, they ensure stable performance, modern
+              aesthetics, and comfortable residential spaces built for urban
+              living.
             </p>
-            <button className={styles.btnSecondary} style={{ marginTop: "16px" }}>
+            <button
+              className={styles.btnSecondary}
+              style={{ marginTop: "16px" }}
+            >
               Contact Us &nbsp;→
             </button>
           </div>
@@ -157,69 +180,250 @@ const RooftopResidential = () => {
               <span>Units Can Be Used</span>
             </h2>
             <div className={styles.divider} />
+            <p>
+              Rooftop residential units turn unused roof space into modern,
+              functional living areas. They are quick to install,
+              space-efficient, and ideal for expanding homes or buildings
+              without major construction.
+            </p>
+
             <div className={styles.numList}>
               <div className={styles.numItem}>
-                <div className={styles.numBadge}>1</div>
-                <div>
-                  <strong>Home Offices &amp; Study Rooms:</strong> Create a quiet, private work space
-                  away from household noise and distractions.
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Additional residential flats
                 </div>
               </div>
               <div className={styles.numItem}>
-                <div className={styles.numBadge}>2</div>
-                <div>
-                  <strong>Guest Bedrooms:</strong> Expand your home layout to comfortably accommodate
-                  guests with modern amenities.
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Rental apartments
                 </div>
               </div>
               <div className={styles.numItem}>
-                <div className={styles.numBadge}>3</div>
-                <div>
-                  <strong>Terrace Lounges &amp; Cafes:</strong> Enjoy panoramic terrace views from a
-                  beautiful, weatherproof lounge room.
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Guest accommodation units
                 </div>
               </div>
               <div className={styles.numItem}>
-                <div className={styles.numBadge}>4</div>
-                <div>
-                  <strong>Rooftop Gyms &amp; Yoga Studios:</strong> Design a dedicated fitness space
-                  surrounded by natural light.
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Studio living spaces
                 </div>
               </div>
               <div className={styles.numItem}>
-                <div className={styles.numBadge}>5</div>
-                <div>
-                  <strong>Staff &amp; Security Accommodations:</strong> Provide clean, comfortable living
-                  quarters for security and helper staff.
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Penthouse-style extensions
                 </div>
               </div>
               <div className={styles.numItem}>
-                <div className={styles.numBadge}>6</div>
-                <div>
-                  <strong>Terrace Canteens &amp; Pantries:</strong> Set up a lightweight food service
-                  pantry for terrace get-togethers.
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Staff housing units
+                </div>
+              </div>
+              <div className={styles.numItem}>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style={{ flexShrink: 0 }}
+                >
+                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    color: "#334155",
+                    fontWeight: "500",
+                    lineHeight: "24px",
+                  }}
+                >
+                  Temporary or permanent housing solutions
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.imgCol}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeRight} />
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
+            <div className={styles.multiImgWrap}>
+              {/* Main Large Image */}
+              <div className={styles.mainImg}>
+                <img
+                  src="/Images/unit1.jpg"
+                  alt="Where Rooftop Residential Units Can Be Used"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "14px",
+                    display: "block",
+                  }}
+                />
+              </div>
+
+              {/* Small Floating Image */}
+              <div className={styles.smallImg}>
+                <img
+                  src="/Images/unit2.jpg"
+                  alt="Modern Prefab Unit"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "12px",
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 3: DESIGNED AROUND YOUR LIFESTYLE ── */}
-      <section className={styles.splitSec}>
+      <section className={styles.splitSec} style={{ background: "#ffffff" }}>
         <div className={styles.containerMax}>
           <div className={styles.thicknessHeaderRow}>
             <div className={styles.thicknessHeaderLeft}>
@@ -229,15 +433,34 @@ const RooftopResidential = () => {
               </h2>
               <div className={styles.divider} />
             </div>
+            <p
+              className={styles.thicknessSubtitle}
+              style={{
+                maxWidth: "480px",
+                color: "#64748b",
+                fontSize: "15px",
+                lineHeight: "1.7",
+                marginBottom: "38px",
+              }}
+            >
+              Each rooftop residential unit is fully customizable to match your
+              requirements, whether for personal living or rental purposes.
+            </p>
           </div>
           <div className={styles.thicknessGrid}>
             {categories.map((cat, i) => (
-              <div
-                key={i}
-                className={`${styles.thicknessCard} ${i === 1 ? styles.thicknessCardActive : ""}`}
-              >
-                <h3>{cat.title}</h3>
-                <p>{cat.desc}</p>
+              <div key={i} className={styles.thicknessCard}>
+                <div className={styles.thicknessCardImageWrap}>
+                  <img
+                    src={cat.img}
+                    alt={cat.title}
+                    className={styles.thicknessCardImage}
+                  />
+                </div>
+                <div className={styles.thicknessCardContent}>
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -246,30 +469,42 @@ const RooftopResidential = () => {
 
       {/* ── SECTION 4: ENGINEERED FOR SAFE URBAN LIVING ── */}
       <section className={styles.blueBannerSec}>
+        <div className={styles.watermark}>
+          L &amp; R ROOF TOP RESIDENTIAL FLAT
+        </div>
         <div className={styles.blueBannerContainer}>
           <div className={styles.blueBannerText}>
             <h2>
               Engineered for <br />
-              Safe Urban Living
+              <span style={{ fontWeight: "600" }}>Safe Urban Living</span>
             </h2>
             <div
               className={styles.divider}
-              style={{ background: "#fff", width: "50px", height: "4px" }}
+              style={{
+                background: "#fff",
+                width: "50px",
+                height: "4px",
+                margin: "15px 0",
+              }}
             />
             <p>
-              L&amp;R Green Pvt Ltd rooftop room cabins are built using high-strength structural steel
-              frames and premium weatherproof insulation panels that resist high wind speeds, heavy rain,
-              and harsh sunlight, ensuring absolute safety for your home.
+              Our rooftop units are built with lightweight steel framing, PUF
+              insulated panels, and weather-resistant roofing for strength,
+              comfort, and durability. Designed to reduce load on existing
+              buildings, they include earthquake and wind resistance along with
+              proper structural safety assessment for reliable urban expansion.
             </p>
           </div>
           <div className={styles.imgCol}>
-            <div className={styles.imgWrap}>
-              <div
-                className={styles.placeholderImgTransparent}
+            <div style={{ width: "100%", height: "420px", overflow: "hidden" }}>
+              <img
+                src="/Images/safeurban.png"
+                alt="Safe Urban Living Prefab Villa"
                 style={{
-                  backgroundImage: "url('')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  display: "block",
                 }}
               />
             </div>
@@ -278,62 +513,252 @@ const RooftopResidential = () => {
       </section>
 
       {/* ── SECTION 5: ADVANTAGES OF PREFAB RESIDENTIAL FLATS ── */}
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
+      <section
+        className={styles.splitSec}
+        style={{ background: "#ffffff", padding: "80px 8%" }}
+      >
+        <div className={styles.containerMax}>
+          <div style={{ marginBottom: "50px" }}>
             <h2 className={styles.secTitle}>
               Advantages of Prefab <br />
               <span>Residential Flats</span>
             </h2>
             <div className={styles.divider} />
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft} />
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-            </div>
           </div>
-          <div className={styles.textCol}>
-            <div className={styles.numList}>
-              <div className={styles.numItem}>
-                <div className={styles.numBadge}>1</div>
-                <div>
-                  <strong>Ultra-Lightweight Frame:</strong> Uses high-tensile steel frames that reduce total load on existing building foundations.
+
+          <div
+            className={styles.splitContainer}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "70px",
+              alignItems: "center",
+            }}
+          >
+            <div className={styles.imgCol}>
+              <div className={styles.multiImgWrap}>
+                {/* Main Large Image */}
+                <div className={styles.mainImg}>
+                  <img
+                    src="/Images/advflatbig.jpg"
+                    alt="Advantages of Prefab Residential Flats"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "14px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+
+                {/* Small Floating Image */}
+                <div className={styles.smallImg}>
+                  <img
+                    src="/Images/advflatsnall.png"
+                    alt="Prefab Residential Terrace"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                      display: "block",
+                    }}
+                  />
                 </div>
               </div>
-              <div className={styles.numItem}>
-                <div className={styles.numBadge}>2</div>
-                <div>
-                  <strong>Rapid Construction (5-7 Days):</strong> Prefabricated components are assembled directly on-site, with zero brick dust or mess.
+            </div>
+
+            <div className={styles.textCol}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "1.7",
+                  color: "#64748b",
+                  marginBottom: "30px",
+                }}
+              >
+                Prefabricated rooftop flats are a quick, cost-effective way to
+                expand space with minimal load on existing buildings. They are
+                energy-efficient, flexible, modern in design, and cause very
+                little disruption during installation.
+              </p>
+
+              <div
+                className={styles.numList}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "18px",
+                }}
+              >
+                <div className={styles.numItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div
+                    style={{
+                      fontSize: "15px",
+                      color: "#334155",
+                      fontWeight: "500",
+                      lineHeight: "24px",
+                    }}
+                  >
+                    Minimal load on existing structure
+                  </div>
                 </div>
-              </div>
-              <div className={styles.numItem}>
-                <div className={styles.numBadge}>3</div>
-                <div>
-                  <strong>Perfect Thermal Comfort:</strong> PUF/EPS sandwich panel walls keep the interior cool in summer and warm in winter, cutting AC bills.
+                <div className={styles.numItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div
+                    style={{
+                      fontSize: "15px",
+                      color: "#334155",
+                      fontWeight: "500",
+                      lineHeight: "24px",
+                    }}
+                  >
+                    Fast installation within weeks
+                  </div>
                 </div>
-              </div>
-              <div className={styles.numItem}>
-                <div className={styles.numBadge}>4</div>
-                <div>
-                  <strong>100% Leak &amp; Weatherproof:</strong> Profiled roofing sheets and heavy-duty flashing ensure zero water leakage or dampness.
+                <div className={styles.numItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div
+                    style={{
+                      fontSize: "15px",
+                      color: "#334155",
+                      fontWeight: "500",
+                      lineHeight: "24px",
+                    }}
+                  >
+                    Cost-effective compared to new construction
+                  </div>
                 </div>
-              </div>
-              <div className={styles.numItem}>
-                <div className={styles.numBadge}>5</div>
-                <div>
-                  <strong>Reusable &amp; Relocatable:</strong> Structure can be dismantled, modified, or relocated without any damage to the building roof.
+                <div className={styles.numItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div
+                    style={{
+                      fontSize: "15px",
+                      color: "#334155",
+                      fontWeight: "500",
+                      lineHeight: "24px",
+                    }}
+                  >
+                    Fully removable or relocatable units
+                  </div>
                 </div>
-              </div>
-              <div className={styles.numItem}>
-                <div className={styles.numBadge}>6</div>
-                <div>
-                  <strong>Modern &amp; Premium Aesthetics:</strong> Available in multiple color profiles, wood finishes, and glass panel configurations.
+                <div className={styles.numItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div
+                    style={{
+                      fontSize: "15px",
+                      color: "#334155",
+                      fontWeight: "500",
+                      lineHeight: "24px",
+                    }}
+                  >
+                    Energy-efficient interiors
+                  </div>
+                </div>
+                <div className={styles.numItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <div
+                    style={{
+                      fontSize: "15px",
+                      color: "#334155",
+                      fontWeight: "500",
+                      lineHeight: "24px",
+                    }}
+                  >
+                    Modern architectural look
+                  </div>
                 </div>
               </div>
             </div>
@@ -342,45 +767,101 @@ const RooftopResidential = () => {
       </section>
 
       {/* ── SECTION 6: WHY CHOOSE ROOFTOP PREFAB ROOMS ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
+      <section
+        className={styles.splitSecAlt}
+        style={{ padding: "80px 8% 100px 8%", background: "#f8fafc" }}
+      >
+        <div
+          className={styles.splitContainer}
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1.1fr",
+            gap: "70px",
+            alignItems: "center",
+          }}
+        >
+          <div className={styles.textCol} style={{ paddingTop: "0px" }}>
             <h2 className={styles.secTitle}>
               Why Choose Roof <br />
               <span>Top Residential Flat</span>
             </h2>
             <div className={styles.divider} />
-            <p>
-              Choosing L&amp;R Green Pvt Ltd for your rooftop prefab room means choosing safety, luxury,
-              and unmatched engineering precision.
+            <p
+              style={{
+                fontSize: "16px",
+                lineHeight: "1.8",
+                color: "#475569",
+                marginBottom: "22px",
+              }}
+            >
+              At L&amp;R Green India Pvt Ltd, we specialize in delivering safe,
+              durable, and high-performance rooftop residential structures using
+              advanced steel engineering and prefabrication technology. Our
+              focus is on creating reliable solutions that ensure strength,
+              efficiency, and long-term value for urban living spaces.
             </p>
-            <p>
-              Our modular designs are engineered to match your existing home architecture while providing
-              premium insulation, sturdy floor frames, weatherproof roofing, and beautiful wall finishes. We
-              provide complete end-to-end services, from structural layout designing to final on-site
-              installation, delivering a hassle-free and long-lasting home extension.
+            <p
+              style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569" }}
+            >
+              With a strong commitment to quality and precision, we provide
+              complete turnkey solutions from design to execution. Our expert
+              team ensures fast project delivery, safe installation over
+              existing buildings, and the use of high-quality materials and
+              insulation systems for superior results.
             </p>
           </div>
           <div className={styles.imgCol}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeRight} />
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
+            <div className={styles.multiImgWrap}>
+              {/* Main Large Image */}
+              <div className={styles.mainImg}>
+                <img
+                  src="/Images/topflat1.png"
+                  alt="Why Choose L&R Green Prefab Rooftop Rooms"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "14px",
+                    display: "block",
+                  }}
+                />
+              </div>
+
+              {/* Small Floating Image */}
+              <div className={styles.smallImg}>
+                <img
+                  src="/Images/topflat2.jpg"
+                  alt="Premium Rooftop Louvered Terrace"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "12px",
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 7: FAQ SECTION ── */}
-      <section className={styles.faqSec}>
+      <section
+        className={styles.faqSec}
+        style={{ background: "#ffffff", padding: "100px 8%" }}
+      >
         <div className={styles.faqContainer}>
-          <div className={styles.faqHeaderRow}>
+          <span className={styles.faqTag}>• FQS</span>
+          <div
+            className={styles.faqHeaderRow}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginBottom: "50px",
+            }}
+          >
             <div className={styles.faqHeaderLeft}>
               <h2 className={styles.secTitle}>
                 Frequently Asked <br />
@@ -388,20 +869,64 @@ const RooftopResidential = () => {
               </h2>
               <div className={styles.divider} />
             </div>
-            <p className={styles.faqDesc}>
-              Answers to structural load questions, rainwater leak protections, assembly times, and regulatory guides.
+            <p
+              className={styles.faqDesc}
+              style={{
+                maxWidth: "480px",
+                color: "#64748b",
+                fontSize: "15px",
+                lineHeight: "1.7",
+              }}
+            >
+              Find answers to common questions about prefabricated rooftop
+              residential flats, including installation, safety, customization,
+              and suitability for different building types.
             </p>
           </div>
-          <div className={styles.faqContent}>
+          <div
+            className={styles.faqContent}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1.1fr 1.3fr",
+              gap: "60px",
+              alignItems: "start",
+            }}
+          >
+            <div
+              className={styles.faqImgOuter}
+              style={{
+                width: "100%",
+                height: "480px",
+                overflow: "hidden",
+                borderRadius: "12px",
+              }}
+            >
+              <img
+                src="/Images/freqflat.jpg"
+                alt="Frequently Asked Questions"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+
             <div className={styles.faqList}>
               {faqs.map((faq) => (
                 <div
                   key={faq.id}
                   className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
                 >
-                  <div className={styles.faqHeader} onClick={() => setOpenFaq(faq.id)}>
+                  <div
+                    className={styles.faqHeader}
+                    onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}
+                  >
                     <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>{openFaq === faq.id ? "▼" : "▶"}</span>
+                    <span className={styles.faqArrow}>
+                      {openFaq === faq.id ? "↓" : "↑"}
+                    </span>
                   </div>
                   {openFaq === faq.id && (
                     <div className={styles.faqBody}>
@@ -411,17 +936,6 @@ const RooftopResidential = () => {
                 </div>
               ))}
             </div>
-            <div className={styles.faqImgOuter}>
-              <div
-                className={styles.placeholderImg}
-                style={{
-                  backgroundImage: "url('')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  minHeight: "400px",
-                }}
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -430,14 +944,16 @@ const RooftopResidential = () => {
       <section
         className={styles.ctaBanner}
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('')",
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/Images/ctaflat.jpg')",
         }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Prefab Residential Flat Solutions?</h2>
           <p>
-            Connect with our team to design and deliver durable, efficient, and fully customized rooftop prefab
-            room solutions tailored to your site needs.
+            Connect with our team to design and deliver durable, efficient, and
+            fully customized rooftop prefab room solutions tailored to your site
+            needs.
           </p>
           <button
             className={styles.btnSecondary}
