@@ -21,7 +21,6 @@
 
 .secTitle span {
   color: #3164a6;
-  /* Brand Blue */
 }
 
 .divider {
@@ -75,7 +74,6 @@
 .placeholderImgTransparent {
   width: 100%;
   height: 100%;
-  /* background-color: rgba(255, 255, 255, 0.2); */
   border-radius: 8px;
   min-height: 350px;
 }
@@ -94,7 +92,6 @@
   background-size: cover;
   background-position: center;
   background-color: #1e293b;
-  /* Fallback */
 }
 
 .heroOverlay {
@@ -113,7 +110,6 @@
 
 .topLabel {
   display: inline-block;
-  /* background: rgba(255, 255, 255, 0.1); */
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -188,7 +184,6 @@
   right: -20px;
   width: 100%;
   height: 100%;
-  /* background: rgba(49, 100, 166, 0.1); */
   border-radius: 8px;
   z-index: 0;
 }
@@ -199,7 +194,6 @@
   left: -20px;
   width: 100%;
   height: 100%;
-  /* background: rgba(49, 100, 166, 0.1); */
   border-radius: 8px;
   z-index: 0;
 }
@@ -258,7 +252,7 @@
 }
 
 /* ===========================
-   THICKNESS COMBINATIONS
+   THICKNESS COMBINATIONS / TYPES
 =========================== */
 .thicknessHeaderRow {
   display: flex;
@@ -299,6 +293,16 @@
   background: #1e293b;
   border-color: #1e293b;
   color: #fff;
+}
+
+.thicknessCardImg {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  background-color: #f1f5f9;
 }
 
 .thicknessCard h3 {
@@ -591,7 +595,6 @@
 
   .imgCol {
     order: -1 !important;
-    /* Always show image before text on mobile */
   }
 
   .thicknessGrid {

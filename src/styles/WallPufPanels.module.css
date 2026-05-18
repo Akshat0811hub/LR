@@ -20,7 +20,8 @@
 }
 
 .secTitle span {
-  color: #3164a6; /* Brand Blue */
+  color: #3164a6;
+  /* Brand Blue */
 }
 
 .divider {
@@ -49,6 +50,7 @@
   color: #fff;
   margin-top: 24px;
 }
+
 .btnPrimary:hover {
   background: #204b82;
 }
@@ -57,6 +59,7 @@
   background: #1e293b;
   color: #fff;
 }
+
 .btnSecondary:hover {
   background: #3164a6;
 }
@@ -72,7 +75,7 @@
 .placeholderImgTransparent {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   border-radius: 8px;
   min-height: 350px;
 }
@@ -90,7 +93,8 @@
   padding: 0 8%;
   background-size: cover;
   background-position: center;
-  background-color: #1e293b; /* Fallback */
+  background-color: #1e293b;
+  /* Fallback */
 }
 
 .heroOverlay {
@@ -179,7 +183,7 @@
   right: -20px;
   width: 100%;
   height: 100%;
-  background: rgba(49, 100, 166, 0.1);
+  /* background: rgba(49, 100, 166, 0.1); */
   border-radius: 8px;
   z-index: 0;
 }
@@ -190,12 +194,12 @@
   left: -20px;
   width: 100%;
   height: 100%;
-  background: rgba(49, 100, 166, 0.1);
+  /* background: rgba(49, 100, 166, 0.1); */
   border-radius: 8px;
   z-index: 0;
 }
 
-.imgWrap > div:not(.imgShapeRight):not(.imgShapeLeft) {
+.imgWrap>div:not(.imgShapeRight):not(.imgShapeLeft) {
   position: relative;
   z-index: 1;
 }
@@ -499,15 +503,19 @@
   .mainTitle {
     font-size: 2.8rem;
   }
+
   .splitContainer,
   .blueBannerContainer,
   .faqContent {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .imgCol {
-    order: -1 !important; /* Always show image before text on mobile */
+    order: -1 !important;
+    /* Always show image before text on mobile */
   }
+
   .faqDesc {
     text-align: left;
   }
@@ -517,12 +525,15 @@
   .heroSec {
     min-height: 70vh;
   }
+
   .mainTitle {
     font-size: 2.2rem;
   }
+
   .secTitle {
     font-size: 1.8rem;
   }
+
   .splitSec,
   .splitSecAlt,
   .blueBannerSec,

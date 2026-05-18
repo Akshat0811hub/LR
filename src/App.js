@@ -26,6 +26,10 @@ import PrefabRailwayShelters from "./pages/PrefabRailwayShelters";
 import PufSandwich from "./pages/pufsandwich";
 import WallPufPanels from "./pages/WallPufPanels";
 import RoofPufPanels from "./pages/RoofPufPanels";
+import EpsPanels from "./pages/EpsPanels";
+import RockwoolPanels from "./pages/RockwoolPanels";
+import GlasswoolPanels from "./pages/GlasswoolPanels";
+import RooftopResidential from "./pages/RooftopResidential";
 
 function App() {
   return (
@@ -61,6 +65,10 @@ function App() {
         <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
         <Route path="/wall-puf-panels" element={<WallPufPanels />} />
         <Route path="/roof-puf-panels" element={<RoofPufPanels />} />
+        <Route path="/eps-panels" element={<EpsPanels />} />
+        <Route path="/rockwool-panels" element={<RockwoolPanels />} />
+        <Route path="/glasswool-panels" element={<GlasswoolPanels />} />
+        <Route path="/rooftop-residential-flats" element={<RooftopResidential />} />
       </Routes>
     </BrowserRouter>
   );

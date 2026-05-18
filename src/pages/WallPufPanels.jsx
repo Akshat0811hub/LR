@@ -52,35 +52,47 @@ const WallPufPanels = () => {
   const faqs = [
     {
       id: 0,
-      q: "What is a Wall PUF Sandwich panel?",
-      a: "A Wall PUF Sandwich panel consists of a rigid polyurethane foam core sandwiched between two metal facings, providing exceptional thermal insulation and structural rigidity for exterior and interior walls.",
+      q: "What are PUF panels used for?",
+      a: "Wall PUF panels are widely used for vertical wall cladding, partitions, clean rooms, cold storages, telecom shelters, and modular cabins to offer high durability and insulation.",
     },
     {
       id: 1,
-      q: "Are Wall PUF panels environmentally friendly?",
-      a: "Yes, they are highly energy-efficient and made with CFC-free polyurethane foam, making them an eco-friendly choice for modern construction.",
+      q: "Are Wall PUF panels energy-efficient?",
+      a: "Yes, due to their excellent thermal insulation properties, they minimize heat transfer and can reduce heating or cooling costs by up to 40%.",
     },
     {
       id: 2,
-      q: "Do Wall PUF panels require maintenance?",
-      a: "No, they require very minimal maintenance. The pre-painted metal facings are resistant to rust, corrosion, and weather elements, ensuring long-lasting performance.",
+      q: "Are Wall PUF panels fire-retardant?",
+      a: "Yes, we manufacture fire-retardant Wall PUF panels that comply with industry safety standards to protect your buildings and assets.",
     },
     {
       id: 3,
-      q: "Can they be used for cold storages?",
-      a: "Absolutely. Due to their outstanding thermal insulation properties and low thermal conductivity, Wall PUF panels are widely used in cold storage facilities and clean rooms.",
+      q: "Can they be used as partitions?",
+      a: "Yes, they are ideal for internal partition walls in warehouses, factories, clean rooms, and commercial offices, offering quick installation and clean aesthetics.",
     },
     {
       id: 4,
-      q: "How long do Wall PUF panels last?",
-      a: "With proper installation and minimal upkeep, Wall PUF panels are designed to last for decades, maintaining their structural and thermal integrity over time.",
+      q: "What is the life of Wall PUF panels?",
+      a: "Wall PUF panels are highly durable, rust-proof, and designed to last for several decades with minimal maintenance.",
     },
   ];
 
   const CheckIcon = () => (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="12" cy="12" r="10" fill="#2b3a55" />
-      <path d="M8 12L11 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M8 12L11 15L16 9"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 
@@ -89,7 +101,10 @@ const WallPufPanels = () => {
       <Header />
 
       {/* ── HERO ── */}
-      <section className={styles.heroSec} style={{ backgroundImage: "url('')" }}>
+      <section
+        className={styles.heroSec}
+        style={{ backgroundImage: "url('/Images/wallpuf.jpg')" }}
+      >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
@@ -98,12 +113,22 @@ const WallPufPanels = () => {
             WALL PUF PANELS
           </h1>
           <p className={styles.subtitle}>
-            L&amp;R Enterprises has been updated Wall PUF Panels which play a key role in providing insulation
-            solutions that highlight strong structure and excellent thermal resistance for modern construction.
+            L&amp;R Enterprises has been updated Wall PUF Panels which play a
+            key role in providing insulation solutions that highlight strong
+            structure and excellent thermal resistance for modern construction.
           </p>
           <button className={styles.btnPrimary}>
             Contact us &nbsp;
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
@@ -121,15 +146,28 @@ const WallPufPanels = () => {
             </h2>
             <div className={styles.divider} />
             <p>
-              Wall PUF Panels are made of two pre-painted galvanized iron (PPGI) sheets with a rigid
-              polyurethane foam (PUF) core in between. This structure provides excellent thermal insulation,
-              high structural strength, and long-term durability. These panels are extensively used for
-              exterior walls, interior partitions, and enclosures in various commercial, industrial, and
-              residential applications.
+              Wall PUF Panels are made of two pre-painted galvanized iron (PPGI)
+              sheets with a rigid polyurethane foam (PUF) core in between. This
+              structure provides excellent thermal insulation, high structural
+              strength, and long-term durability. These panels are extensively
+              used for exterior walls, interior partitions, and enclosures in
+              various commercial, industrial, and residential applications.
             </p>
-            <button className={styles.btnSecondary} style={{ marginTop: "16px" }}>
+            <button
+              className={styles.btnSecondary}
+              style={{ marginTop: "16px" }}
+            >
               Get Contact &nbsp;
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />
               </svg>
@@ -139,9 +177,13 @@ const WallPufPanels = () => {
             <div className={styles.imgWrap}>
               <div className={styles.imgShapeRight}></div>
               {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/wallapanel.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               ></div>
             </div>
           </div>
@@ -151,25 +193,31 @@ const WallPufPanels = () => {
       {/* ── KEY FEATURES ── */}
       <section className={styles.splitSecAlt}>
         <div className={styles.splitContainer}>
-          <div className={styles.imgCol} style={{ order: -1 }}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft}></div>
-              {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
-              ></div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
+          <div className={styles.imgCol}>
             <h2 className={styles.secTitle}>
               Key Features of <br />
               <span>Wall PUF Panels</span>
             </h2>
             <div className={styles.divider} />
+            <div className={styles.imgWrap}>
+              <div className={styles.imgShapeLeft}></div>
+              {/* Add image later */}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/pufpanel5.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+          </div>
+          <div className={styles.textCol}>
             <p>
-              Wall PUF Panels by L&amp;R Enterprises are engineered with precision to provide superior performance.
-              They are an ideal choice for a wide range of applications due to their exceptional properties:
+              Wall PUF Panels by L&amp;R Enterprises are engineered with
+              precision to provide superior performance. They are an ideal
+              choice for a wide range of applications due to their exceptional
+              properties:
             </p>
             <div className={styles.featureList}>
               {keyFeatures.map((feat, i) => (
@@ -193,9 +241,10 @@ const WallPufPanels = () => {
             </h2>
             <div className={styles.divider} />
             <p>
-              Our PUF panels are available in customized thicknesses and dimensions to suit different project
-              requirements. They are manufactured using state-of-the-art technology to ensure precision,
-              reliability, and longevity.
+              Our PUF panels are available in customized thicknesses and
+              dimensions to suit different project requirements. They are
+              manufactured using state-of-the-art technology to ensure
+              precision, reliability, and longevity.
             </p>
           </div>
           <div className={styles.gridCol}>
@@ -218,7 +267,9 @@ const WallPufPanels = () => {
               </div>
               <div className={styles.specRow}>
                 <span className={styles.specLabel}>Length</span>
-                <span className={styles.specValue}>As per project requirement</span>
+                <span className={styles.specValue}>
+                  As per project requirement
+                </span>
               </div>
             </div>
           </div>
@@ -235,12 +286,15 @@ const WallPufPanels = () => {
             </h2>
             <div className={styles.divider} />
             <p>
-              L&amp;R Enterprises Wall PUF Panels are ideal for a wide range of industrial and commercial
-              applications due to their high structural strength and thermal insulation.
+              L&amp;R Enterprises Wall PUF Panels are ideal for a wide range of
+              industrial and commercial applications due to their high
+              structural strength and thermal insulation.
             </p>
             <div className={styles.tagsGrid}>
               {applications.map((app, i) => (
-                <span key={i} className={styles.tagItem}>{app}</span>
+                <span key={i} className={styles.tagItem}>
+                  {app}
+                </span>
               ))}
             </div>
           </div>
@@ -248,9 +302,13 @@ const WallPufPanels = () => {
             <div className={styles.imgWrap}>
               <div className={styles.imgShapeRight}></div>
               {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/applicationpufpanel.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               ></div>
             </div>
           </div>
@@ -266,17 +324,22 @@ const WallPufPanels = () => {
               &amp; Structural Strength
             </h2>
             <p>
-              L&amp;R Enterprises provides environmentally friendly building materials that reduce carbon footprint.
-              The polyurethane foam used in our panels is free from CFCs and HCFCs. By improving thermal
-              insulation, they significantly reduce the energy required for cooling and heating, resulting in
-              long-term cost savings.
+              L&amp;R Enterprises provides environmentally friendly building
+              materials that reduce carbon footprint. The polyurethane foam used
+              in our panels is free from CFCs and HCFCs. By improving thermal
+              insulation, they significantly reduce the energy required for
+              cooling and heating, resulting in long-term cost savings.
             </p>
           </div>
           <div className={styles.blueBannerImg}>
             {/* Add image later */}
-            <div 
+            <div
               className={styles.placeholderImgTransparent}
-              style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
+              style={{
+                backgroundImage: "url('/Images/energy.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             ></div>
           </div>
         </div>
@@ -285,25 +348,30 @@ const WallPufPanels = () => {
       {/* ── THERMAL INSULATION ── */}
       <section className={styles.splitSec}>
         <div className={styles.splitContainer}>
-          <div className={styles.imgCol} style={{ order: -1 }}>
-            <div className={styles.imgWrap}>
-              <div className={styles.imgShapeLeft}></div>
-              {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
-              ></div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
+          <div className={styles.imgCol}>
             <h2 className={styles.secTitle}>
               Thermal Insulation <br />
               <span>Performance</span>
             </h2>
             <div className={styles.divider} />
+            <div className={styles.imgWrap}>
+              <div className={styles.imgShapeLeft}></div>
+              {/* Add image later */}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/thermal.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+          </div>
+          <div className={styles.textCol}>
             <p>
-              The high density PUF core provides excellent thermal insulation, which significantly reduces the
-              energy required for cooling and heating. It acts as a strong barrier against heat transfer.
+              The high density PUF core provides excellent thermal insulation,
+              which significantly reduces the energy required for cooling and
+              heating. It acts as a strong barrier against heat transfer.
             </p>
             <div className={styles.featureListBordered}>
               {thermalInsulationList.map((item, i) => (
@@ -327,12 +395,14 @@ const WallPufPanels = () => {
             </h2>
             <div className={styles.divider} />
             <p>
-              Our PUF Panels are designed with an easy tongue-and-groove jointing system, making installation quick,
-              seamless, and secure. This significantly reduces construction time and labor costs.
+              Our PUF Panels are designed with an easy tongue-and-groove
+              jointing system, making installation quick, seamless, and secure.
+              This significantly reduces construction time and labor costs.
             </p>
             <p>
-              In addition to performance, safety is our top priority. We offer fire-retardant PUF panels that
-              comply with industry fire safety standards, providing an extra layer of protection for your
+              In addition to performance, safety is our top priority. We offer
+              fire-retardant PUF panels that comply with industry fire safety
+              standards, providing an extra layer of protection for your
               infrastructure and assets.
             </p>
           </div>
@@ -340,9 +410,13 @@ const WallPufPanels = () => {
             <div className={styles.imgWrap}>
               <div className={styles.imgShapeRight}></div>
               {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/firesafety.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               ></div>
             </div>
           </div>
@@ -352,21 +426,25 @@ const WallPufPanels = () => {
       {/* ── ADVANTAGES ── */}
       <section className={styles.splitSec}>
         <div className={styles.splitContainer}>
-          <div className={styles.imgCol} style={{ order: -1 }}>
-            <div className={styles.imgWrap}>
-              {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
-              ></div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
+          <div className={styles.imgCol}>
             <h2 className={styles.secTitle}>
               Advantages of Prefabricated <br />
               <span>Railway &amp; Telecom Shelters</span>
             </h2>
             <div className={styles.divider} />
+            <div className={styles.imgWrap}>
+              {/* Add image later */}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/advtele.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+            </div>
+          </div>
+          <div className={styles.textCol}>
             <p>
               Choosing a factory-built modular shelter over conventional
               brick-and-mortar construction delivers measurable project and
@@ -419,12 +497,30 @@ const WallPufPanels = () => {
                     <span>{faq.q}</span>
                     <span className={styles.faqArrow}>
                       {openFaq === faq.id ? (
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
                           <line x1="12" y1="5" x2="12" y2="19" />
                           <polyline points="19 12 12 19 5 12" />
                         </svg>
                       ) : (
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
                           <line x1="12" y1="19" x2="12" y2="5" />
                           <polyline points="5 12 12 5 19 12" />
                         </svg>
@@ -441,9 +537,13 @@ const WallPufPanels = () => {
             </div>
             <div className={styles.faqImgOuter}>
               {/* Add image later */}
-              <div 
-                className={styles.placeholderImg} 
-                style={{ backgroundImage: "url('')", backgroundSize: "cover", backgroundPosition: "center" }}
+              <div
+                className={styles.placeholderImg}
+                style={{
+                  backgroundImage: "url('/Images/faqquestion.jpg')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
               ></div>
             </div>
           </div>
@@ -451,21 +551,42 @@ const WallPufPanels = () => {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section 
+      <section
         className={styles.ctaBanner}
-        style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('')" }}
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/Images/cat.jpg')",
+        }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Sandwich Wall Puf Panels Solution?</h2>
           <p>
-            Connect with our team to discuss your project requirements and let us provide you
-            a custom sandwich wall puf panels solution that fits your needs perfectly.
+            Connect with our team to design and deliver durable, efficient, and fully
+            customized sandwich wall PUF panel solutions tailored to your site needs.
           </p>
-          <button className={styles.btnSecondary} style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "#3164a6", color: "#fff" }}>
-            Contact Us
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
+          <button
+            className={styles.btnSecondary}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              background: "#3164a6",
+              color: "#fff",
+            }}
+          >
+            Contact US &nbsp;
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
             </svg>
           </button>
         </div>
