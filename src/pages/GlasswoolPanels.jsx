@@ -40,20 +40,20 @@ const GlasswoolPanels = () => {
 
   const apps = [
     {
-      title: "Roofing & Cladding",
+      title: "Fire-Rated Partitions & Walls",
       desc: "Ideal for large-span roofs and vertical wall cladding in commercial buildings, factories, and warehouses.",
     },
     {
-      title: "Acoustic Partitions",
-      desc: "Outstanding acoustic barriers for dividing offices, recording studios, and machinery zones.",
+      title: "Acoustic Enclosures",
+      desc: "Ideal for DG sets, machinery rooms, studios, and auditoriums where effective noise reduction is essential.",
     },
     {
       title: "Clean Room & Laboratories",
-      desc: "Maintains temperature stability and ultra-clean environments with zero dust generation.",
+      desc: "Suitable for pharma units, factories, and warehouses requiring controlled environments, insulation, and hygiene.",
     },
     {
-      title: "Industrial Facilities",
-      desc: "Excellent choice for factories, boiler rooms, and petrochemical plants where light insulation is needed.",
+      title: "Roofing & HVAC Insulation",
+      desc: "Applied in industrial roofing, cladding, and HVAC ducting to improve thermal efficiency and energy savings.",
     },
   ];
 
@@ -355,6 +355,12 @@ const GlasswoolPanels = () => {
               </h2>
               <div className={styles.divider} />
             </div>
+            <p className={styles.thicknessDesc}>
+              Glass wool panels from L&amp;R Green Pvt Ltd are designed for
+              versatile use across industrial, commercial, and specialized
+              environments, delivering insulation, safety, and acoustic
+              performance.
+            </p>
           </div>
           <div className={styles.thicknessGrid}>
             {apps.map((app, i) => (
@@ -380,15 +386,19 @@ const GlasswoolPanels = () => {
             </h2>
             <div className={styles.divider} />
             <p>
-              Glasswool panels provide a durable, non-toxic, lightweight
-              solution that combines thermal efficiency, flame safety, and
-              acoustic control for all commercial structures.
+              Glass wool panels from L&R Green Pvt Ltd offer an ideal
+              combination of thermal insulation, fire safety, and acoustic
+              performance, making them suitable for a wide range of industrial
+              and commercial applications. Their lightweight structure allows
+              for easy handling and faster installation, reducing construction
+              time while maintaining high efficiency and performance standards.
             </p>
             <p>
-              Their flexible core makes them highly resistant to vibration,
-              thermal shocks, and sagging, while their rust-proof metal facings
-              protect them against moisture and elements, offering a
-              maintenance-free life.
+              Designed for long-term reliability, L&R Green Pvt Ltd panels are
+              resistant to moisture, corrosion, and environmental stress. They
+              help maintain consistent indoor temperatures, reduce noise levels,
+              and lower energy consumption, ensuring cost-effective and durable
+              solutions for modern construction projects.
             </p>
           </div>
           <div className={styles.imgCol}>
@@ -419,8 +429,8 @@ const GlasswoolPanels = () => {
               <div className={styles.divider} />
             </div>
             <p className={styles.faqDesc}>
-              Quick answers about silica fiber safety, weight comparisons,
-              thermal limits, and durability.
+              Find clear and concise answers to the most commonly asked
+              questions about glass wool panels.
             </p>
           </div>
           <div className={styles.faqContent}>
