@@ -3,6 +3,9 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopPartyLounge.module.css";
 
+const BLANK =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 const RooftopPartyLounge = () => {
   const [openFaq, setOpenFaq] = useState(1);
 
@@ -40,24 +43,24 @@ const RooftopPartyLounge = () => {
 
   const strengthCards = [
     {
-      title: "Aesthetics & Lighting",
-      desc: "Modern structural designs with customized warm lights to create a premium party look.",
-      img: "/Images/life1.jpg",
+      title: "Ambient LED lighting setups",
+      desc: "Creates a vibrant and stylish mood with customizable lighting effects for day and night events.",
+      img: "/Images/party1.jpg",
     },
     {
       title: "Open seating arrangements",
-      desc: "Sleek wooden decks and outdoor lounging spaces that offer a panoramic view of the skyline.",
-      img: "/Images/life2.png",
+      desc: "Offers comfortable and flexible seating layouts that enhance social interaction and rooftop views.",
+      img: "/Images/party2.jpg",
     },
     {
-      title: "Modular sound system",
-      desc: "Soundproof walls reduce noise outside, keeping your music loud and clear within the lounge.",
-      img: "/Images/life3.png",
+      title: "Music & sound system",
+      desc: "Supports high-quality audio systems to set the perfect vibe for parties and gatherings.",
+      img: "/Images/party3.jpg",
     },
     {
-      title: "Glass railing structures",
-      desc: "Toughened glass railings ensure maximum safety while maintaining a sleek, modern architectural aesthetic.",
-      img: "/Images/life4.jpg",
+      title: "Glass railing & modern",
+      desc: "Ensures safety while adding a sleek, contemporary look to the rooftop space.",
+      img: "/Images/party4.jpg",
     },
   ];
 
@@ -69,23 +72,23 @@ const RooftopPartyLounge = () => {
       <section
         className={styles.heroSec}
         style={{
-          backgroundImage: "url('/Images/flat.jpg')",
+          backgroundImage: "url('/Images/party.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R ROOFTOP PVT LTD</span>
+          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             ROOFTOP PARTY LOUNGE <br />
             ELEVATE YOUR CELEBRATIONS
           </h1>
           <p className={styles.subtitle}>
-            L&amp;R specializes in delivering elegant, durable, and lightweight
-            rooftop party lounge structures using advanced steel engineering and
-            high-performance panel insulation for high-quality, weather-resistant,
-            and sustainable outdoor living.
+            Turn unused rooftop space into a stylish party lounge for
+            celebrations and gatherings. Our prefabricated rooftop lounges are
+            lightweight, safe, and designed for modern comfort and premium urban
+            living.
           </p>
           <button className={styles.btnPrimary}>
             Contact us &nbsp;
@@ -106,201 +109,214 @@ const RooftopPartyLounge = () => {
         </div>
       </section>
 
-      {/* ── SECTION 2: MODERN ROOFTOP PARTY LIVING CONCEPT ── */}
+      {/* ── SECTION 2: MODERN ROOFTOP PARTY LIVING CONCEPT ──
+          Layout (per mockup):
+            - Title + divider span full width at top-left
+            - Below: [Image LEFT] | [Text RIGHT]
+      */}
       <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
+        <div className={styles.containerMax}>
+          {/* Title row — full width, top-left */}
+          <h2 className={styles.secTitle}>
+            Modern Rooftop <br />
+            <span className={styles.accentText}>Party Living Concept</span>
+          </h2>
+          <div className={styles.divider} />
+
+          {/* Two-column row below title */}
+          <div className={styles.twoColRow}>
+            {/* LEFT: Image with corner brackets */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageFrame}>
+                <span className={`${styles.corner} ${styles.topLeft}`}></span>
+                <span className={`${styles.corner} ${styles.topRight}`}></span>
+                <span
+                  className={`${styles.corner} ${styles.bottomLeft}`}
+                ></span>
+                <span
+                  className={`${styles.corner} ${styles.bottomRight}`}
+                ></span>
                 <img
-                  src="/Images/topflat1.png"
+                  src="/Images/partyliving.png"
                   alt="Modern Rooftop Party Living Concept"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
-
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/topflat2.jpg"
-                  alt="Elegant Rooftop Deck View"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
+                  className={styles.frameImg}
                 />
               </div>
             </div>
-          </div>
 
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Modern Rooftop <br />
-              <span>Party Living Concept</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>
-              Our prefabricated rooftop party lounges are highly designed to be
-              spaces for modern, dynamic, and aesthetic celebrations. They provide
-              a luxury, custom feel with excellent insulation, sturdy steel
-              foundations, glass window views, electric fittings, and absolute
-              soundproofing.
-            </p>
-            <p>
-              We use high-performance polyurethane panels (PUF) for the construction,
-              engineering them with a robust frame that keeps the party alive in any weather.
-              This panel structure is perfect for creating lightweight yet highly insulated
-              spaces, preventing water leaks, dampness, and offering high-end acoustics
-              that prevent sound transfer so your party won't disturb the neighborhood.
-            </p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
-              Read more &nbsp;
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
+            {/* RIGHT: Text + button */}
+            <div className={styles.textCol}>
+              <p>
+                Our prefabricated rooftop party lounges are thoughtfully
+                designed to introduce a modern lifestyle upgrade to urban
+                environments. These spaces transform ordinary rooftops into
+                vibrant, functional, and aesthetically appealing lounges
+                suitable for a wide range of experiences. From private
+                celebrations and intimate family gatherings to stylish weekend
+                hangouts and professional commercial lounge setups, every design
+                focuses on maximizing comfort, usability, and visual appeal
+                while making the best use of available rooftop space.
+              </p>
+              <p>
+                These rooftop lounges redefine the way unused terrace areas are
+                utilized by combining smart engineering with contemporary
+                design. Built for flexibility and convenience, they allow
+                property owners to create a premium social environment without
+                the complexities of traditional construction. With quick
+                installation and minimal structural changes, your rooftop can be
+                converted into a lively destination that enhances both lifestyle
+                value and property potential.
+              </p>
+              <button className={styles.btnPill}>
+                Get Contact &nbsp;
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 3: SMART & SAFE ROOFTOP ENGINEERING ── */}
+      {/* ── SECTION 3: SMART & SAFE ROOFTOP ENGINEERING ──
+          Layout (per mockup):
+            - Title + divider span full width at top-left
+            - Below: [Text + bullets LEFT] | [Image RIGHT]
+      */}
       <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Smart &amp; Safe <br />
-              <span>Rooftop Engineering</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              Built with advanced prefabrication technology, our rooftop lounges ensure
-              durability and safety while maintaining a dynamic aesthetic.
-            </p>
+        <div className={styles.containerMax}>
+          {/* Title row — full width, top-left */}
+          <h2 className={styles.secTitle}>
+            Smart &amp; Safe <br />
+            <span className={styles.accentText}>Rooftop Engineering</span>
+          </h2>
+          <div className={styles.divider} />
 
-            <div className={styles.bulletList}>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Lightweight Steel Framework</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>High Soundproof Insulation (up to 40 dB)</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Rapid On-Site Assembly (in weeks)</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>100% Leak &amp; Weather Resistant</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Customizable Architectural Finishes</span>
+          {/* Two-column row below title */}
+          <div className={styles.twoColRow}>
+            {/* LEFT: Text + bullet list */}
+            <div className={styles.textCol}>
+              <p style={{ color: "#64748b" }}>
+                Built with advanced prefabrication technology, our rooftop
+                lounges ensure durability and safety while maintaining a modern
+                aesthetic.
+              </p>
+              <div className={styles.bulletList}>
+                {[
+                  "Lightweight steel framework",
+                  "PUF insulated panels for comfort",
+                  "Weather-resistant roofing system",
+                  "Strong load distribution design",
+                  "Minimal impact on existing building",
+                ].map((item) => (
+                  <div className={styles.bulletItem} key={item}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className={styles.checkIcon}
+                    >
+                      <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                      <path
+                        d="M8 12L11 15L16 9"
+                        stroke="#ffffff"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span className={styles.bulletLabel}>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
 
-          <div className={styles.imgCol} style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              src="/Images/safeurban.png"
-              alt="Safe Urban Rooftop Design Model"
-              style={{
-                width: "100%",
-                maxWidth: "500px",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
-              }}
-            />
+            {/* RIGHT: Image with corner brackets */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageFrame}>
+                <span className={`${styles.corner} ${styles.topLeft}`}></span>
+                <span className={`${styles.corner} ${styles.topRight}`}></span>
+                <span
+                  className={`${styles.corner} ${styles.bottomLeft}`}
+                ></span>
+                <span
+                  className={`${styles.corner} ${styles.bottomRight}`}
+                ></span>
+                <img
+                  src="/Images/rooftopparty.jpg"
+                  alt="Smart &amp; Safe Rooftop Engineering"
+                  className={styles.frameImg}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 4: URBAN & COMMERCIAL ROOFTOP LOUNGE DESIGN ── */}
+      {/* ── SECTION 4: URBAN & COMMERCIAL ROOFTOP LOUNGE DESIGN ──
+          Layout (per mockup):
+            - Text (title + divider + para) on LEFT
+            - Image on RIGHT
+      */}
       <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>
-          PARTY LOUNGE
-        </div>
+        <div className={styles.watermark}>L&amp;R PARTY LOUNGE</div>
         <div className={styles.blueBannerContainer}>
           <div className={styles.blueBannerText}>
-            <h2>
+            <h2 className={styles.secTitleLight}>
               Urban &amp; Commercial <br />
               <strong>Rooftop Lounge Design</strong>
             </h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
+            <div className={styles.dividerWhite} />
             <p>
-              Fully planned layout and structural design that maximizes your rooftop space
-              for commercial or private gatherings. Engineered with lightweight steel frames,
-              insulated panels, and modern glass facades for a gorgeous and durable rooftop extension.
+              Our prefabricated rooftop party lounges are ideal for residential,
+              commercial, and hospitality spaces like apartments, hotels, cafés,
+              corporate buildings, event venues, and co-working terraces. Fully
+              customizable, they offer options such as themed interiors,
+              flexible seating, glass or open designs, bar counters, HVAC
+              systems, and lighting setups for a stylish and personalized
+              rooftop experience.
             </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <div className={styles.bannerImgCol}>
             <img
-              src="/Images/station.png"
-              alt="3D Glowing Rooftop Lounge Render"
-              style={{
-                width: "100%",
-                maxWidth: "480px",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "14px",
-                display: "block",
-              }}
+              src="/Images/loungedesign.png"
+              alt="Urban &amp; Commercial Rooftop Lounge Design"
+              className={styles.bannerImg}
             />
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 5: ENGINEERED FOR STRENGTH & SAFETY ── */}
-      <section className={styles.splitSec} style={{ padding: "100px 8% 120px 8%" }}>
+      {/* ── SECTION 5: ENGINEERED FOR STRENGTH & SAFETY ──
+          Layout (per mockup):
+            - Header row: Title (bottom-left) + Description (right)
+            - 4-card grid below
+      */}
+      <section className={styles.strengthSec}>
         <div className={styles.containerMax}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px", marginBottom: "20px" }}>
+          <div className={styles.strengthHeaderRow}>
             <div>
               <h2 className={styles.secTitle}>
                 Engineered for <br />
-                <span>Strength &amp; Safety</span>
+                <span className={styles.accentText}>Strength &amp; Safety</span>
               </h2>
               <div className={styles.divider} />
             </div>
-            <p style={{ maxWidth: "480px", color: "#64748b", fontSize: "15px", lineHeight: "1.7" }}>
-              Enjoy peace of mind with our heavy-duty steel structures, smart lighting, and 
-              superior weather-proofing for unforgettable moments.
+            <p className={styles.strengthDesc}>
+              Experience a premium rooftop lifestyle with elegant interiors,
+              ambient lighting, and open-air comfort designed for unforgettable
+              moments.
             </p>
           </div>
 
@@ -310,7 +326,7 @@ const RooftopPartyLounge = () => {
                 <div className={styles.cardImageWrap}>
                   <img
                     className={styles.cardImage}
-                    src={card.img}
+                    src={card.img || BLANK}
                     alt={card.title}
                   />
                 </div>
@@ -324,101 +340,82 @@ const RooftopPartyLounge = () => {
         </div>
       </section>
 
-      {/* ── SECTION 6: WHY CHOOSE L&R ROOFTOP PARTY LOUNGE USES ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer} style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "70px", alignItems: "center" }}>
-          <div className={styles.textCol} style={{ paddingTop: "0px" }}>
-            <h2 className={styles.secTitle}>
-              Why Choose L&amp;R Rooftop <br />
-              <span>Party Lounge Uses</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569", marginBottom: "22px", marginTop: "40px" }}>
-              At L&amp;R Green India Pvt Ltd, we specialize in delivering safe, durable, and 
-              high-performance rooftop structures using advanced steel engineering and 
-              prefabrication technology. Our focus is on creating reliable solutions that 
-              ensure strength, efficiency, and long-term value for modern urban living spaces.
-            </p>
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569" }}>
-              With a strong commitment to quality and precision, we provide complete 
-              turnkey solutions from design to execution. Our expert team ensures fast 
-              project delivery, safe installation over existing buildings, and the use of 
-              high-quality materials and insulation systems for superior results.
-            </p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/topflat1.png"
-                  alt="Why Choose L&R Green Prefab Rooftop Rooms"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
+      {/* ── SECTION 6: WHY CHOOSE L&R ROOFTOP PARTY LOUNGE ──
+          Layout: Text LEFT | Image RIGHT
+      */}
+      <section className={styles.splitSec} style={{ background: "#ffffff" }}>
+        <div className={styles.containerMax}>
+          {/* Title row — full width, top-left */}
+          <h2 className={styles.secTitle}>
+            Why Choose L&amp;R Rooftop <br />
+            <span className={styles.accentText}>Party Lounge Uses</span>
+          </h2>
+          <div className={styles.divider} />
 
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
+          {/* Two-column row below title */}
+          <div className={styles.twoColRow}>
+            {/* LEFT: Image with corner brackets */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageFrame}>
+                <span className={`${styles.corner} ${styles.topLeft}`}></span>
+                <span className={`${styles.corner} ${styles.topRight}`}></span>
+                <span className={`${styles.corner} ${styles.bottomLeft}`}></span>
+                <span className={`${styles.corner} ${styles.bottomRight}`}></span>
                 <img
-                  src="/Images/topflat2.jpg"
-                  alt="Premium Rooftop Louvered Terrace"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
+                  src="/Images/partyuses.jpg"
+                  alt="Why Choose L&amp;R Prefab Rooftop"
+                  className={styles.frameImg}
                 />
               </div>
+            </div>
+
+            {/* RIGHT: Text */}
+            <div className={styles.textCol}>
+              <p style={{ color: "#475569" }}>
+                At L&amp;R Green India Pvt Ltd, we specialize in delivering
+                safe, durable, and high-performance rooftop structures using
+                advanced steel engineering and prefabrication technology. Our
+                focus is on creating reliable solutions that ensure strength,
+                efficiency, and long-term value for modern urban living spaces.
+              </p>
+              <p>
+                With a strong commitment to quality and precision, we provide
+                complete turnkey solutions from design to execution. Our expert
+                team ensures fast project delivery, safe installation over
+                existing buildings, and the use of high-quality materials and
+                insulation systems for superior results.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 7: FAQ SECTION ── */}
+      {/* ── SECTION 7: FAQ ── */}
       <section className={styles.faqSec}>
         <div className={styles.faqContainer}>
           <span className={styles.faqTag}>• FAQs</span>
           <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
+            <div>
               <h2 className={styles.secTitle}>
                 Frequently Asked <br />
-                <span>Questions</span>
+                <span className={styles.accentText}>Questions</span>
               </h2>
               <div className={styles.divider} />
             </div>
-            <p className={styles.faqDesc} style={{ fontSize: "15px", lineHeight: "1.7" }}>
-              Delivered using heavy-duty steel framing and lightweight structures, 
-              they can withstand winds and heavy rain while offering 
+            <p className={styles.faqDesc}>
+              Delivered using heavy-duty steel framing and lightweight
+              structures, they can withstand winds and heavy rain while offering
               excellent soundproofing and high temperature resistance.
             </p>
           </div>
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter} style={{ width: "100%", height: "480px", overflow: "hidden", borderRadius: "12px" }}>
-              <img
-                src="/Images/freqflat.jpg"
-                alt="Frequently Asked Questions"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-            
             <div className={styles.faqList}>
               {faqs.map((faq) => (
                 <div
                   key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
+                  className={`${styles.faqItem} ${
+                    openFaq === faq.id ? styles.faqItemActive : ""
+                  }`}
                 >
                   <div
                     className={styles.faqHeader}
@@ -437,6 +434,13 @@ const RooftopPartyLounge = () => {
                 </div>
               ))}
             </div>
+            <div className={styles.faqImgOuter}>
+              <img
+                src="/Images/feqparty.jpg"
+                alt="Frequently Asked Questions"
+                className={styles.faqImg}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -446,14 +450,15 @@ const RooftopPartyLounge = () => {
         className={styles.ctaBanner}
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/ctaflat.jpg')",
+            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('')",
         }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Prefab Party Lounge Solutions?</h2>
           <p>
             Connect with our team to design and deliver durable, efficient, and
-            fully customized rooftop party lounge solutions tailored to your site needs.
+            fully customized rooftop party lounge solutions tailored to your
+            site needs.
           </p>
           <button className={styles.btnSecondary}>
             Contact US &nbsp;

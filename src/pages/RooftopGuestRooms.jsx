@@ -3,6 +3,9 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopGuestRooms.module.css";
 
+const BLANK =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 const RooftopGuestRooms = () => {
   const [openFaq, setOpenFaq] = useState(1);
 
@@ -40,24 +43,24 @@ const RooftopGuestRooms = () => {
 
   const strengthCards = [
     {
-      title: "Guest bedroom",
-      desc: "A modern, premium bedroom designed to provide your guests with a cozy, comfortable stay.",
-      img: "/Images/life1.jpg",
+      title: "Interior View",
+      desc: "Clean and cozy setup with bed, lighting, and minimal furniture, designed for maximum comfort and efficient space use",
+      img: "/Images/guesttype1.jpg",
     },
     {
-      title: "Private Rooftop Deck",
-      desc: "Enjoy sunset views and quiet evenings on your beautiful, customized rooftop lounging deck.",
-      img: "/Images/life2.png",
+      title: "Exterior Rooftop View",
+      desc: "Modern prefab structure placed on the terrace, showcasing a lightweight build with a sleek and stylish appearance.",
+      img: "/Images/guesttype2.jpg",
     },
     {
-      title: "Modern Light Fixtures",
-      desc: "Elegant indoor and outdoor warm lighting systems to enhance the luxury feel of your guest rooms.",
-      img: "/Images/life3.png",
+      title: "Natural Light & Windows",
+      desc: "Large windows or glass panels allow ample sunlight, creating a bright, open, and refreshing indoor environment.",
+      img: "/Images/guesttype3.jpg",
     },
     {
-      title: "Balcony & Terrace",
-      desc: "Attached glass railing balconies or open terraces integrated perfectly into your guest suite.",
-      img: "/Images/life4.jpg",
+      title: "Balcony / Terrace",
+      desc: "Compact outdoor space with seating, offering a relaxing and premium rooftop living experience.",
+      img: "/Images/guesttype4.jpg",
     },
   ];
 
@@ -69,23 +72,22 @@ const RooftopGuestRooms = () => {
       <section
         className={styles.heroSec}
         style={{
-          backgroundImage: "url('/Images/flat.jpg')",
+          backgroundImage: "url('/Images/guest.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R GREEN INDIA PVT LTD</span>
+          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             ROOFTOP GUEST <br />
             ROOMS
           </h1>
           <p className={styles.subtitle}>
-            L&amp;R specializes in delivering safe, durable, and high-performance
-            rooftop guest room structures using advanced steel engineering and
-            high-performance panel insulation for high-quality, weather-resistant,
-            and sustainable outdoor living.
+            Transform unused rooftops into fully functional living, working, or
+            hospitality spaces using lightweight, durable prefabricated
+            structures designed for safety, speed, and style.
           </p>
           <button className={styles.btnPrimary}>
             Contact us &nbsp;
@@ -106,228 +108,200 @@ const RooftopGuestRooms = () => {
         </div>
       </section>
 
-      {/* ── SECTION 2: ROOF TOP GUEST ROOM ── */}
+      {/* ── SECTION 2: ROOF TOP GUEST ROOM ──
+          Layout: Title top-left → Text LEFT | Double-image RIGHT
+      */}
       <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Roof Top <br />
-              <span>Guest Room</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>
-              L&amp;R Green India Pvt Ltd offers customized, modern, and
-              aesthetically appealing prefab rooftop guest room solutions. Designed
-              using high-grade structural steel framework and insulated panels, our
-              structures deliver superior structural stability, safety, and durability,
-              making them an ideal extension for modern homes and hotels.
-            </p>
-            <p>
-              Our rooftop structures are perfect for guest rooms, offices, recreation
-              rooms, and more. With standard features such as waterproof roofing, secure
-              panel insulation, glass doors and windows, electrical wiring, and high-end
-              soundproofing, we build beautiful extensions.
-            </p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
-              Read more &nbsp;
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-          </div>
-
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/topflat1.png"
-                  alt="Modern Rooftop Guest Room Design"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
-
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/topflat2.jpg"
-                  alt="Luxury Penthouse Guest Room"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 3: MAXIMIZE YOUR ROOFTOP SPACE ── */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/unit1.jpg"
-                  alt="Maximize Your Rooftop Space"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
-
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/unit2.jpg"
-                  alt="Modular Guest Room Deck"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Maximize Your <br />
-              <span>Rooftop Space</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              Our prefabricated guest rooms are highly versatile and customized. Let our
-              expert team help you design the perfect rooftop addition matching your
-              aesthetic and functional needs.
-            </p>
-
-            <div className={styles.bulletList}>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Elegant guest bedrooms</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Mini bar / lounging deck</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Attached bathrooms</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Glass panel walls</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Weatherproof terraces</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Modern aesthetics</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 4: SUSTAINABLE DESIGN & CUSTOMIZATION ── */}
-      <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>
-          GUEST ROOMS
-        </div>
-        <div className={styles.blueBannerContainer}>
-          <div className={styles.blueBannerText}>
-            <h2>
-              Sustainable Design <br />
-              <strong>&amp; Customization</strong>
-            </h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
-            <p>
-              L&amp;R Green India Pvt Ltd delivers highly durable, modular rooftop guest room structures.
-              Engineered with lightweight steel frames, insulated sandwich panels, and modern facade elements,
-              they cause very minimal load on your existing structure while offering a gorgeous, premium modern look.
-            </p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img
-              src="/Images/station.png"
-              alt="3D Glowing Rooftop Lounge Render"
-              style={{
-                width: "100%",
-                maxWidth: "480px",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "14px",
-                display: "block",
-              }}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ── SECTION 5: ENGINEERED FOR STRENGTH & SAFETY ── */}
-      <section className={styles.splitSec} style={{ padding: "100px 8% 120px 8%" }}>
         <div className={styles.containerMax}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px", marginBottom: "20px" }}>
+          {/* Title — full width top */}
+          <h2 className={styles.secTitle}>
+            Roof Top <br />
+            <span className={styles.accentText}>Guest Room</span>
+          </h2>
+          <div className={styles.divider} />
+
+          {/* Two-column below title */}
+          <div className={styles.twoColRow}>
+            {/* LEFT: Text */}
+            <div className={styles.textCol}>
+              <p style={{ fontWeight: "600", color: "#334155" }}>
+                L&amp;R Enterprises offers innovative rooftop structures
+                designed to transform unused terrace spaces into fully
+                functional residential and commercial units. These lightweight
+                and durable structures are engineered using advanced steel
+                framing and insulated panel systems, ensuring safety, stability,
+                and long-lasting performance. Ideal for urban environments where
+                space is limited, our rooftop solutions provide a smart way to
+                expand vertically without the need for large-scale construction
+                or land acquisition.
+              </p>
+              <p>
+                Our rooftop systems are suitable for guest rooms, office
+                extensions, studio spaces, and other functional setups. Designed
+                for quick installation with minimal disruption, they combine
+                modern aesthetics with practical engineering. Each structure is
+                customizable to meet specific requirements, making it an
+                efficient and cost-effective solution for both residential and
+                commercial property development.
+              </p>
+              <button className={styles.btnPill} style={{ marginTop: "10px" }}>
+                Get Contact &nbsp;
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </button>
+            </div>
+
+            {/* RIGHT: Overlapping double image */}
+            <div className={styles.imgCol}>
+              <div className={styles.multiImgWrap}>
+                <div className={styles.mainImg}>
+                  <img
+                    src="/Images/guest1.jpg"
+                    alt="Modern Rooftop Guest Room Design"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "14px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+                <div className={styles.smallImg}>
+                  <img
+                    src="Images/guest1small.jpg"
+                    alt="Luxury Penthouse Guest Room"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: MAXIMIZE YOUR ROOFTOP SPACE ──
+          Layout: Title top-left → Double-image LEFT | Bullets RIGHT
+      */}
+      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
+        <div className={styles.containerMax}>
+          {/* Title — full width top */}
+          <h2 className={styles.secTitle}>
+            Maximize Your <br />
+            <span className={styles.accentText}>Rooftop Space</span>
+          </h2>
+          <div className={styles.divider} />
+
+          {/* Two-column below title */}
+          <div className={styles.twoColRow}>
+            {/* LEFT: Double overlapping images */}
+            <div className={styles.imgCol}>
+              <div className={styles.multiImgWrap}>
+                <div className={styles.mainImg}>
+                  <img
+                    src="/Images/guest2big.png"
+                    alt="Maximize Your Rooftop Space"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "14px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+                <div className={styles.smallImg}>
+                  <img
+                    src="/Images/guest2small.jpg"
+                    alt="Modular Guest Room Deck"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT: Text + bullet list */}
+            <div className={styles.textCol}>
+              <p style={{ color: "#64748b" }}>
+                As cities become denser, rooftops offer valuable unused space.
+                L&amp;R Enterprises converts these areas into functional rooms
+                without disturbing existing building operations.
+              </p>
+              <div className={styles.bulletList}>
+                {[
+                  "Rooftop Guest Rooms",
+                  "Additional Residential Units",
+                  "Office Extensions",
+                  "Studio Apartments",
+                  "Rooftop Cafeterias",
+                  "Lounge Areas",
+                ].map((item) => (
+                  <div className={styles.bulletItem} key={item}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      style={{ flexShrink: 0 }}
+                    >
+                      <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                      <path
+                        d="M8 12.5L10.5 15L16 9"
+                        stroke="white"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span className={styles.bulletLabel}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 4: ENGINEERED FOR STRENGTH & SAFETY ──
+          Layout: Title left + desc right → 4-card grid
+      */}
+      <section className={styles.strengthSec}>
+        <div className={styles.containerMax}>
+          <div className={styles.strengthHeaderRow}>
             <div>
               <h2 className={styles.secTitle}>
                 Engineered for <br />
-                <span>Strength &amp; Safety</span>
+                <span className={styles.accentText}>Strength &amp; Safety</span>
               </h2>
               <div className={styles.divider} />
             </div>
-            <p style={{ maxWidth: "480px", color: "#64748b", fontSize: "15px", lineHeight: "1.7" }}>
-              Enjoy peace of mind with our heavy-duty steel structures, smart lighting, and 
-              superior weather-proofing for unforgettable moments.
+            <p className={styles.strengthDesc}>
+              Every rooftop structure is designed with precision engineering to
+              ensure safety, durability, and minimal load impact on existing
+              buildings.
             </p>
           </div>
 
@@ -337,7 +311,7 @@ const RooftopGuestRooms = () => {
                 <div className={styles.cardImageWrap}>
                   <img
                     className={styles.cardImage}
-                    src={card.img}
+                    src={card.img || BLANK}
                     alt={card.title}
                   />
                 </div>
@@ -351,99 +325,134 @@ const RooftopGuestRooms = () => {
         </div>
       </section>
 
-      {/* ── SECTION 6: WHY CHOOSE ROOFTOP GUEST ROOM STRUCTURES? ── */}
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer} style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "70px", alignItems: "center" }}>
-          <div className={styles.textCol} style={{ paddingTop: "0px" }}>
-            <h2 className={styles.secTitle}>
-              Why Choose Rooftop <br />
-              <span>Guest Room Structures?</span>
+      {/* ── SECTION 5: SUSTAINABLE DESIGN & CUSTOMIZATION (Blue Banner) ──
+          Layout: Text LEFT | Image RIGHT with watermark
+      */}
+      <section className={styles.blueBannerSec}>
+        <div className={styles.watermark}>L&amp;R GUEST</div>
+        <div className={styles.blueBannerContainer}>
+          <div className={styles.blueBannerText}>
+            <h2 className={styles.secTitleLight}>
+              Sustainable Design <br />
+              <strong>&amp; Customization</strong>
             </h2>
-            <div className={styles.divider} />
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569", marginBottom: "22px", marginTop: "40px" }}>
-              Prefabricated guest rooms are a quick, cost-effective way to expand space with minimal load on
-              existing buildings. They are energy-efficient, flexible, modern in design, and cause very minimal
-              disruption to your daily life during installation.
-            </p>
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569" }}>
-              With a strong commitment to quality and precision, we provide complete turnkey solutions from design to
-              execution. Our expert team ensures fast project delivery, safe installation over existing buildings, and the
-              use of high-quality materials and insulation systems for superior results.
+            <div className={styles.dividerWhite} />
+            <p>
+              L&amp;R Green India Pvt Ltd provides fully customizable rooftop
+              structures designed to suit various functional and architectural
+              requirements, allowing flexible layouts, modern design options,
+              and complete service integration. These rooftop solutions are
+              ideal for residential, commercial, and institutional use, offering
+              efficient space expansion for apartments, offices, schools,
+              hotels, co-working spaces, and industrial campuses with a focus on
+              speed, durability, and structural safety.
             </p>
           </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/topflat1.png"
-                  alt="Why Choose L&R Green Prefab Rooftop Rooms"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
+          <div className={styles.bannerImgCol}>
+            <img
+              src="/Images/guestcustom.png"
+              alt="Sustainable Design & Customization"
+              className={styles.bannerImg}
+            />
+          </div>
+        </div>
+      </section>
 
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/topflat2.jpg"
-                  alt="Premium Rooftop Louvered Terrace"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
-                />
+      {/* ── SECTION 6: WHY CHOOSE ROOFTOP GUEST ROOM STRUCTURES? ──
+          Layout: Title top-left → Text LEFT | Double-image RIGHT
+      */}
+      <section className={styles.splitSec} style={{ background: "#ffffff" }}>
+        <div className={styles.containerMax}>
+          {/* Title — full width top */}
+          <h2 className={styles.secTitle}>
+            Why Choose Rooftop <br />
+            <span className={styles.accentText}>Guest Room Structures?</span>
+          </h2>
+          <div className={styles.divider} />
+
+          {/* Two-column below title */}
+          <div className={styles.twoColRow}>
+            {/* LEFT: Text */}
+            <div className={styles.textCol}>
+              <p style={{ color: "#475569" }}>
+                Prefabricated guest rooms are a quick, cost-effective way to
+                expand space with minimal load on existing buildings. They are
+                energy-efficient, flexible, modern in design, and cause very
+                minimal disruption to your daily life during installation.
+              </p>
+              <p>
+                With a strong commitment to quality and precision, we provide
+                complete turnkey solutions from design to execution. Our expert
+                team ensures fast project delivery, safe installation over
+                existing buildings, and the use of high-quality materials and
+                insulation systems for superior results.
+              </p>
+            </div>
+
+            {/* RIGHT: Double overlapping images */}
+            <div className={styles.imgCol}>
+              <div className={styles.multiImgWrap}>
+                <div className={styles.mainImg}>
+                  <img
+                    src="/Images/gueststrbig.png"
+                    alt="Why Choose L&R Green Prefab Rooftop Rooms"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "14px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+                <div className={styles.smallImg}>
+                  <img
+                    src="/Images/gueststrsmall.jpg"
+                    alt="Premium Rooftop Louvered Terrace"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                      display: "block",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 7: FAQ SECTION ── */}
+      {/* ── SECTION 7: FAQ ──
+          Layout: Title left + desc right → FAQ list LEFT | Image RIGHT
+      */}
       <section className={styles.faqSec}>
         <div className={styles.faqContainer}>
           <span className={styles.faqTag}>• FAQs</span>
           <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
+            <div>
               <h2 className={styles.secTitle}>
                 Frequently Asked <br />
-                <span>Questions</span>
+                <span className={styles.accentText}>Questions</span>
               </h2>
               <div className={styles.divider} />
             </div>
-            <p className={styles.faqDesc} style={{ fontSize: "15px", lineHeight: "1.7" }}>
-              Delivered using heavy-duty steel framing and lightweight structures, 
-              they can withstand winds and heavy rain while offering 
+            <p className={styles.faqDesc}>
+              Delivered using heavy-duty steel framing and lightweight
+              structures, they can withstand winds and heavy rain while offering
               excellent soundproofing and high temperature resistance.
             </p>
           </div>
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter} style={{ width: "100%", height: "480px", overflow: "hidden", borderRadius: "12px" }}>
-              <img
-                src="/Images/freqflat.jpg"
-                alt="Frequently Asked Questions"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-            
+            {/* LEFT: FAQ list */}
             <div className={styles.faqList}>
               {faqs.map((faq) => (
                 <div
                   key={faq.id}
-                  className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
+                  className={`${styles.faqItem} ${
+                    openFaq === faq.id ? styles.faqItemActive : ""
+                  }`}
                 >
                   <div
                     className={styles.faqHeader}
@@ -462,6 +471,15 @@ const RooftopGuestRooms = () => {
                 </div>
               ))}
             </div>
+
+            {/* RIGHT: Image */}
+            <div className={styles.faqImgOuter}>
+              <img
+                src="/Images/feqguest.jpg"
+                alt="Frequently Asked Questions"
+                className={styles.faqImg}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -471,14 +489,15 @@ const RooftopGuestRooms = () => {
         className={styles.ctaBanner}
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/ctaflat.jpg')",
+            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/catguest.jpg')",
         }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Guest Rooms Solutions?</h2>
           <p>
             Connect with our team to design and deliver durable, efficient, and
-            fully customized rooftop guest room solutions tailored to your site needs.
+            fully customized rooftop guest room solutions tailored to your site
+            needs.
           </p>
           <button className={styles.btnSecondary}>
             Contact US &nbsp;
