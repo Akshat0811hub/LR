@@ -26,7 +26,6 @@ import PrefabRailwayShelters from "./pages/PrefabRailwayShelters";
 import PufSandwich from "./pages/pufsandwich";
 import WallPufPanels from "./pages/WallPufPanels";
 import RoofPufPanels from "./pages/RoofPufPanels";
-import EpsPanels from "./pages/EpsPanels";
 import RockwoolPanels from "./pages/RockwoolPanels";
 import GlasswoolPanels from "./pages/GlasswoolPanels";
 import RooftopResidential from "./pages/RooftopResidential";
@@ -36,6 +35,17 @@ import RooftopServantRooms from "./pages/RooftopServantRooms";
 import PrefabResidentialHouse from "./pages/PrefabResidentialHouse";
 import LgsfLuxuryLounges from "./pages/LgsfLuxuryLounges";
 import LgsfShowroom from "./pages/LgsfShowroom";
+import PrefabSalesOffice from "./pages/PrefabSalesOffice";
+import PrefabWaitingArea from "./pages/PrefabWaitingArea";
+import FarmhouseCottage from "./pages/FarmhouseCottage";
+import SolarEPC from "./pages/SolarEPC";
+import SolarMountingStructure from "./pages/SolarMountingStructure";
+import SolarHardware from "./pages/SolarHardware";
+import HVACSolutions from "./pages/HVACSolutions";
+import Projects from "./pages/Projects";
+import Gallery from "./pages/Gallery";
+import ContactUs from "./pages/ContactUs";
+import Brochure from "./pages/Brochure";
 
 function App() {
   return (
@@ -68,10 +78,11 @@ function App() {
         <Route path="/clean-rooms" element={<CleanRoomPage />} />
         <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
         <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
+    
         <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
         <Route path="/wall-puf-panels" element={<WallPufPanels />} />
         <Route path="/roof-puf-panels" element={<RoofPufPanels />} />
-        <Route path="/eps-panels" element={<EpsPanels />} />
+       
         <Route path="/rockwool-panels" element={<RockwoolPanels />} />
         <Route path="/glasswool-panels" element={<GlasswoolPanels />} />
         <Route path="/rooftop-residential-flats" element={<RooftopResidential />} />
@@ -81,6 +92,17 @@ function App() {
         <Route path="/prefab-residential-house" element={<PrefabResidentialHouse />} />
         <Route path="/lgsf-luxury-lounges" element={<LgsfLuxuryLounges />} />
         <Route path="/lgsf-showroom" element={<LgsfShowroom />} />
+        <Route path="/prefab-sales-office" element={<PrefabSalesOffice />} />
+        <Route path="/prefab-waiting-area" element={<PrefabWaitingArea />} />
+        <Route path="/farmhouse-cottage" element={<FarmhouseCottage />} />
+        <Route path="/solar-epc" element={<SolarEPC />} />
+        <Route path="/solar-mounting-structure" element={<SolarMountingStructure />} />
+        <Route path="/hardware-solutions" element={<SolarHardware />} />
+        <Route path="/hvac-solutions" element={<HVACSolutions />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/brochure" element={<Brochure />} />
       </Routes>
     </BrowserRouter>
   );

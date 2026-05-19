@@ -285,7 +285,7 @@ const About = () => {
             <img src={workImg} alt="Work" />
           </div>
         </section>
-
+                         
         <section className={styles.commitment}>
           <div>
             <h2>

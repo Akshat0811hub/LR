@@ -1,4 +1,9 @@
 /* ══════════════════════════════════
+   TABLER ICONS IMPORT
+══════════════════════════════════ */
+@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
+
+/* ══════════════════════════════════
    GLOBAL
 ══════════════════════════════════ */
 *,
@@ -26,6 +31,7 @@
   justify-content: space-between;
   color: #10284f;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .top-label {
@@ -39,43 +45,59 @@
   letter-spacing: 0.2px;
   white-space: nowrap;
   border-bottom-right-radius: 28px;
+  flex-shrink: 0;
 }
 
 .top-info {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   align-items: center;
   padding: 0 16px;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.info-item .ti {
+  font-size: 15px;
+  flex-shrink: 0;
 }
 
 .top-social {
   background: #263f69;
   color: #fff;
   height: 100%;
-  padding: 0 32px;
+  padding: 0 28px;
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
   border-bottom-left-radius: 28px;
   border-top-left-radius: 28px;
-  font-weight: 600;
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .top-social a {
   color: #fff;
   display: flex;
   align-items: center;
+  line-height: 1;
   transition: opacity 0.2s;
 }
+
+.top-social a .ti {
+  font-size: 17px;
+}
+
 .top-social a:hover {
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 /* ══════════════════════════════════
@@ -169,6 +191,19 @@
   font-weight: 700;
 }
 
+/* Arrow icon on dropdown toggle */
+.dropdown-toggle .arrow {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.dropdown:hover > .dropdown-toggle .arrow,
+.dropdown:focus-within > .dropdown-toggle .arrow,
+.dropdown.mobile-open > .dropdown-toggle .arrow {
+  transform: rotate(180deg);
+}
+
 /* Desktop underline */
 @media (min-width: 901px) {
   .nav-links > li > a::after,
@@ -200,11 +235,12 @@
 }
 
 /* ══════════════════════════════════
-   DROPDOWNS
+   DROPDOWNS — BASE STYLES
 ══════════════════════════════════ */
 .dropdown-menu,
 .submenu-list,
-.nested-list {
+.nested-list,
+.deep-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -212,7 +248,8 @@
 
 .dropdown-menu,
 .submenu-list,
-.nested-list {
+.nested-list,
+.deep-list {
   position: absolute;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
@@ -222,7 +259,8 @@
   box-shadow:
     0 18px 45px rgba(15, 23, 42, 0.14),
     0 8px 18px rgba(15, 23, 42, 0.08);
-  min-width: 250px;
+  min-width: 230px;
+  max-width: 280px;
   padding: 8px;
   z-index: 99999;
   opacity: 0;
@@ -234,6 +272,7 @@
     visibility 0.22s ease;
 }
 
+/* Level 1 dropdown: opens below */
 .dropdown-menu {
   top: 100%;
   left: 0;
@@ -253,13 +292,34 @@
   transform: rotate(45deg);
 }
 
+/* Level 2 & 3: opens to the right by default */
 .submenu-list,
-.nested-list {
+.nested-list,
+.deep-list {
   top: -10px;
-  left: calc(100% + 10px);
+  left: calc(100% + 8px);
+  right: auto;
   transform: translateX(10px);
 }
 
+/* ── Smart flip: keep nested menus on-screen ── */
+/* When a submenu-item is near the right edge it gets .flip-left class via JS
+   OR we rely on CSS :has / manual class. Here we use a CSS-only approach:
+   place the nested lists to the LEFT when the parent li is inside a list
+   that is itself opening to the right and might overflow. */
+
+/* Override for menus that could overflow right side of viewport */
+.dropdown-submenu.flip-left > .submenu-list,
+.nested-submenu.flip-left > .nested-list,
+.deep-submenu.flip-left > .deep-list {
+  left: auto;
+  right: calc(100% + 8px);
+  transform: translateX(-10px);
+}
+
+/* ══════════════════════════════════
+   DESKTOP HOVER REVEAL
+══════════════════════════════════ */
 @media (min-width: 901px) {
   .dropdown:hover > .dropdown-menu,
   .dropdown:focus-within > .dropdown-menu {
@@ -277,6 +337,11 @@
     transform: translateX(0);
   }
 
+  .dropdown-submenu.flip-left:hover > .submenu-list,
+  .dropdown-submenu.flip-left:focus-within > .submenu-list {
+    transform: translateX(0);
+  }
+
   .nested-submenu:hover > .nested-list,
   .nested-submenu:focus-within > .nested-list {
     opacity: 1;
@@ -284,36 +349,67 @@
     pointer-events: auto;
     transform: translateX(0);
   }
+
+  .nested-submenu.flip-left:hover > .nested-list,
+  .nested-submenu.flip-left:focus-within > .nested-list {
+    transform: translateX(0);
+  }
+
+  .deep-submenu:hover > .deep-list,
+  .deep-submenu:focus-within > .deep-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .deep-submenu.flip-left:hover > .deep-list,
+  .deep-submenu.flip-left:focus-within > .deep-list {
+    transform: translateX(0);
+  }
 }
 
+/* Invisible bridge to prevent hover gap on submenu items */
 .dropdown-submenu > .submenu-list::before,
 .nested-submenu > .nested-list::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -12px;
-  width: 14px;
+  left: -10px;
+  width: 12px;
   height: 100%;
 }
 
+.dropdown-submenu.flip-left > .submenu-list::before,
+.nested-submenu.flip-left > .nested-list::before {
+  left: auto;
+  right: -10px;
+}
+
+/* ══════════════════════════════════
+   DROPDOWN ITEMS
+══════════════════════════════════ */
 .dropdown-menu li,
 .submenu-list li,
-.nested-list li {
+.nested-list li,
+.deep-list li {
   position: relative;
 }
 
 .dropdown-menu li > a,
 .submenu-list li > a,
 .nested-list li > a,
+.deep-list li > a,
 .dropdown-submenu > button,
-.nested-submenu > button {
+.nested-submenu > button,
+.deep-submenu > button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  padding: 12px 14px;
-  min-height: 44px;
+  padding: 11px 14px;
+  min-height: 42px;
   font-size: 14px;
   font-weight: 500;
   color: #1f2937;
@@ -333,53 +429,81 @@
 .dropdown-menu li:hover > a,
 .submenu-list li:hover > a,
 .nested-list li:hover > a,
+.deep-list li:hover > a,
 .dropdown-submenu:hover > button,
 .nested-submenu:hover > button,
+.deep-submenu:hover > button,
 .dropdown-submenu:focus-within > button,
-.nested-submenu:focus-within > button {
+.nested-submenu:focus-within > button,
+.deep-submenu:focus-within > button {
   background: linear-gradient(135deg, #3f557f 0%, #2d4672 100%);
   color: #fff;
   transform: translateX(3px);
 }
 
-/* ══════════════════════════════════
-   ARROWS
-══════════════════════════════════ */
-.arrow {
-  font-size: 12px;
-  margin-left: 2px;
-  display: inline-block;
-  transition: transform 0.25s ease;
-}
-
-.dropdown:hover > .dropdown-toggle .arrow,
-.dropdown:focus-within > .dropdown-toggle .arrow,
-.dropdown.mobile-open > .dropdown-toggle .arrow {
-  transform: rotate(180deg);
-}
-
+/* Side arrows */
 .side-arrow {
-  font-size: 16px;
+  font-size: 15px;
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
 .dropdown-submenu:hover > button .side-arrow,
 .nested-submenu:hover > button .side-arrow,
+.deep-submenu:hover > button .side-arrow,
 .dropdown-submenu:focus-within > button .side-arrow,
-.nested-submenu:focus-within > button .side-arrow {
+.nested-submenu:focus-within > button .side-arrow,
+.deep-submenu:focus-within > button .side-arrow {
   transform: translateX(3px);
 }
 
-/* If right side overflow risk */
-.nav-links > li:last-child .dropdown-menu,
-.nav-links > li:nth-last-child(2) .dropdown-menu {
-  right: 0;
-  left: auto;
+/* Flip side arrow when menu opens left */
+.dropdown-submenu.flip-left > button .side-arrow,
+.nested-submenu.flip-left > button .side-arrow,
+.deep-submenu.flip-left > button .side-arrow {
+  transform: rotate(180deg);
 }
 
-.nav-links > li:last-child .dropdown-menu::after,
-.nav-links > li:nth-last-child(2) .dropdown-menu::after {
+.dropdown-submenu.flip-left:hover > button .side-arrow,
+.nested-submenu.flip-left:hover > button .side-arrow,
+.deep-submenu.flip-left:hover > button .side-arrow,
+.dropdown-submenu.flip-left:focus-within > button .side-arrow,
+.nested-submenu.flip-left:focus-within > button .side-arrow,
+.deep-submenu.flip-left:focus-within > button .side-arrow {
+  transform: rotate(180deg) translateX(3px);
+}
+
+/* Section heading inside nested list (e.g. "Premium Containers") */
+.nested-section-heading {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #3f557f 0%, #2d4672 100%);
+  border-radius: 10px;
+  margin-bottom: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+/* ══════════════════════════════════
+   RIGHT-EDGE FLIP (CSS approach)
+   Products is 3rd from right — push dropdown left
+══════════════════════════════════ */
+/* The "Our Products" li is position:relative.
+   Its dropdown-menu opens to the right, but submenu/nested
+   lists could overflow. We detect this with a utility class
+   added via JS (see useEffect in component), but also provide
+   a CSS fallback for the outermost level. */
+
+/* If the dropdown itself would overflow, move it right-aligned */
+.nav-links > li.align-right > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.nav-links > li.align-right > .dropdown-menu::after {
   left: auto;
   right: 28px;
 }
@@ -417,10 +541,16 @@
   background: #263f69;
   color: #fff;
   border-radius: 8px;
-  font-size: 26px;
+  font-size: 22px;
   cursor: pointer;
   line-height: 1;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn .ti {
+  font-size: 22px;
 }
 
 /* ══════════════════════════════════
@@ -432,34 +562,34 @@
   }
 
   .menu-btn {
-    display: grid;
-    place-items: center;
+    display: flex;
   }
 
   .top-bar {
-    padding: 0 14px;
-    gap: 12px;
+    padding: 0 12px;
+    gap: 8px;
   }
 
   .top-info {
-    gap: 14px;
+    gap: 12px;
     font-size: 12px;
+    justify-content: flex-start;
   }
 
   .top-social {
-    padding: 0 18px;
-    gap: 12px;
+    padding: 0 16px;
+    gap: 10px;
   }
 
   .navbar {
-    height: 72px;
+    height: 68px;
     padding: 0 18px;
     position: relative;
   }
 
   .nav-links {
     position: absolute;
-    top: 72px;
+    top: 68px;
     left: 0;
     width: 100%;
     background: #fff;
@@ -495,15 +625,18 @@
     display: none;
   }
 
+  /* Reset all absolute positioning on mobile */
   .dropdown-menu,
   .submenu-list,
-  .nested-list {
+  .nested-list,
+  .deep-list {
     position: static !important;
     transform: none !important;
     box-shadow: none;
     border: none;
     border-radius: 0;
     min-width: 100%;
+    max-width: 100%;
     max-height: 0;
     overflow: hidden;
     opacity: 1;
@@ -512,27 +645,35 @@
     padding: 0;
     background: #f4f6fa;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    margin-top: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .mobile-open > .dropdown-menu {
-    max-height: 1000px;
+    max-height: 1200px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
   }
 
   .mobile-sub-open > .submenu-list {
-    max-height: 700px;
+    max-height: 800px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
     background: #eaecf3;
   }
 
   .mobile-nested-open > .nested-list {
-    max-height: 500px;
+    max-height: 800px;
     padding: 4px 0 8px 14px;
     pointer-events: auto;
     background: #e1e4ef;
+  }
+
+  .mobile-deep-open > .deep-list {
+    max-height: 400px;
+    padding: 4px 0 8px 14px;
+    pointer-events: auto;
+    background: #d8dce8;
   }
 
   .dropdown-menu::after,
@@ -544,9 +685,11 @@
   .dropdown-menu li > a,
   .submenu-list li > a,
   .nested-list li > a,
+  .deep-list li > a,
   .dropdown-submenu > button,
-  .nested-submenu > button {
-    padding: 11px 16px;
+  .nested-submenu > button,
+  .deep-submenu > button {
+    padding: 11px 14px;
     white-space: normal;
     border-radius: 8px;
     transform: none !important;
@@ -555,17 +698,35 @@
   .dropdown-menu li:hover > a,
   .submenu-list li:hover > a,
   .nested-list li:hover > a,
+  .deep-list li:hover > a,
   .dropdown-submenu:hover > button,
   .nested-submenu:hover > button,
+  .deep-submenu:hover > button,
   .dropdown-submenu:focus-within > button,
-  .nested-submenu:focus-within > button {
+  .nested-submenu:focus-within > button,
+  .deep-submenu:focus-within > button {
     background: rgba(38, 63, 105, 0.1);
     color: #263f69;
     transform: none !important;
   }
 
+  /* Mobile: side arrows point down when open */
+  .dropdown-submenu.mobile-sub-open > button .side-arrow,
+  .nested-submenu.mobile-nested-open > button .side-arrow,
+  .deep-submenu.mobile-deep-open > button .side-arrow {
+    transform: rotate(90deg);
+  }
+
   .nav-links > li > a::after {
     display: none;
+  }
+
+  /* Disable flip-left logic on mobile */
+  .dropdown-submenu.flip-left > .submenu-list,
+  .nested-submenu.flip-left > .nested-list,
+  .deep-submenu.flip-left > .deep-list {
+    left: 0 !important;
+    right: auto !important;
   }
 }
 
@@ -576,7 +737,7 @@
   .top-bar {
     flex-direction: column;
     height: auto;
-    padding: 8px 0;
+    padding: 6px 0;
   }
 
   .top-label,
@@ -589,21 +750,16 @@
 
   .top-info {
     flex-direction: column;
-    gap: 6px;
-    padding: 8px 12px;
+    gap: 4px;
+    padding: 6px 12px;
     text-align: center;
+    justify-content: center;
   }
 }
 
 @media (max-width: 560px) {
   .brand h2 {
     font-size: 18px;
-  }
-
-  .brand-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 13px;
   }
 
   .navbar {
