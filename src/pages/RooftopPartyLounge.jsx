@@ -3,9 +3,6 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopPartyLounge.module.css";
 
-const BLANK =
-  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
 const RooftopPartyLounge = () => {
   const [openFaq, setOpenFaq] = useState(1);
 
@@ -326,7 +323,7 @@ const RooftopPartyLounge = () => {
                 <div className={styles.cardImageWrap}>
                   <img
                     className={styles.cardImage}
-                    src={card.img || BLANK}
+                    src={card.img}
                     alt={card.title}
                   />
                 </div>
@@ -359,8 +356,12 @@ const RooftopPartyLounge = () => {
               <div className={styles.imageFrame}>
                 <span className={`${styles.corner} ${styles.topLeft}`}></span>
                 <span className={`${styles.corner} ${styles.topRight}`}></span>
-                <span className={`${styles.corner} ${styles.bottomLeft}`}></span>
-                <span className={`${styles.corner} ${styles.bottomRight}`}></span>
+                <span
+                  className={`${styles.corner} ${styles.bottomLeft}`}
+                ></span>
+                <span
+                  className={`${styles.corner} ${styles.bottomRight}`}
+                ></span>
                 <img
                   src="/Images/partyuses.jpg"
                   alt="Why Choose L&amp;R Prefab Rooftop"

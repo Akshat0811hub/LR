@@ -3,9 +3,6 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabResidentialHouse.module.css";
 
-const BLANK =
-  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
 const PrefabResidentialHouse = () => {
   const [openFaq, setOpenFaq] = useState(1); // Second item open by default
 
