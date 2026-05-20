@@ -66,7 +66,6 @@ function App() {
         <Route path="/premium-ms-containers" element={<PremiumMsContainer />} />
         <Route path="/labour-accommodation" element={<PrefabLabour />} />
         <Route path="/site-office" element={<PrefabSiteOffice />} />
-        {/* Naya route yahan add karein */}
         <Route path="/prefab-staff-canteens" element={<PrefabStaffCanteens />} />
         <Route path="/prefab-dry-wall" element={<PrefabDryWall />} />
         <Route path="/prefab-mushroom" element={<PrefabMushroom />} />

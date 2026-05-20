@@ -43,7 +43,16 @@ const LgsfShowroom = () => {
       title: "Fast Construction",
       desc: "Enables up to 3x faster building completion compared to traditional showroom construction methods.",
       icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
         </svg>
       ),
@@ -52,7 +61,16 @@ const LgsfShowroom = () => {
       title: "Open Space Design",
       desc: "Provides large column-free interiors, making it ideal for product display, branding, and customer movement.",
       icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="3" y="4" width="18" height="4" rx="1.5" />
           <rect x="3" y="11" width="18" height="4" rx="1.5" />
           <rect x="3" y="18" width="18" height="4" rx="1.5" />
@@ -64,7 +82,16 @@ const LgsfShowroom = () => {
       title: "Flexible Architecture",
       desc: "Supports innovative designs including curved walls, modern facades, and customized layouts.",
       icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 14.5 3.5 16.5 5 18C5.5 18.5 5.5 19.5 5.5 20C5.5 21 6.5 22 7.5 22H12Z" />
           <circle cx="7.5" cy="10.5" r="1" fill="currentColor" />
           <circle cx="11.5" cy="7.5" r="1" fill="currentColor" />
@@ -77,7 +104,16 @@ const LgsfShowroom = () => {
       title: "Lightweight Structure",
       desc: "Reduces overall structural load, resulting in lower foundation costs and quicker installation.",
       icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
           <rect x="3" y="3" width="18" height="6" rx="1" />
           <rect x="3" y="14" width="8" height="7" rx="1" />
           <rect x="13" y="14" width="8" height="7" rx="1" />
@@ -94,7 +130,7 @@ const LgsfShowroom = () => {
       <section
         className={styles.heroSec}
         style={{
-          backgroundImage: "url('/Images/flat.jpg')",
+          backgroundColor: "#black",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -107,8 +143,9 @@ const LgsfShowroom = () => {
             SOLUTIONS
           </h1>
           <p className={styles.subtitle}>
-            We design and build high-performance LGSF showrooms that showcase innovation, speed,
-            and architectural flexibility for modern businesses.
+            We design and build high-performance LGSF showrooms that showcase
+            innovation, speed, and architectural flexibility for modern
+            businesses.
           </p>
           <button className={styles.btnPrimary}>
             Conatct us &nbsp;
@@ -136,9 +173,9 @@ const LgsfShowroom = () => {
           <div className={styles.imgCol}>
             <div className={styles.multiImgWrap}>
               {/* Main Large Image (Left-aligned) */}
-              <div className={styles.mainImg}>
+              <div className={styles.mainImgLeft}>
                 <img
-                  src="/Images/topflat1.png"
+                  src="/Images/showbig.jpg"
                   alt="Modern LGSF Showroom Structure"
                   style={{
                     width: "100%",
@@ -151,9 +188,9 @@ const LgsfShowroom = () => {
               </div>
 
               {/* Small Floating Image (Right-aligned) */}
-              <div className={styles.smallImg}>
+              <div className={styles.smallImgRight}>
                 <img
-                  src="/Images/topflat2.jpg"
+                  src="/Images/showsmall.jpg"
                   alt="Glass curtain wall showroom facade"
                   style={{
                     width: "100%",
@@ -173,19 +210,22 @@ const LgsfShowroom = () => {
               LGSF <span className={styles.accentText}>Showroom</span>
             </h2>
             <div className={styles.divider} style={{ width: "110px" }} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>
-              An LGSF showroom is a prefabricated exhibition space constructed using
-              cold-formed galvanized steel framing, designed to deliver modern, fast,
-              and efficient building solutions. It showcases advanced construction
-              technology that combines strength, speed, and architectural flexibility,
-              making it a preferred choice over traditional building methods.
+            <p
+              style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}
+            >
+              An LGSF showroom is a prefabricated exhibition space constructed
+              using cold-formed galvanized steel framing, designed to deliver
+              modern, fast, and efficient building solutions. It showcases
+              advanced construction technology that combines strength, speed,
+              and architectural flexibility, making it a preferred choice over
+              traditional building methods.
             </p>
             <p>
-              It is built using a prefabricated steel frame system that allows quick
-              installation and easy relocation when required. These showrooms are
-              ideal for modern commercial display spaces, offering open, customizable
-              layouts that support branding, product showcasing, and contemporary
-              design requirements.
+              It is built using a prefabricated steel frame system that allows
+              quick installation and easy relocation when required. These
+              showrooms are ideal for modern commercial display spaces, offering
+              open, customizable layouts that support branding, product
+              showcasing, and contemporary design requirements.
             </p>
             <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
               Get Contact &nbsp;
@@ -218,9 +258,10 @@ const LgsfShowroom = () => {
             </h2>
             <div className={styles.divider} style={{ width: "130px" }} />
             <p style={{ marginTop: "30px" }}>
-              LGSF showrooms are widely used across commercial and industrial sectors due to
-              their fast construction, flexibility, and modern design capabilities, making
-              them suitable for various display and business applications.
+              LGSF showrooms are widely used across commercial and industrial
+              sectors due to their fast construction, flexibility, and modern
+              design capabilities, making them suitable for various display and
+              business applications.
             </p>
 
             <div className={styles.bulletList}>
@@ -233,9 +274,21 @@ const LgsfShowroom = () => {
                 "Industrial Product Display Units",
               ].map((bullet, idx) => (
                 <div key={idx} className={styles.bulletItem}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
                     <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                    <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                   <span className={styles.bulletLabel}>{bullet}</span>
                 </div>
@@ -249,7 +302,7 @@ const LgsfShowroom = () => {
               {/* Main Large Image (Left-aligned) */}
               <div className={styles.mainImg}>
                 <img
-                  src="/Images/safeurban.png"
+                  src="/Images/show2.png"
                   alt="Where LGSF Showrooms Are Used"
                   style={{
                     width: "100%",
@@ -264,7 +317,7 @@ const LgsfShowroom = () => {
               {/* Small Floating Image (Right-aligned) */}
               <div className={styles.smallImg}>
                 <img
-                  src="/Images/topflat2.jpg"
+                  src="/Images/show2small.jpg"
                   alt="Interior mezzanine stairs"
                   style={{
                     width: "100%",
@@ -282,9 +335,7 @@ const LgsfShowroom = () => {
 
       {/* ── SECTION 4: DURABILITY & SUSTAINABILITY OF LGSF SHOWROOMS ── */}
       <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>
-          L&amp;R LGSF SHOWROOM
-        </div>
+        <div className={styles.watermark}>L&amp;R LGSF SHOWROOM</div>
         <div className={styles.blueBannerContainer}>
           <div className={styles.blueBannerText}>
             <h2 className={styles.secTitleLight}>
@@ -293,18 +344,19 @@ const LgsfShowroom = () => {
             </h2>
             <div className={styles.dividerWhite} />
             <p>
-              Our LGSF showrooms are designed for high strength, safety, and long-term
-              performance while also following eco-friendly construction practices. Built with
-              galvanized steel technology, they offer resistance to earthquakes, fire,
-              termites, and corrosion, ensuring reliable structural durability. At the same
-              time, they promote sustainability through recyclable materials, reduced
-              construction waste, lower carbon footprint, and energy-efficient building
-              systems.
+              Our LGSF showrooms are designed for high strength, safety, and
+              long-term performance while also following eco-friendly
+              construction practices. Built with galvanized steel technology,
+              they offer resistance to earthquakes, fire, termites, and
+              corrosion, ensuring reliable structural durability. At the same
+              time, they promote sustainability through recyclable materials,
+              reduced construction waste, lower carbon footprint, and
+              energy-efficient building systems.
             </p>
           </div>
           <div className={styles.bannerImgCol}>
             <img
-              src="/Images/station.png"
+              src="/Images/showblue.png"
               alt="Commercial Showroom 3D Isometric render"
               className={styles.bannerImg}
               style={{ objectFit: "contain" }}
@@ -314,9 +366,21 @@ const LgsfShowroom = () => {
       </section>
 
       {/* ── SECTION 5: KEY FEATURES OF LGSF SHOWROOMS ── */}
-      <section className={styles.splitSec} style={{ padding: "100px 8% 120px 8%" }}>
+      <section
+        className={styles.splitSec}
+        style={{ padding: "100px 8% 120px 8%" }}
+      >
         <div className={styles.containerMax}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px", marginBottom: "20px" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              flexWrap: "wrap",
+              gap: "24px",
+              marginBottom: "20px",
+            }}
+          >
             <div>
               <h2 className={styles.secTitle}>
                 Key Features of <br />
@@ -324,18 +388,29 @@ const LgsfShowroom = () => {
               </h2>
               <div className={styles.divider} style={{ width: "140px" }} />
             </div>
-            <p style={{ maxWidth: "480px", color: "#64748b", fontSize: "15px", lineHeight: "1.7" }}>
-              LGSF showrooms are modern, efficient structures that combine speed, flexibility,
-              and smart engineering to deliver cost-effective and fast-built commercial display spaces.
+            <p
+              style={{
+                maxWidth: "480px",
+                color: "#64748b",
+                fontSize: "15px",
+                lineHeight: "1.7",
+              }}
+            >
+              LGSF showrooms are modern, efficient structures that combine
+              speed, flexibility, and smart engineering to deliver
+              cost-effective and fast-built commercial display spaces.
             </p>
           </div>
 
           <div className={styles.cardGrid}>
             {features.map((card, idx) => (
-              <div key={idx} className={card.highlight ? styles.featureCardActive : styles.featureCard}>
-                <div className={styles.iconWrap}>
-                  {card.icon}
-                </div>
+              <div
+                key={idx}
+                className={
+                  card.highlight ? styles.featureCardActive : styles.featureCard
+                }
+              >
+                <div className={styles.iconWrap}>{card.icon}</div>
                 <h3 className={styles.cardTitle}>{card.title}</h3>
                 <p className={styles.cardDesc}>{card.desc}</p>
               </div>
@@ -346,54 +421,90 @@ const LgsfShowroom = () => {
 
       {/* ── SECTION 6: PRECISION ENGINEERING & WHY CHOOSE L&R ── */}
       <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer} style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "70px", alignItems: "center" }}>
-          <div className={styles.textCol} style={{ paddingTop: "0px" }}>
-            <h2 className={styles.secTitle}>
-              Precision Engineering <br />
-              <span className={styles.accentText}>&amp; Why Choose L&amp;R</span>
-            </h2>
-            <div className={styles.divider} style={{ width: "120px" }} />
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569", marginBottom: "22px", marginTop: "40px" }}>
-              At L&amp;R Green India Pvt Ltd, we specialize in complete turnkey showroom solutions. From conceptual layout
-              design, structural load calculations, off-site steel fabrication, to precise on-site framing and final
-              detailing, we manage every step with precision.
-            </p>
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569" }}>
-              Our certified LGSF components and premium materials ensure top-tier aesthetics, low maintenance, rapid
-              completion, and environmentally sustainable construction.
-            </p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image (Left-aligned) */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/unit1.jpg"
-                  alt="Why Choose L&R LGSF Showrooms"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
+        <div className={styles.containerMax}>
+          <h2 className={styles.secTitle} style={{ marginBottom: "15px" }}>
+            Precision Engineering <br />
+            <span className={styles.accentText}>&amp; Why Choose L&amp;R</span>
+          </h2>
+          <div
+            className={styles.divider}
+            style={{ width: "120px", marginBottom: "40px" }}
+          />
 
-              {/* Small Floating Image (Right-aligned) */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/unit2.jpg"
-                  alt="Modern showroom commercial glazing"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
-                />
+          <div
+            className={styles.splitContainer}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1.1fr",
+              gap: "70px",
+              alignItems: "start",
+            }}
+          >
+            <div className={styles.imgCol}>
+              <div className={styles.multiImgWrap}>
+                {/* Main Large Image (Left-aligned) */}
+                <div className={styles.mainImgLeft}>
+                  <img
+                    src="/Images/show6big.jpg"
+                    alt="Why Choose L&R LGSF Showrooms"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "14px",
+                      display: "block",
+                    }}
+                  />
+                </div>
+
+                {/* Small Floating Image (Right-aligned) */}
+                <div className={styles.smallImgRight}>
+                  <img
+                    src="/Images/show6small.png"
+                    alt="Modern showroom commercial glazing"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "12px",
+                      display: "block",
+                    }}
+                  />
+                </div>
               </div>
+            </div>
+
+            <div className={styles.textCol} style={{ paddingTop: "0px" }}>
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "1.8",
+                  color: "#475569",
+                  marginBottom: "22px",
+                }}
+              >
+                L&amp;R Green Pvt Ltd delivers advanced LGSF showroom solutions
+                through a precise and systematic manufacturing process, ensuring
+                high-quality results from design to final assembly. Every
+                project begins with custom design engineering, followed by
+                high-precision steel fabrication, off-site panel preparation,
+                strict quality inspections, and efficient on-site dispatch and
+                assembly for smooth execution.
+              </p>
+              <p
+                style={{
+                  fontSize: "16px",
+                  lineHeight: "1.8",
+                  color: "#475569",
+                }}
+              >
+                We are chosen for our expert engineering team, fast project
+                delivery, and flexible custom design capabilities that meet
+                diverse client needs. With high-quality manufacturing standards
+                and complete end-to-end project support, we ensure reliable,
+                durable, and modern showroom structures built with efficiency
+                and excellence.
+              </p>
             </div>
           </div>
         </div>
@@ -411,21 +522,16 @@ const LgsfShowroom = () => {
               </h2>
               <div className={styles.divider} style={{ width: "100px" }} />
             </div>
-            <p className={styles.faqDesc} style={{ fontSize: "15px", lineHeight: "1.7" }}>
-              Delivered using heavy-duty steel framing and lightweight structures, 
-              they can withstand winds and heavy rain while offering 
+            <p
+              className={styles.faqDesc}
+              style={{ fontSize: "15px", lineHeight: "1.7" }}
+            >
+              Delivered using heavy-duty steel framing and lightweight
+              structures, they can withstand winds and heavy rain while offering
               excellent soundproofing and high temperature resistance.
             </p>
           </div>
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter}>
-              <img
-                src="/Images/freqflat.jpg"
-                alt="Frequently Asked Questions"
-                className={styles.faqImg}
-              />
-            </div>
-            
             <div className={styles.faqList}>
               {faqs.map((faq) => (
                 <div
@@ -449,6 +555,14 @@ const LgsfShowroom = () => {
                 </div>
               ))}
             </div>
+
+            <div className={styles.faqImgOuter}>
+              <img
+                src="/Images/show5.png"
+                alt="Frequently Asked Questions"
+                className={styles.faqImg}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -457,15 +571,15 @@ const LgsfShowroom = () => {
       <section
         className={styles.ctaBanner}
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/ctaflat.jpg')",
+          backgroundColor: "#black",
         }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your LGSF Showroom Solutions?</h2>
           <p>
             Connect with our team to design and deliver durable, efficient, and
-            fully customized LGSF showroom solutions tailored to your site needs.
+            fully customized LGSF showroom solutions tailored to your site
+            needs.
           </p>
           <button className={styles.btnSecondary}>
             Contact US &nbsp;

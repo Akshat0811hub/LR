@@ -3,9 +3,6 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopGuestRooms.module.css";
 
-const BLANK =
-  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
 const RooftopGuestRooms = () => {
   const [openFaq, setOpenFaq] = useState(1);
 
@@ -311,7 +308,7 @@ const RooftopGuestRooms = () => {
                 <div className={styles.cardImageWrap}>
                   <img
                     className={styles.cardImage}
-                    src={card.img || BLANK}
+                    src={card.img}
                     alt={card.title}
                   />
                 </div>
