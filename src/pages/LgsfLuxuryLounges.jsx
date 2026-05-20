@@ -3,8 +3,8 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/LgsfLuxuryLounges.module.css";
 
-const BLANK =
-  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+// const BLANK =
+//   "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
 const LgsfLuxuryLounges = () => {
   const [openFaq, setOpenFaq] = useState(1); // Second item open by default (Index 1)
