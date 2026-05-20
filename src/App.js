@@ -78,11 +78,11 @@ function App() {
         <Route path="/clean-rooms" element={<CleanRoomPage />} />
         <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
         <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
-    
+
         <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
         <Route path="/wall-puf-panels" element={<WallPufPanels />} />
         <Route path="/roof-puf-panels" element={<RoofPufPanels />} />
-       
+
         <Route path="/rockwool-panels" element={<RockwoolPanels />} />
         <Route path="/glasswool-panels" element={<GlasswoolPanels />} />
         <Route path="/rooftop-residential-flats" element={<RooftopResidential />} />
