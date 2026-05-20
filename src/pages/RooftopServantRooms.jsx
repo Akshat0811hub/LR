@@ -3,8 +3,11 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/RooftopServantRooms.module.css";
 
+const BLANK =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 const RooftopServantRooms = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const [openFaq, setOpenFaq] = useState(1); // Second item open by default
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,46 +21,46 @@ const RooftopServantRooms = () => {
     },
     {
       id: 1,
-      q: "Will it add significant weight to my building?",
-      a: "No, we use high-grade pre-engineered light-gauge steel framing (LGSF) and lightweight insulated panels, keeping the structural load extremely minimal.",
+      q: "Is a rooftop servant room safe for my building structure?",
+      a: "Yes, these rooms are designed using lightweight steel and engineered materials, ensuring minimal load impact on the existing building after proper structural assessment.",
     },
     {
       id: 2,
-      q: "Is an attached bathroom possible?",
-      a: "Yes, all our servant room layouts can be configured with attached modern washrooms and toilets.",
+      q: "How long does it take to install a rooftop servant room?",
+      a: "The off-site prefabrication and on-site assembly can be completed in just 2 to 3 weeks.",
     },
     {
       id: 3,
-      q: "Is it weather-proof?",
-      a: "Yes, the structures are completely water-tight, leak-resistant, and engineered to withstand extreme winds and heavy rain.",
+      q: "What facilities are included in a rooftop servant room?",
+      a: "All our servant room layouts can be configured with compact bedrooms, ventilation openings, and attached modern washrooms and toilets.",
     },
     {
       id: 4,
-      q: "How long does construction take?",
-      a: "The off-site prefabrication and on-site assembly can be completed in just 2 to 3 weeks.",
+      q: "Can the design of servant rooms be customized?",
+      a: "Yes, the design, dimensions, interior partitions, and finishes can be customized to match your building space and requirements.",
     },
   ];
 
   const strengthCards = [
     {
       title: "Compact Bedroom Space",
-      desc: "Spacious enough to hold a single bed, a wardrobe, and essential utilities comfortably.",
-      img: "/Images/life1.jpg",
+      desc: "A neatly designed sleeping area that ensures comfort and privacy within a space-efficient layout suitable for essential living needs.",
+      img: "/Images/serv1.png",
     },
     {
-      title: "Attached Pantry",
-      desc: "Optional layout with a small counter space and sink for tea/coffee making convenience.",
-      img: "/Images/life2.png",
+      title: "Bathroom Facility",
+      desc: "Clean and functional bathroom options provided either as attached or common use, ensuring hygiene and convenience.",
+      img: "/Images/serv2.jpg",
     },
     {
-      title: "Modern Washroom Design",
-      desc: "Fully integrated attached washroom with standard modern sanitary ware and wall finishes.",
-      img: "/Images/life3.png",
+      title: "Proper Ventilation System",
+      desc: "Well-planned airflow design with windows and openings to maintain fresh air circulation and a healthy indoor environment.",
+      img: "/Images/serv3.jpg",
     },
     {
-      title: "Well-Ventilated Interior",
-      desc: "Dual-pane sliding windows and exhaust provisions ensure fresh airflow and adequate light.",
-      img: "/Images/life4.jpg",
+      title: "Heat Insulated Interior",
+      desc: "Advanced insulation panels help maintain comfortable indoor temperatures by reducing heat and improving energy efficiency.",
+      img: "/Images/serv4.jpg",
     },
   ];
 
@@ -65,29 +68,29 @@ const RooftopServantRooms = () => {
     <div className={styles.wrapper}>
       <Header />
 
-      {/* ── HERO ── */}
+      {/* ── HERO SECTION (Image 1) ── */}
       <section
         className={styles.heroSec}
         style={{
-          backgroundImage: "url('/Images/flat.jpg')",
+          backgroundImage: `url("/Images/servantroomm.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R GREEN INDIA PVT LTD</span>
+          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             MODERN ROOFTOP <br />
             SERVANT ROOMS
           </h1>
           <p className={styles.subtitle}>
-            L&amp;R specializes in delivering high-quality, durable, and structurally
-            insulated modern rooftop servant rooms designed to blend with existing residential
-            spaces, providing complete privacy, comfort, and sustainability.
+            L&amp;R Green India Pvt Ltd designs and installs lightweight rooftop
+            servant rooms that transform unused terrace space into fully
+            functional living units with privacy, comfort, and durability.
           </p>
           <button className={styles.btnPrimary}>
-            Contact us &nbsp;
+            Conatct us &nbsp;
             <svg
               width="18"
               height="18"
@@ -107,93 +110,88 @@ const RooftopServantRooms = () => {
 
       {/* ── SECTION 2: SMART LIVING SPACE FOR DOMESTIC STAFF ── */}
       <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/topflat1.png"
-                  alt="Modern Servant Room Structure"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
+        <div className={styles.containerMax}>
+          <h2 className={styles.secTitle}>
+            Smart Living Space <br />
+            <span className={styles.accentText}>for Domestic Staff</span>
+          </h2>
+          <div className={styles.divider} />
 
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
+          <div className={styles.twoColRow}>
+            {/* LEFT: Content (Text & copy) */}
+            <div className={styles.textCol}>
+              <p className={styles.highlightPara}>
+                Rooftop servant rooms are modern compact housing units designed
+                to be built on top of existing buildings, making efficient use
+                of unused terrace space. They offer safe, comfortable, and
+                private accommodation for domestic staff while maintaining
+                functionality and convenience in urban living environments.
+                These units are designed to maximize space utility while
+                ensuring everyday comfort and privacy.
+              </p>
+
+              <p className={styles.normalPara}>
+                L&amp;R Green India Pvt Ltd provides expertly engineered
+                solutions that require minimal structural modifications to the
+                existing building. These rooftop units are designed for
+                durability, long-term performance, and efficient space
+                utilization, ensuring a practical and reliable living solution
+                for staff accommodation. They are built with precision to ensure
+                safety, strength, and long-lasting usability in all conditions.
+              </p>
+
+              <button className={styles.btnPill}>
+                Get Contact &nbsp;
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </button>
+            </div>
+
+            {/* RIGHT: Image with background decor box */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageDecorWrap}>
+                <div className={styles.decorBox} />
                 <img
-                  src="/Images/topflat2.jpg"
-                  alt="Pre-engineered staff cabin"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
+                  src="/Images/servantroom1.jpg"
+                  alt="Smart Living Space for Domestic Staff"
+                  className={styles.decorImage}
                 />
               </div>
             </div>
-          </div>
-
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Smart Living Space <br />
-              <span>for Domestic Staff</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>
-              Providing proper accommodation for household staff is essential for security,
-              convenience, and home organization. Rooftop servant rooms built using lightweight
-              steel framework and premium insulated panels offer a highly cost-effective and modern
-              structural addition without affecting the existing building foundations.
-            </p>
-            <p>
-              Our prefabricated servant rooms are designed with standard features such as secure
-              structural frameworks, insulated walls and roofs, attached bathroom facilities,
-              electricity wiring, and modern sliding windows for ventilation and natural light.
-            </p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
-              Read more &nbsp;
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 3: WHAT'S INSIDE A ROOFTOP SERVANT ROOM ── */}
-      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
+      <section className={styles.splitSec} style={{ background: "#ffffff" }}>
         <div className={styles.containerMax}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px", marginBottom: "20px" }}>
-            <div>
+          <div className={styles.sectionHeaderRow}>
+            <div className={styles.headerLeft}>
               <h2 className={styles.secTitle}>
                 What's Inside a <br />
-                <span>Rooftop Servant Room</span>
+                <span className={styles.accentText}>Rooftop Servant Room</span>
               </h2>
               <div className={styles.divider} />
             </div>
-            <p style={{ maxWidth: "480px", color: "#64748b", fontSize: "15px", lineHeight: "1.7" }}>
-              Our servant rooms are fully equipped with all functional layouts and high-end insulation systems 
-              for modern, comfortable living.
-            </p>
+            <div className={styles.headerRight}>
+              <p className={styles.sectionDescText}>
+                A rooftop servant room is thoughtfully designed to provide all
+                essential living comforts within a compact and efficient layout.
+                It ensures a balance of privacy, functionality, and modern
+                comfort for domestic staff.
+              </p>
+            </div>
           </div>
 
           <div className={styles.cardGrid}>
@@ -218,163 +216,158 @@ const RooftopServantRooms = () => {
 
       {/* ── SECTION 4: FULLY CUSTOMIZABLE ROOFTOP SERVANT ROOM SOLUTIONS ── */}
       <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>
-          SERVANT ROOM
-        </div>
+        <div className={styles.watermark}>L&amp;R SERVANT</div>
         <div className={styles.blueBannerContainer}>
           <div className={styles.blueBannerText}>
             <h2>
-              Fully Customizable <br />
+              Fully Customizable Rooftop <br />
               <strong>Servant Room Solutions</strong>
             </h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
+            <div className={styles.dividerWhite} />
             <p>
-              Every rooftop is unique, and L&amp;R delivers tailor-made layouts that match the available
-              space perfectly. Our pre-engineered lightweight steel framing and insulated sandwich panels
-              allow for rapid construction while ensuring optimal thermal and sound insulation.
+              Our rooftop servant room solutions are fully customizable and
+              designed to adapt to various building layouts, space conditions,
+              and comfort requirements, providing safe, functional, and modern
+              living spaces for domestic staff while efficiently utilizing
+              available rooftop areas; these designs combine smart planning,
+              durable materials, and flexible configurations to ensure maximum
+              comfort, usability, and long-term performance in urban
+              environments, delivering a practical and reliable rooftop living
+              solution.
             </p>
           </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <div className={styles.bannerImgCol}>
             <img
-              src="/Images/station.png"
-              alt="3D Isometric Cabin Render"
-              style={{
-                width: "100%",
-                maxWidth: "480px",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "14px",
-                display: "block",
-              }}
+              src="/Images/servant5.png"
+              alt="3D Isometric Layout Render"
+              className={styles.bannerImg}
             />
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 5: ROOFTOP SERVANT ROOM FEATURES ── */}
+      {/* ── SECTION 5: ROOFTOP SERVANT ROOMS ── */}
       <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>
-              Rooftop <br />
-              <span>Servant Rooms</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>
-              Engineered with advanced prefabrication systems, our servant rooms provide perfect utility,
-              privacy, and durability.
-            </p>
+        <div className={styles.containerMax}>
+          <h2 className={styles.secTitle}>
+            Rooftop <br />
+            <span className={styles.accentText}>Servant Rooms</span>
+          </h2>
+          <div className={styles.divider} />
 
-            <div className={styles.bulletList}>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Compact modular designs</span>
+          <div className={styles.twoColRow}>
+            {/* LEFT: Image with background decor box */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageDecorWrap}>
+                <div className={styles.decorBox} />
+                <img
+                  src="/Images/servant7.png"
+                  alt="Rooftop Servant Room Features"
+                  className={styles.decorImage}
+                />
               </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Attached washroom layout</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Premium panel insulation</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Low thermal conductivity</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Fast structural construction</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Weatherproof roof system</span>
+            </div>
+
+            {/* RIGHT: Text & Bullets */}
+            <div className={styles.textCol}>
+              <p className={styles.normalPara}>
+                Our rooftop servant rooms are compact and comfortable units for
+                staff accommodation, ensuring privacy and proper living while
+                efficiently using rooftop space.
+              </p>
+
+              <div className={styles.bulletListGrid}>
+                {[
+                  "Compact bedroom layout",
+                  "Ventilation & natural lighting",
+                  "Basic interior finishing",
+                  "Attached toilet & bathroom option",
+                  "Thermal insulated panels",
+                  "Optional kitchenette space",
+                ].map((item, idx) => (
+                  <div className={styles.bulletItem} key={idx}>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      style={{ flexShrink: 0 }}
+                    >
+                      <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                      <path
+                        d="M8 12.5L10.5 15L16 9"
+                        stroke="white"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span className={styles.bulletLabel}>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-
-          <div className={styles.imgCol} style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              src="/Images/safeurban.png"
-              alt="Safe Urban Servant Room Model"
-              style={{
-                width: "100%",
-                maxWidth: "500px",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
-              }}
-            />
-          </div>
         </div>
       </section>
 
-      {/* ── SECTION 6: WHY CHOOSE ROOFTOP SERVANT ROOMS? ── */}
+      {/* ── SECTION 6: WHY CHOOSE ROOFTOP GUEST ROOM STRUCTURES? ── */}
       <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer} style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "70px", alignItems: "center" }}>
-          <div className={styles.textCol} style={{ paddingTop: "0px" }}>
-            <h2 className={styles.secTitle}>
-              Why Choose L&amp;R Rooftop <br />
-              <span>Servant Rooms?</span>
-            </h2>
-            <div className={styles.divider} />
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569", marginBottom: "22px", marginTop: "40px" }}>
-              L&amp;R Green India Pvt Ltd is dedicated to delivering premium modular structures using advanced
-              engineering and high-quality raw materials. Our rooftop servant rooms are highly durable,
-              fire-retardant, and weather-resistant, ensuring complete safety and comfort.
-            </p>
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569" }}>
-              We manage the entire project from layout planning to structural design and complete on-site
-              execution, ensuring minimal disruption to your daily life during installation.
-            </p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/unit1.jpg"
-                  alt="Why Choose L&R Green Prefab Rooftop Rooms"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
+        <div className={styles.containerMax}>
+          <h2 className={styles.secTitle}>
+            Why Choose Rooftop <br />
+            <span className={styles.accentText}>Guest Room Structures?</span>
+          </h2>
+          <div className={styles.divider} />
 
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
+          <div className={styles.twoColRow}>
+            {/* LEFT: Text content */}
+            <div className={styles.textCol}>
+              <p
+                className={styles.normalPara}
+                style={{
+                  fontSize: "1.05rem",
+                  lineHeight: "1.8",
+                  color: "#475569",
+                  marginBottom: "24px",
+                }}
+              >
+                L&amp;R Green India Pvt Ltd is a trusted name in rooftop
+                construction, delivering safe, durable, and cost-effective
+                servant room solutions designed for modern urban needs. With an
+                expert engineering team, high-quality prefabrication materials,
+                fast execution, safe rooftop installation practices, and
+                end-to-end project management, we ensure every project is
+                completed with precision, reliability, and long-lasting
+                performance.
+              </p>
+              <p
+                className={styles.normalPara}
+                style={{
+                  fontSize: "1.05rem",
+                  lineHeight: "1.8",
+                  color: "#475569",
+                }}
+              >
+                Rooftop servant rooms are designed to provide practical and
+                private living spaces for domestic staff, making efficient use
+                of unused terrace areas in apartments, villas, and commercial
+                buildings. They are ideal for private staff accommodation,
+                housekeeping and domestic worker housing, cook or helper living
+                space, security guard rooms on terraces, maintenance staff
+                accommodation, and staff rooms in residential and institutional
+                properties.
+              </p>
+            </div>
+
+            {/* RIGHT: Image with background decor box */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageDecorWrap}>
+                <div className={styles.decorBox} />
                 <img
-                  src="/Images/unit2.jpg"
-                  alt="Premium Rooftop Louvered Terrace"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
+                  src="/Images/servant8.jpg"
+                  alt="Why Choose Rooftop Guest Room Structures"
+                  className={styles.decorImage}
                 />
               </div>
             </div>
@@ -385,35 +378,24 @@ const RooftopServantRooms = () => {
       {/* ── SECTION 7: FAQ SECTION ── */}
       <section className={styles.faqSec}>
         <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
+          <span className={styles.faqTag}>• FQS</span>
           <div className={styles.faqHeaderRow}>
             <div className={styles.faqHeaderLeft}>
               <h2 className={styles.secTitle}>
                 Frequently Asked <br />
-                <span>Questions</span>
+                <span className={styles.accentText}>Questions</span>
               </h2>
               <div className={styles.divider} />
             </div>
-            <p className={styles.faqDesc} style={{ fontSize: "15px", lineHeight: "1.7" }}>
-              Delivered using heavy-duty steel framing and lightweight structures, 
-              they can withstand winds and heavy rain while offering 
-              excellent soundproofing and high temperature resistance.
+            <p className={styles.faqDesc}>
+              Prefabricated rooftop servant rooms are compact, safe living units
+              built on existing buildings for domestic staff. Below are common
+              FAQs about their features and benefits.
             </p>
           </div>
+
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter} style={{ width: "100%", height: "480px", overflow: "hidden", borderRadius: "12px" }}>
-              <img
-                src="/Images/freqflat.jpg"
-                alt="Frequently Asked Questions"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-            
+            {/* LEFT: FAQ list */}
             <div className={styles.faqList}>
               {faqs.map((faq) => (
                 <div
@@ -437,6 +419,15 @@ const RooftopServantRooms = () => {
                 </div>
               ))}
             </div>
+
+            {/* RIGHT: Rounded image */}
+            <div className={styles.faqImgOuter}>
+              <img
+                src="/Images/catservant.jpg"
+                alt="Frequently Asked Questions"
+                className={styles.faqImg}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -445,15 +436,15 @@ const RooftopServantRooms = () => {
       <section
         className={styles.ctaBanner}
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/ctaflat.jpg')",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/Images/catservant.jpg")`,
         }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Prefab Servant Room Solutions?</h2>
           <p>
             Connect with our team to design and deliver durable, efficient, and
-            fully customized rooftop servant room solutions tailored to your site needs.
+            fully customized insulated Prefab Servant Room solutions tailored to
+            your site needs.
           </p>
           <button className={styles.btnSecondary}>
             Contact US &nbsp;

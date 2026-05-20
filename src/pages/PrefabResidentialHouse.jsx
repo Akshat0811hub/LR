@@ -3,8 +3,11 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import styles from "../styles/PrefabResidentialHouse.module.css";
 
+const BLANK =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 const PrefabResidentialHouse = () => {
-  const [openFaq, setOpenFaq] = useState(1);
+  const [openFaq, setOpenFaq] = useState(1); // Second item open by default
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,51 +16,28 @@ const PrefabResidentialHouse = () => {
   const faqs = [
     {
       id: 0,
-      q: "What is LGSF prefab technology?",
-      a: "LGSF (Light Gauge Steel Framing) is a modern construction method using high-strength galvanized steel sections to build incredibly strong, lightweight, and fast multi-story buildings.",
+      q: "What is LGSF construction?",
+      a: "Light Gauge Steel Framing (LGSF) is a modern construction method using high-strength galvanized steel sections to build strong, lightweight, and fast multi-story buildings.",
     },
     {
       id: 1,
-      q: "Is G+1 or G+2 construction safe with LGSF?",
-      a: "Yes, LGSF is fully certified and highly recommended for multi-story residential buildings up to G+3, providing unmatched seismic safety and structural integrity.",
+      q: "Is it suitable for G+2 houses?",
+      a: "Yes, LGSF is engineered for multi-story buildings like G+1 and G+2 with excellent structural stability. It provides safety and flexibility for modern residential designs.",
     },
     {
       id: 2,
-      q: "How long does it take to build a G+1 LGSF house?",
-      a: "On average, the structural framing and finishing of a G+1 LGSF villa can be completed in 6 to 8 weeks, compared to 8 to 10 months for concrete houses.",
+      q: "How fast is construction?",
+      a: "LGSF construction is 50-60% faster than traditional concrete builds, as framing and panels are manufactured off-site and quickly assembled on-site.",
     },
     {
       id: 3,
-      q: "What is the lifespan of an LGSF house?",
-      a: "LGSF structures use highly corrosion-resistant galvanized steel, ensuring a lifespan of over 50 years with very minimal maintenance.",
+      q: "Is it durable?",
+      a: "Yes, LGSF structures are highly durable, resistant to moisture, corrosion, termites, and earthquakes, ensuring a lifespan of over 50 years.",
     },
     {
       id: 4,
-      q: "Are LGSF houses heat and soundproof?",
-      a: "Yes, the walls are filled with high-density rockwool or glasswool insulation, providing superior thermal and acoustic performance compared to traditional brick walls.",
-    },
-  ];
-
-  const strengthCards = [
-    {
-      title: "Fast Construction",
-      desc: "Prefabricated off-site components enable precise, extremely fast assembly on-site within a few weeks.",
-      img: "/Images/life1.jpg",
-    },
-    {
-      title: "Seismic & Wind Safety",
-      desc: "Engineered high-grade steel framing provides excellent structural flexibility and high resistance to earthquakes.",
-      img: "/Images/life2.png",
-    },
-    {
-      title: "Excellent Insulation",
-      desc: "High-density thermal and acoustic insulation keeps your home comfortable in both extreme summers and winters.",
-      img: "/Images/life3.png",
-    },
-    {
-      title: "Termite & Decay Proof",
-      desc: "LGSF materials are 100% immune to termites, moisture decay, rusting, and mold growth, ensuring maximum lifespan.",
-      img: "/Images/life4.jpg",
+      q: "Is it eco-friendly?",
+      a: "Yes, LGSF uses over 90% recyclable steel and generates minimal construction waste, making it a highly sustainable and green building solution.",
     },
   ];
 
@@ -69,25 +49,24 @@ const PrefabResidentialHouse = () => {
       <section
         className={styles.heroSec}
         style={{
-          backgroundImage: "url('/Images/flat.jpg')",
+          backgroundImage: `url("/Images/g1.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <span className={styles.topLabel}>L&amp;R GREEN INDIA PVT LTD</span>
+          <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
           <h1 className={styles.mainTitle}>
             LGSF PREFAB RESIDENTIAL <br />
             HOUSES (G+1 / G+2)
           </h1>
           <p className={styles.subtitle}>
-            L&amp;R specializes in delivering high-quality, durable, and seismically
-            safe multi-story LGSF residential houses (G+1 / G+2) utilizing advanced
-            steel engineering and premium panel insulation for modern urban living.
+            L&amp;R Green Pvt Ltd delivers high-quality prefab homes designed
+            for speed, durability, and flexibility—perfect for modern living.
           </p>
           <button className={styles.btnPrimary}>
-            Contact us &nbsp;
+            Conatct us &nbsp;
             <svg
               width="18"
               height="18"
@@ -108,63 +87,47 @@ const PrefabResidentialHouse = () => {
       {/* ── SECTION 2: PREFAB RESIDENTIAL HOUSES (G+1 / G+2) ── */}
       <section className={styles.splitSec}>
         <div className={styles.splitContainer}>
+          {/* LEFT: Image with decoration box on left */}
           <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/topflat1.png"
-                  alt="Modern LGSF Villa Architecture"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
-
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/topflat2.jpg"
-                  alt="Multi-story residential design"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
-                />
-              </div>
+            <div className={styles.imageDecorWrap}>
+              <div className={styles.decorBox} />
+              <img
+                src="/Images/g2.png"
+                alt="Prefab Residential Houses"
+                className={styles.decorImage}
+              />
             </div>
           </div>
 
+          {/* RIGHT: Content */}
           <div className={styles.textCol}>
             <h2 className={styles.secTitle}>
               Prefab Residential <br />
               <span>Houses (G+1 / G+2)</span>
             </h2>
             <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>
-              Light Gauge Steel Frame (LGSF) technology represents a paradigm shift in
-              modern residential construction. It provides lightweight, extremely strong,
-              and highly durable multi-story structures built to withstand high seismic
-              activity, heavy wind loads, and extreme weather changes.
+            <p style={{ marginTop: "30px" }}>
+              Light Gauge Steel Framing (LGSF) prefab houses are modern
+              residential structures built using cold-formed galvanized steel
+              components that are manufactured in a controlled factory
+              environment and assembled on-site. This method ensures high
+              precision, consistent quality, and significantly reduces
+              construction time compared to traditional RCC methods, making it
+              an efficient solution for contemporary housing needs.
             </p>
             <p>
-              Our prefab residential houses offer elegant, flexible architectural designs
-              with superior heat and sound insulation, rapid construction, and high-quality
-              customized finishes, making them the ultimate choice for modern villas, residential
-              societies, and farmhouses.
+              These homes are especially suitable for G+1 and G+2 residential
+              buildings, offering a strong yet lightweight structure with
+              excellent durability. LGSF prefab houses are designed for faster
+              project completion while maintaining structural integrity, making
+              them ideal for urban homes, villas, and other residential
+              applications.
             </p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>
-              Read more &nbsp;
+            <button className={styles.btnPill}>
+              Get Contact &nbsp;
               <svg
-                width="18"
-                height="18"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -172,8 +135,8 @@ const PrefabResidentialHouse = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
               </svg>
             </button>
           </div>
@@ -183,6 +146,7 @@ const PrefabResidentialHouse = () => {
       {/* ── SECTION 3: APPLICATIONS OF PREFAB RESIDENTIAL HOUSES ── */}
       <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
         <div className={styles.splitContainer}>
+          {/* LEFT: Content */}
           <div className={styles.textCol}>
             <h2 className={styles.secTitle}>
               Applications of Prefab <br />
@@ -190,105 +154,96 @@ const PrefabResidentialHouse = () => {
             </h2>
             <div className={styles.divider} />
             <p style={{ marginTop: "30px" }}>
-              Our multi-story LGSF homes support beautiful designs and highly customized layouts,
-              making them ideal for modern architectural demands.
+              LGSF homes offer unmatched speed, strength, and sustainability,
+              making them a future-ready construction solution. Their
+              lightweight yet durable structure ensures faster construction,
+              reduced costs, and long-term performance with minimal maintenance.
             </p>
 
             <div className={styles.bulletList}>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Premium Modern Villas</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Multi-Story Residential Houses</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Farmhouses &amp; Holiday Homes</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Society Extension Floors</span>
-              </div>
-              <div className={styles.bulletItem}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                  <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span className={styles.bulletLabel}>Seismic Zone Safe Housing</span>
-              </div>
+              {[
+                "Individual Villas & Bungalows",
+                "Urban Residential Housing",
+                "Farmhouses & Holiday Homes",
+                "Staff Quarters & Worker Housing",
+                "Disaster Relief Housing",
+              ].map((item, idx) => (
+                <div className={styles.bulletItem} key={idx}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className={styles.bulletLabel}>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className={styles.imgCol} style={{ display: "flex", justifyContent: "center" }}>
-            <img
-              src="/Images/safeurban.png"
-              alt="G+1 LGSF Villa Structure"
-              style={{
-                width: "100%",
-                maxWidth: "500px",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
-              }}
-            />
+          {/* RIGHT: Image with decoration box on left */}
+          <div className={styles.imgCol}>
+            <div className={styles.imageDecorWrap}>
+              <div className={styles.decorBox} />
+              <img
+                src="/Images/g3.jpg"
+                alt="Applications of Prefab"
+                className={styles.decorImage}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 4: G+1 / G+2 LGSF HOMES - FLEXIBLE DESIGNS ── */}
       <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>
-          RESIDENTIAL
-        </div>
+        <div className={styles.watermark}>L&amp;R PREFAB RESIDENTIAL</div>
         <div className={styles.blueBannerContainer}>
+          {/* LEFT: Text */}
           <div className={styles.blueBannerText}>
             <h2>
               G+1 / G+2 LGSF <br />
-              <strong>Homes - Flexible Designs</strong>
+              <strong>Homes Flexible Designs</strong>
             </h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
-            <p>
-              L&amp;R Green India Pvt Ltd offers completely customizable multi-story residential solutions
-              utilizing high-grade light-gauge steel frameworks and premium insulated panels. From modern
-              layouts to luxury facades, we turn your dream home into reality in a fraction of the time
-              compared to traditional brick-and-mortar construction.
+            <div className={styles.dividerWhite} />
+            <p style={{ marginTop: "30px" }}>
+              LGSF prefab homes for G+1 and G+2 configurations offer flexible
+              modern designs with spacious layouts, balconies, and open living
+              areas, while delivering key advantages like faster construction,
+              lightweight structure, durability, low maintenance, and
+              eco-friendly performance. These homes provide a perfect balance of
+              style, efficiency, and long-term reliability for modern
+              residential living.
             </p>
           </div>
+          {/* RIGHT: Image */}
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <img
-              src="/Images/station.png"
-              alt="Modern LGSF House Isometric Render"
-              style={{
-                width: "100%",
-                maxWidth: "480px",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "14px",
-                display: "block",
-              }}
+              src="/Images/g4.png"
+              alt="LGSF Homes Flexible Designs"
+              className={styles.bannerImg}
             />
           </div>
         </div>
       </section>
 
       {/* ── SECTION 5: KEY FEATURES OF LGSF PREFAB RESIDENTIAL HOUSES ── */}
-      <section className={styles.splitSec} style={{ padding: "100px 8% 120px 8%" }}>
+      <section
+        className={styles.splitSec}
+        style={{ padding: "100px 8% 120px 8%" }}
+      >
         <div className={styles.containerMax}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "24px", marginBottom: "20px" }}>
+          <div className={styles.sectionHeaderRow}>
             <div>
               <h2 className={styles.secTitle}>
                 Key Features of LGSF Prefab <br />
@@ -296,83 +251,155 @@ const PrefabResidentialHouse = () => {
               </h2>
               <div className={styles.divider} />
             </div>
-            <p style={{ maxWidth: "480px", color: "#64748b", fontSize: "15px", lineHeight: "1.7" }}>
-              Enjoy peace of mind with our heavy-duty LGSF frameworks, premium thermal cores, 
-              and certified wind and earthquake resistance engineering.
+            <p className={styles.sectionDescText}>
+              LGSF prefab homes (G+1 / G+2) deliver fast, strong, and
+              sustainable modern living with precise, durable construction.
             </p>
           </div>
 
           <div className={styles.cardGrid}>
-            {strengthCards.map((card, idx) => (
-              <div key={idx} className={styles.strengthCard}>
-                <div className={styles.cardImageWrap}>
-                  <img
-                    className={styles.cardImage}
-                    src={card.img}
-                    alt={card.title}
-                  />
-                </div>
-                <div className={styles.cardContent}>
-                  <h3>{card.title}</h3>
-                  <p>{card.desc}</p>
-                </div>
+            {/* Card 1 */}
+            <div className={styles.featureCard}>
+              <div className={styles.cardIconWrap}>
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={styles.cardIcon}
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
               </div>
-            ))}
+              <h3>Fast Construction</h3>
+              <p>
+                Built 50-60% faster using factory-made, pre-engineered
+                components.
+              </p>
+            </div>
+
+            {/* Card 2 (Active/Dark Background) */}
+            <div
+              className={`${styles.featureCard} ${styles.featureCardActive}`}
+            >
+              <div className={styles.cardIconWrap}>
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={styles.cardIcon}
+                >
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+                  <line x1="9" y1="22" x2="9" y2="16" />
+                  <line x1="15" y1="22" x2="15" y2="16" />
+                  <line x1="9" y1="16" x2="15" y2="16" />
+                  <path d="M8 6h3v3H8zm5 0h3v3h-3zm-5 5h3v3H8zm5 0h3v3h-3z" />
+                </svg>
+              </div>
+              <h3>Structural Strength</h3>
+              <p>
+                High strength-to-weight ratio ensures stability for G+1 and G+2
+                homes.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className={styles.featureCard}>
+              <div className={styles.cardIconWrap}>
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={styles.cardIcon}
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3>Durability &amp; Safety</h3>
+              <p>Resistant to earthquakes, fire, termites, and corrosion.</p>
+            </div>
+
+            {/* Card 4 */}
+            <div className={styles.featureCard}>
+              <div className={styles.cardIconWrap}>
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={styles.cardIcon}
+                >
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 9.5a7 7 0 0 1-8 8.5z" />
+                  <path d="M19 2L11 10" />
+                </svg>
+              </div>
+              <h3>Sustainable Design</h3>
+              <p>
+                Uses over 90% recyclable materials with minimal environmental
+                impact.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── SECTION 6: WHY CHOOSE L&R & OUR CONSTRUCTION PROCESS ── */}
       <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer} style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "70px", alignItems: "center" }}>
-          <div className={styles.textCol} style={{ paddingTop: "0px" }}>
+        <div className={styles.splitContainer}>
+          {/* LEFT: Image with decoration box on left */}
+          <div className={styles.imgCol}>
+            <div className={styles.imageDecorWrap}>
+              <div className={styles.decorBox} />
+              <img
+                src="/Images/g5.jpg"
+                alt="Why Choose L&R"
+                className={styles.decorImage}
+              />
+            </div>
+          </div>
+
+          {/* RIGHT: Text */}
+          <div className={styles.textCol}>
             <h2 className={styles.secTitle}>
               Why Choose L&amp;R &amp; <br />
               <span>Our Construction Process</span>
             </h2>
             <div className={styles.divider} />
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569", marginBottom: "22px", marginTop: "40px" }}>
-              At L&amp;R Green India Pvt Ltd, we manage the entire modular building process from custom layout design,
-              structural engineering checks, off-site prefabrication, to precise on-site construction, ensuring
-              a completely hassle-free, turnkey experience.
+            <p style={{ marginTop: "30px" }}>
+              At L&amp;R Green Pvt Ltd, we combine innovation, precision
+              engineering, and sustainable practices to deliver high-performance
+              LGSF prefab homes tailored to your needs. With a skilled design
+              team, premium galvanized steel materials, cost-effective
+              solutions, and reliable on-time delivery, we ensure a seamless and
+              efficient building experience from start to finish.
             </p>
-            <p style={{ fontSize: "16px", lineHeight: "1.8", color: "#475569" }}>
-              Our steel frame structures use the highest quality galvanized steel and certified insulation systems,
-              ensuring premium aesthetics, long-term safety, and sustainable green construction.
+            <p>
+              Our construction process is streamlined for speed and accuracy,
+              starting with off-site fabrication of precision steel components,
+              followed by lightweight foundation preparation. The structure is
+              then assembled using advanced fastening systems, completed with
+              high-quality cladding, insulation, and customized interior and
+              exterior finishes to create durable and comfortable living spaces.
             </p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              {/* Main Large Image */}
-              <div className={styles.mainImg}>
-                <img
-                  src="/Images/unit1.jpg"
-                  alt="Why Choose L&R LGSF Prefab"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "14px",
-                    display: "block",
-                  }}
-                />
-              </div>
-
-              {/* Small Floating Image */}
-              <div className={styles.smallImg}>
-                <img
-                  src="/Images/unit2.jpg"
-                  alt="Galvanized steel framework detail"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "12px",
-                    display: "block",
-                  }}
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -380,7 +407,7 @@ const PrefabResidentialHouse = () => {
       {/* ── SECTION 7: FAQ SECTION ── */}
       <section className={styles.faqSec}>
         <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
+          <span className={styles.faqTag}>• FQS</span>
           <div className={styles.faqHeaderRow}>
             <div className={styles.faqHeaderLeft}>
               <h2 className={styles.secTitle}>
@@ -389,26 +416,15 @@ const PrefabResidentialHouse = () => {
               </h2>
               <div className={styles.divider} />
             </div>
-            <p className={styles.faqDesc} style={{ fontSize: "15px", lineHeight: "1.7" }}>
-              Delivered using heavy-duty steel framing and lightweight structures, 
-              they can withstand winds and heavy rain while offering 
-              excellent soundproofing and high temperature resistance.
+            <p className={styles.faqDesc}>
+              Find quick answers to common questions about LGSF prefab
+              residential houses (G+1 / G+2), including construction,
+              durability, and benefits. Understand why they are a fast,
+              reliable, and modern housing solution.
             </p>
           </div>
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter} style={{ width: "100%", height: "480px", overflow: "hidden", borderRadius: "12px" }}>
-              <img
-                src="/Images/freqflat.jpg"
-                alt="Frequently Asked Questions"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-            
+            {/* LEFT: FAQ list */}
             <div className={styles.faqList}>
               {faqs.map((faq) => (
                 <div
@@ -432,6 +448,15 @@ const PrefabResidentialHouse = () => {
                 </div>
               ))}
             </div>
+
+            {/* RIGHT: Rounded image */}
+            <div className={styles.faqImgOuter}>
+              <img
+                src="/Images/g6.png"
+                alt="Frequently Asked Questions"
+                className={styles.faqImg}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -440,15 +465,15 @@ const PrefabResidentialHouse = () => {
       <section
         className={styles.ctaBanner}
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/ctaflat.jpg')",
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(/Images/catg1.jpg)`,
         }}
       >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Prefab Residential Houses (G+1 / G+2)?</h2>
           <p>
             Connect with our team to design and deliver durable, efficient, and
-            fully customized multi-story LGSF residential solutions tailored to your site needs.
+            fully customized insulated Prefab Residential Houses (G+1 / G+2)
+            solutions tailored to your site needs.
           </p>
           <button className={styles.btnSecondary}>
             Contact US &nbsp;
