@@ -561,8 +561,9 @@ const WallPufPanels = () => {
         <div className={styles.ctaInner}>
           <h2>Ready for Your Sandwich Wall Puf Panels Solution?</h2>
           <p>
-            Connect with our team to design and deliver durable, efficient, and fully
-            customized sandwich wall PUF panel solutions tailored to your site needs.
+            Connect with our team to design and deliver durable, efficient, and
+            fully customized sandwich wall PUF panel solutions tailored to your
+            site needs.
           </p>
           <button
             className={styles.btnSecondary}
