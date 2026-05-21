@@ -69,6 +69,7 @@
   font-weight: 700;
   color: #f1f5f9;
   padding: 6px 16px;
+  margin-left: -1.5%;
   display: inline-block;
   margin-bottom: 24px;
 }
@@ -539,8 +540,9 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 120px 8%;
+  padding: 20px 8%;
   text-align: center;
+
   color: #fff;
   z-index: 2;
 }
@@ -553,6 +555,8 @@
 .ctaInner h2 {
   font-size: 3rem;
   line-height: 1.15;
+  width: 100vw;
+  margin-left: -22vw;
   margin-bottom: 24px;
   font-weight: 300;
 }

@@ -14,7 +14,7 @@ const SolarMountingStructure = () => {
     {
       title: "Rails & Frames",
       desc: "Provide the main structural base for secure panel alignment and stable system support.",
-      img: "/Images/mounttype1.jpg",
+      img: "/Images/mountype1.jpg",
     },
     {
       title: "Electrical System Design",
@@ -29,7 +29,7 @@ const SolarMountingStructure = () => {
     {
       title: "Heavy-Duty Mounts",
       desc: "Deliver strong anchoring support for durable and reliable solar structure performance.",
-      img: "/Images/mounttype.jpg",
+      img: "/Images/mounttype4.jpg",
     },
   ];
 
@@ -135,9 +135,7 @@ const SolarMountingStructure = () => {
       {/* ════ SECTION 1 · HERO ════ */}
       <section
         className={styles.heroSec}
-        style={
-          img.heroBg ? { backgroundImage: `url("/Images/mounting1.jpg")` } : {}
-        }
+        style={{ backgroundImage: `url("/Images/mounting1.jpg")` }}
       >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
@@ -151,7 +149,7 @@ const SolarMountingStructure = () => {
             for maximum efficiency, safety, and long-term performance.
           </p>
           <button className={styles.btnPrimary}>
-            Conatct us &nbsp;
+            Contact us &nbsp;
             <svg
               width="18"
               height="18"
@@ -182,7 +180,7 @@ const SolarMountingStructure = () => {
             <div className={styles.imgDecorWrap}>
               <div className={styles.verticalBar} />
               <Img
-                url="/Images/mount2.jpg"
+                url="/Images/mountingstructure.jpg"
                 alt="Solar Module Mounting Structure"
                 height={340}
               />
@@ -340,7 +338,11 @@ const SolarMountingStructure = () => {
           {/* RIGHT · image with vertical bar */}
           <div className={styles.imgDecorWrap}>
             <div className={styles.verticalBar} />
-            <Img url="" alt="Types of Mounting Systems" height={380} />
+            <Img
+              url="/Images/typesmounting.jpg"
+              alt="Types of Mounting Systems"
+              height={380}
+            />
           </div>
         </div>
       </section>
@@ -357,7 +359,11 @@ const SolarMountingStructure = () => {
             <div className={styles.divider} />
             <div className={styles.imgDecorWrap}>
               <div className={styles.verticalBar} />
-              <Img url="" alt="Why Choose Solar EPC Services" height={340} />
+              <Img
+                url="/Images/epc.jpg"
+                alt="Why Choose Solar EPC Services"
+                height={340}
+              />
             </div>
           </div>
 
@@ -396,7 +402,7 @@ const SolarMountingStructure = () => {
           <div className={styles.faqContent}>
             {/* LEFT · tag + heading + divider + accordion */}
             <div>
-              <span className={styles.faqTag}>• FQS</span>
+              <span className={styles.faqTag}>• FAQS</span>
               <h2 className={styles.secTitle} style={{ marginTop: "10px" }}>
                 Frequently Asked <br />
                 <span className={styles.accentText}>Questions</span>
@@ -447,11 +453,11 @@ const SolarMountingStructure = () => {
                 all installations.
               </p>
               <div className={styles.faqImgOuter}>
-                {img.faqImage ? (
-                  <img src="" alt="FAQ" className={styles.faqImg} />
-                ) : (
-                  <Placeholder height={420} />
-                )}
+                <img
+                  src="/Images/freqmount.jpg"
+                  alt="FAQ"
+                  className={styles.faqImg}
+                />
               </div>
             </div>
           </div>
@@ -462,9 +468,8 @@ const SolarMountingStructure = () => {
       <section
         className={styles.ctaBanner}
         style={{
-          backgroundImage: img.ctaBg
-            ? `linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(''}')`
-            : "linear-gradient(135deg, #10192e 0%, #1e3a63 100%)",
+          backgroundImage:
+            'linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("/Images/mountcat.jpg")',
         }}
       >
         <div className={styles.ctaInner}>
