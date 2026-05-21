@@ -8,26 +8,33 @@ const SolarEPC = () => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const engineeringCards = [
-    { title: "Site Survey & Assessment", desc: "Comprehensive site analysis including shadow mapping, load assessment and orientation study.", img: "/Images/solar1.jpg" },
-    { title: "Structural Design", desc: "Engineering of mounting structures and civil foundations for optimal load distribution.", img: "/Images/solar2.jpg" },
-    { title: "Electrical System Design", desc: "Complete AC/DC electrical layout, inverter selection, cable sizing, and protection systems.", img: "/Images/solar3.jpg" },
-    { title: "Grid Connectivity", desc: "Complete grid integration design including synchronization, metering and protection relays.", img: "/Images/solar4.jpg" },
+    {
+      title: "Site Survey & Feasibility Analysis",
+      desc: "A neatly designed sleeping area that ensures comfort and privacy within a space-efficient layout suitable for essential living needs.",
+      img: "",
+    },
+    {
+      title: "Electrical System Design",
+      desc: "Designing DC and AC systems including string layouts, inverter placement, cable routing, and grid interconnection planning for maximum efficiency.",
+      img: "",
+    },
+    {
+      title: "Structural Engineering Design",
+      desc: "Creating strong mounting structures based on wind load, soil type, and terrain conditions to ensure durability and safety for long-term performance.",
+      img: "",
+    },
+    {
+      title: "Technology Selection & Optimization",
+      desc: "Selecting advanced technologies like N-type TOPCon modules, bifacial panels, and solar trackers to increase energy output and improve plant performance.",
+      img: "",
+    },
   ];
 
   const procurementItems = [
-    "High-efficiency mono/poly crystalline solar modules",
-    "String & central inverters from certified global brands",
-    "MS / GI / aluminium mounting structures",
-    "DC & AC cables, connectors, and protection devices",
-    "Grid meters, SCADA systems, and monitoring hardware",
-  ];
-
-  const finalTestingItems = [
-    "String-level IV curve testing and thermography",
-    "Insulation resistance and continuity tests",
-    "Inverter commissioning and ramp-up testing",
-    "Grid synchronization and export meter verification",
-    "Performance Ratio (PR) measurement and report",
+    "Procurement of modules, inverters, transformers, cables",
+    "Vendor selection and technical evaluation",
+    "Factory inspections and quality checks",
+    "Compliance verification with project specifications",
   ];
 
   const faqs = [
@@ -41,133 +48,199 @@ const SolarEPC = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/solarepc.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+
+      {/* ── HERO SECTION ── */}
+      <section
+        className={styles.heroSec}
+        style={{
+          backgroundImage: `url("/Images/solarepc.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>SOLAR EPC <br /><span>WORK SOLUTIONS</span></h1>
-          <p className={styles.subtitle}>Complete Engineering, Procurement, and Construction services for solar power plants — from site survey and design to commissioning and monitoring.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <h1 className={styles.mainTitle}>
+            SOLAR EPC <br />
+            WORK SOLUTIONS
+          </h1>
+          <p className={styles.subtitle}>
+            L&amp;R Green Pvt Ltd offers complete Solar EPC services, managing design, procurement,
+            construction, and commissioning for efficient, hassle-free solar project delivery under one roof.
+          </p>
+          <button className={styles.btnPrimary}>
+            Conatct us &nbsp;
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
         </div>
       </section>
 
+      {/* ── SECTION 2: WHAT IS SOLAR EPC WORK? ── */}
       <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>What is Solar <br /><span>EPC work?</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>Solar EPC (Engineering, Procurement, and Construction) is a complete turnkey solution where a single contractor manages all phases of a solar power project — from initial engineering to final commissioning.</p>
-            <p>L&amp;R Green India Pvt Ltd delivers end-to-end Solar EPC services for rooftop, ground-mounted, and utility-scale solar installations. We combine proven engineering expertise with high-quality components and rigorous quality assurance to deliver plants that perform at peak efficiency throughout their 25+ year lifecycle.</p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>Get in touch &nbsp;→</button>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/solarepc1.jpg" alt="Solar EPC project" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/solarepc2.jpg" alt="Solar installation" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+        <div className={styles.containerMax}>
+          <h2 className={styles.secTitle}>
+            What is Solar <br />
+            <span className={styles.accentText}>EPC work?</span>
+          </h2>
+          <div className={styles.divider} />
+
+          <div className={styles.twoColRow}>
+            {/* LEFT: Text */}
+            <div className={styles.textCol}>
+              <p className={styles.highlightPara}>
+                Solar EPC stands for Engineering, Procurement, and Construction, which is a complete project execution model for solar power plants. In this system, a single company takes full responsibility for designing the system, sourcing all required equipment, managing on-site installation, and completing final testing and commissioning. This integrated approach ensures that the entire solar project is executed in a structured, efficient, and coordinated manner without involving multiple contractors.
+              </p>
+              <p className={styles.normalPara}>
+                With L&amp;R Green Pvt Ltd, the Solar EPC process becomes simple and seamless for project owners and investors. We manage every stage of the project—from initial planning and technical design to procurement of high-quality components and final grid connection. This eliminates coordination challenges, reduces project risks, and ensures smooth execution with reliable long-term performance of the solar plant.
+              </p>
+              <button className={styles.btnPill}>
+                Get Contact &nbsp;
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </button>
+            </div>
+
+            {/* RIGHT: Image with decor box */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageDecorWrap}>
+                <div className={styles.decorBox} />
+                <img
+                  src=""
+                  alt="Solar EPC Work"
+                  className={styles.decorImage}
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* ── SECTION 3: ENGINEERING & SYSTEM DESIGN ── */}
       <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
         <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Engineering &amp; <br /><span>System Design</span></h2>
-            <div className={styles.divider} />
+          <div className={styles.sectionHeaderRow}>
+            <div className={styles.headerLeft}>
+              <h2 className={styles.secTitle}>
+                Engineering &amp; <br />
+                <span className={styles.accentText}>System Design</span>
+              </h2>
+              <div className={styles.divider} />
+            </div>
+            <div className={styles.headerRight}>
+              <p className={styles.sectionDescText}>
+                Engineering is the foundation of a solar project. Our experts design optimized systems that maximize output and reduce losses.
+              </p>
+            </div>
           </div>
+
           <div className={styles.cardGrid}>
             {engineeringCards.map((card, idx) => (
               <div key={idx} className={styles.strengthCard}>
-                <div className={styles.cardImageWrap}><img className={styles.cardImage} src={card.img} alt={card.title} /></div>
-                <div className={styles.cardContent}><h3>{card.title}</h3><p>{card.desc}</p></div>
+                <div className={styles.cardImageWrap}>
+                  <img className={styles.cardImage} src={card.img} alt={card.title} />
+                </div>
+                <div className={styles.cardContent}>
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={styles.splitSec}>
-        <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/finaltesting1.jpg" alt="Final testing solar" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/finaltesting2.jpg" alt="Solar commissioning" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
-            </div>
-          </div>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Final Testing <br /><span>&amp; Commissioning</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>Every solar plant we commission undergoes rigorous multi-stage testing to verify performance, safety, and grid compliance before handover.</p>
-            <div className={styles.bulletList}>
-              {finalTestingItems.map((item, i) => (
-                <div key={i} className={styles.bulletItem}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
-                    <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span className={styles.bulletLabel}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* ── SECTION 4: FINAL TESTING & COMMISSIONING ── */}
       <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>SOLAR EPC</div>
-        <div className={styles.blueBannerContainer}>
+        <div className={styles.watermark}>SOLAR WORK EPC</div>
+        <div className={styles.blueBannerInner}>
           <div className={styles.blueBannerText}>
-            <h2>Procurement &amp; <br /><strong>Quality Assurance</strong></h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
-            <p>We source only certified, tier-1 components from approved global manufacturers. Every item goes through incoming inspection and quality verification before deployment on site.</p>
-            <div className={styles.bulletList} style={{ marginTop: "24px" }}>
-              {procurementItems.map((item, i) => (
-                <div key={i} className={styles.bulletItem}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                    <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.2)" />
-                    <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span style={{ color: "#e2e8f0", fontSize: "0.95rem" }}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img src="/Images/procurement.jpg" alt="Solar procurement" style={{ width: "100%", maxWidth: "480px", height: "auto", objectFit: "cover", borderRadius: "14px" }} />
+            <h2>
+              Final Testing <br />
+              <strong>&amp; Commissioning</strong>
+            </h2>
+            <div className={styles.dividerWhite} />
+            <p>
+              At L&amp;R Green Pvt Ltd, the final EPC stage ensures complete testing, validation,
+              and safety checks before commissioning. It includes string-level and inverter
+              testing, system inspections, and verification of performance and compliance.
+              All required approvals and clearances are secured, along with DISCOM
+              coordination for final synchronization, ensuring smooth and reliable plant
+              operation.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className={styles.splitSecAlt}>
-        <div className={styles.splitContainer}>
-          <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Why Choose Solar <br /><span>EPC Services</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>L&amp;R Green India Pvt Ltd delivers solar power plants that maximize energy generation, minimize downtime, and provide guaranteed performance over the plant's lifecycle.</p>
-            <p>Our experienced team of solar engineers, project managers, and certified electricians ensures every project is completed on time, on budget, and to the highest quality standards.</p>
-          </div>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/whysolar1.jpg" alt="Why choose solar EPC" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/whysolar2.jpg" alt="Solar energy benefits" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+      {/* ── SECTION 5: PROCUREMENT & QUALITY ASSURANCE ── */}
+      <section className={styles.splitSec}>
+        <div className={styles.containerMax}>
+          <h2 className={styles.secTitle}>
+            Procurement &amp; <br />
+            <span className={styles.accentText}>Quality Assurance</span>
+          </h2>
+          <div className={styles.divider} />
+
+          <div className={styles.twoColRow}>
+            {/* LEFT: Image with decor box */}
+            <div className={styles.imgCol}>
+              <div className={styles.imageDecorWrap}>
+                <div className={styles.decorBox} />
+                <img
+                  src=""
+                  alt="Procurement & Quality Assurance"
+                  className={styles.decorImage}
+                />
+              </div>
+            </div>
+
+            {/* RIGHT: Text + Bullets */}
+            <div className={styles.textCol}>
+              <p className={styles.normalPara}>
+                Our rooftop servant rooms are compact and comfortable units for staff
+                accommodation, ensuring privacy and proper living while efficiently using
+                rooftop space.
+              </p>
+              <div className={styles.bulletListSingle}>
+                {procurementItems.map((item, i) => (
+                  <div key={i} className={styles.bulletItem}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
+                      <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                      <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span className={styles.bulletLabel}>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* ── FAQ SECTION ── */}
       <section className={styles.faqSec}>
         <div className={styles.faqContainer}>
           <span className={styles.faqTag}>• FAQs</span>
           <div className={styles.faqHeaderRow}>
             <div className={styles.faqHeaderLeft}>
-              <h2 className={styles.secTitle}>Frequently Asked <br /><span>Questions</span></h2>
+              <h2 className={styles.secTitle}>
+                Frequently Asked <br />
+                <span className={styles.accentText}>Questions</span>
+              </h2>
               <div className={styles.divider} />
             </div>
-            <p className={styles.faqDesc}>Common questions about our Solar EPC services — project scope, timelines, and maintenance.</p>
+            <p className={styles.faqDesc}>
+              Common questions about our Solar EPC services — project scope, timelines, and maintenance.
+            </p>
           </div>
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter} style={{ width: "100%", height: "480px", overflow: "hidden", borderRadius: "12px" }}>
-              <img src="/Images/faqsolar.jpg" alt="FAQ solar EPC" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <div className={styles.faqImgOuter}>
+              <img src="" alt="FAQ solar EPC" className={styles.faqImg} />
             </div>
             <div className={styles.faqList}>
               {faqs.map((faq) => (
@@ -184,11 +257,21 @@ const SolarEPC = () => {
         </div>
       </section>
 
-      <section className={styles.ctaBanner} style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/Images/ctasolar.jpg')" }}>
+      {/* ── CTA BANNER ── */}
+      <section
+        className={styles.ctaBanner}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/Images/ctasolar.jpg')` }}
+      >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Solar EPC Work Solutions?</h2>
           <p>Connect with our team to design and deliver your complete solar power plant — from engineering to commissioning.</p>
-          <button className={styles.btnSecondary}>Contact US &nbsp;→</button>
+          <button className={styles.btnSecondary}>
+            Contact US &nbsp;
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
         </div>
       </section>
 
