@@ -4,188 +4,492 @@ import Footer from "../components/common/Footer";
 import styles from "../styles/SolarMountingStructure.module.css";
 
 const SolarMountingStructure = () => {
-  const [openFaq, setOpenFaq] = useState(0);
-  useEffect(() => { window.scrollTo(0, 0); }, []);
+  const [openFaq, setOpenFaq] = useState(1);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const components = [
-    { title: "Module Clamps & Rails", desc: "Precision-engineered mid and end clamps with C-section rails for secure panel mounting.", img: "/Images/mount1.jpg" },
-    { title: "Roof Hooks & Flashings", desc: "Weatherproof roof hooks and flashing kits for various roofing profiles — metal, RCC, and tiles.", img: "/Images/mount2.jpg" },
-    { title: "Pile Foundations", desc: "Ground-driven steel piles for ground-mounted systems eliminating the need for concrete footings.", img: "/Images/mount3.jpg" },
-    { title: "Adjustable Tilt Systems", desc: "Variable tilt angle structures for optimal solar irradiance capture across different latitudes.", img: "/Images/mount4.jpg" },
+    {
+      title: "Rails & Frames",
+      desc: "Provide the main structural base for secure panel alignment and stable system support.",
+      img: "/Images/mounttype1.jpg",
+    },
+    {
+      title: "Electrical System Design",
+      desc: "Hold solar panels firmly in place while maintaining proper spacing and positioning.",
+      img: "/Images/mounttype2.jpg",
+    },
+    {
+      title: "Fasteners & Screws",
+      desc: "Ensure strong, tight connections between all mounting parts for long-lasting stability.",
+      img: "/Images/mounttype3.jpg",
+    },
+    {
+      title: "Heavy-Duty Mounts",
+      desc: "Deliver strong anchoring support for durable and reliable solar structure performance.",
+      img: "/Images/mounttype.jpg",
+    },
   ];
 
-  const mountingTypes = [
-    { type: "Rooftop Systems", items: ["RCC flat roof mounting systems", "Metal sheet roof mounting systems", "Tile roof mounting systems", "Ballasted (non-penetrative) systems"] },
-    { type: "Ground-Mounted Systems", items: ["Fixed-tilt ground mount structures", "Single-axis solar tracking systems", "Dual-axis solar tracking systems", "Agrivoltaic / agri-solar structures"] },
-    { type: "Carport & Elevated", items: ["Solar carport structures for parking areas", "Elevated walkway canopy structures", "Water canal solar mounting systems", "Floating solar pontoon structures"] },
-  ];
-
-  const benefitsList = [
-    "Hot-dip galvanized / anodized for 25+ year corrosion resistance",
-    "Pre-drilled and pre-fabricated for rapid site assembly",
-    "Designed to withstand wind loads up to 170 km/h",
-    "Compatible with all major solar module brands and sizes",
-    "Custom engineering for seismic and snow load zones",
-    "Minimal land disturbance with pile foundation systems",
+  const typesList = [
+    "Rooftop Mounting Systems",
+    "Ground Mounting Systems",
+    "Pole Mount Structures",
+    "Solar Tracking Systems",
+    "Floating Solar Structures",
   ];
 
   const faqs = [
-    { id: 0, q: "What is a Solar Module Mounting Structure?", a: "A solar module mounting structure is the framework that holds solar panels at the correct angle and elevation to maximize energy output while withstanding environmental loads." },
-    { id: 1, q: "What materials are used in solar mounting structures?", a: "We use hot-dip galvanized steel, anodized aluminium, and stainless steel fasteners — all rated for 25+ years outdoor service life without significant corrosion." },
-    { id: 2, q: "They are relocatable mounting structures?", a: "Yes, most of our ground-mounted structures can be dismantled and relocated. Pile-based systems especially allow easy extraction and reinstallation at a new site." },
-    { id: 3, q: "What wind speed can your structures withstand?", a: "Our structures are engineered to withstand wind speeds up to 170 km/h by default, with options for higher wind zones available through custom structural engineering." },
-    { id: 4, q: "Do you provide installation of mounting structures?", a: "Yes, we provide complete supply and installation services. Our experienced installation teams ensure structures are erected accurately, safely, and on schedule." },
+    {
+      id: 0,
+      q: "What is a solar module mounting structure?",
+      a: "A solar module mounting structure is the engineered framework that holds solar panels securely at the optimum tilt angle and height to maximize energy generation.",
+    },
+    {
+      id: 1,
+      q: "Why are mounting structures important in solar systems?",
+      a: "They provide strength, safety, and correct tilt angle, which helps improve solar panel performance and system lifespan.",
+    },
+    {
+      id: 2,
+      q: "What materials are used in mounting structures?",
+      a: "We use hot-dip galvanized steel, anodized aluminum, and stainless steel fasteners to ensure 25+ years of corrosion-free performance.",
+    },
+    {
+      id: 3,
+      q: "Can mounting structures withstand harsh weather?",
+      a: "Yes, our structures are custom-designed to withstand extreme wind speeds up to 170 km/h, heavy snow loads, and seismic activities based on site locations.",
+    },
+    {
+      id: 4,
+      q: "Which type of mounting structure should I choose?",
+      a: "It depends on your installation space. We offer rooftop mounting systems for space-efficiency, ground-mounted systems for large open areas, and carport or floating structures for specialized needs.",
+    },
   ];
+
+  // Renders a real image or a styled placeholder
+  const Placeholder = ({ height = 340 }) => (
+    <div className={styles.imagePlaceholder} style={{ height }}>
+      <div className={styles.placeholderOverlay}>
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <circle cx="8.5" cy="8.5" r="1.5" />
+          <polyline points="21 15 16 10 5 21" />
+        </svg>
+        <span>Image Area</span>
+      </div>
+    </div>
+  );
+
+  const Img = ({ url, alt, height = 340 }) =>
+    url ? (
+      <img
+        src={url}
+        alt={alt}
+        className={styles.decorImage}
+        style={{ height }}
+      />
+    ) : (
+      <Placeholder height={height} />
+    );
+
+  const CardImg = ({ url, alt }) =>
+    url ? (
+      <img src={url} alt={alt} className={styles.cardImage} />
+    ) : (
+      <div className={styles.cardPlaceholder}>
+        <div className={styles.cardPlaceholderOverlay}>
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+        </div>
+      </div>
+    );
 
   return (
     <div className={styles.wrapper}>
       <Header />
-      <section className={styles.heroSec} style={{ backgroundImage: "url('/Images/solarmount.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+
+      {/* ════ SECTION 1 · HERO ════ */}
+      <section
+        className={styles.heroSec}
+        style={
+          img.heroBg ? { backgroundImage: `url("/Images/mounting1.jpg")` } : {}
+        }
+      >
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>L&amp;R Green India Pvt Ltd</span>
-          <h1 className={styles.mainTitle}>SOLAR MODULE <br /><span>MOUNTING STRUCTURE</span></h1>
-          <p className={styles.subtitle}>Precision-engineered solar panel mounting systems built for rooftop, ground-mounted, carport, and floating solar installations — designed for 25+ year structural integrity.</p>
-          <button className={styles.btnPrimary}>Contact us &nbsp;→</button>
+          <h1 className={styles.mainTitle}>
+            SOLAR MODULE <br />
+            <span>MOUNTING STRUCTURE</span>
+          </h1>
+          <p className={styles.subtitle}>
+            L&amp;R Green Pvt Ltd delivers advanced mounting solutions designed
+            for maximum efficiency, safety, and long-term performance.
+          </p>
+          <button className={styles.btnPrimary}>
+            Conatct us &nbsp;
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
         </div>
       </section>
 
+      {/* ════ SECTION 2 · WHAT IS A SOLAR MODULE MOUNTING STRUCTURE ════ */}
       <section className={styles.splitSec}>
         <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/solarmount1.jpg" alt="Solar mounting structure" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/solarmount2.jpg" alt="Ground mounted solar" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+          {/* LEFT · heading on top, image below */}
+          <div>
+            <h2 className={styles.secTitle}>
+              What is a Solar Module <br />
+              <span className={styles.accentText}>Mounting Structure</span>
+            </h2>
+            <div className={styles.divider} />
+            <div className={styles.imgDecorWrap}>
+              <div className={styles.verticalBar} />
+              <Img
+                url="/Images/mount2.jpg"
+                alt="Solar Module Mounting Structure"
+                height={340}
+              />
             </div>
           </div>
+
+          {/* RIGHT · paragraphs + button */}
           <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>What is a Solar Module <br /><span>Mounting Structure</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px", fontWeight: "600", color: "#334155" }}>A Solar Module Mounting Structure is the engineered framework that secures solar photovoltaic (PV) panels at the optimum tilt angle and elevation for maximum energy production.</p>
-            <p>L&amp;R Green India Pvt Ltd designs and manufactures high-quality solar mounting structures for every installation type — rooftop, ground-mounted, carport, floating, and canal-top — using hot-dip galvanized steel and anodized aluminium for exceptional durability in all climatic conditions.</p>
-            <button className={styles.btnPrimary} style={{ marginTop: "20px" }}>Get a Quote &nbsp;→</button>
+            <p className={styles.highlightPara} style={{ marginTop: "10px" }}>
+              A solar mounting structure is the essential support framework that
+              holds solar panels securely in place. It ensures proper tilt,
+              alignment, and stability so the panels can receive maximum
+              sunlight and generate efficient energy output. This structure also
+              protects the system from wind, weather, and other external
+              conditions, making the entire solar installation safe and
+              long-lasting.
+            </p>
+            <p className={styles.normalPara}>
+              At L&amp;R Green Pvt Ltd, we design strong and reliable solar
+              mounting structures for all types of installations including
+              rooftop, ground, and large-scale solar projects. Our solutions are
+              built with high-quality materials and smart engineering to ensure
+              durability, safety, and maximum performance in every project.
+            </p>
+            <button className={styles.btnPill}>
+              Get Contact &nbsp;
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
 
+      {/* ════ SECTION 3 · PRECISION ENGINEERED COMPONENTS ════ */}
       <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
         <div className={styles.containerMax}>
-          <div style={{ marginBottom: "50px" }}>
-            <h2 className={styles.secTitle}>Precision Engineered <br /><span>Solar Mounting Components</span></h2>
-            <div className={styles.divider} />
+          {/* Header row: title left, desc right */}
+          <div className={styles.sectionHeaderRow}>
+            <div className={styles.headerLeft}>
+              <h2 className={styles.secTitle}>
+                Precision Engineered <br />
+                <span className={styles.accentText}>
+                  Solar Mounting Components
+                </span>
+              </h2>
+              <div className={styles.divider} />
+            </div>
+            <div className={styles.headerRight}>
+              <p className={styles.sectionDescText}>
+                At L&amp;R Green Pvt Ltd, we provide high-quality solar mounting
+                components designed for strength, accuracy, and long-term
+                reliability in all installation conditions.
+              </p>
+            </div>
           </div>
+
+          {/* 4 cards */}
           <div className={styles.cardGrid}>
             {components.map((card, idx) => (
               <div key={idx} className={styles.strengthCard}>
-                <div className={styles.cardImageWrap}><img className={styles.cardImage} src={card.img} alt={card.title} /></div>
-                <div className={styles.cardContent}><h3>{card.title}</h3><p>{card.desc}</p></div>
+                <div className={styles.cardImageWrap}>
+                  <CardImg url={card.img} alt={card.title} />
+                </div>
+                <div className={styles.cardContent}>
+                  <h3>{card.title}</h3>
+                  <p>{card.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ════ SECTION 4 · BENEFITS & MATERIALS (dark navy banner) ════ */}
       <section className={styles.blueBannerSec}>
-        <div className={styles.watermark}>MOUNTING</div>
-        <div className={styles.blueBannerContainer}>
+        <div className={styles.watermark}>
+          L &amp; R MODULE MOUNTING STRUCTURE
+        </div>
+        <div className={styles.blueBannerInner}>
           <div className={styles.blueBannerText}>
-            <h2>Benefits &amp; Materials of <br /><strong>Solar Mounting Structures</strong></h2>
-            <div className={styles.divider} style={{ background: "#ffffff", marginBottom: "30px" }} />
-            <p>Our mounting structures combine superior materials with precision manufacturing to deliver solar support systems that are robust, corrosion-resistant, and designed to last the full lifecycle of your solar plant.</p>
-            <div className={styles.bulletList} style={{ marginTop: "24px" }}>
-              {benefitsList.map((item, i) => (
-                <div key={i} className={styles.bulletItem}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0 }}>
-                    <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.2)" />
-                    <path d="M8 12.5L10.5 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span style={{ color: "#e2e8f0", fontSize: "0.95rem" }}>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <img src="/Images/mountmaterial.jpg" alt="Solar mounting materials" style={{ width: "100%", maxWidth: "480px", height: "auto", objectFit: "cover", borderRadius: "14px" }} />
+            <h2>
+              Benefits &amp; Materials of <br />
+              <strong>Solar Mounting Structures</strong>
+            </h2>
+            <div
+              className={styles.dividerWhite}
+              style={{ margin: "15px 0 25px 0" }}
+            />
+            <p>
+              Solar mounting structures are designed for long-lasting
+              reliability, maximum energy output, and safe installation across
+              all solar projects. At L&amp;R Green Pvt Ltd, every system is
+              custom-designed for efficiency and durability using premium
+              materials like lightweight, corrosion-resistant aluminum for
+              rooftops and high-strength galvanized steel for large-scale
+              installations, ensuring a perfect balance of strength, safety, and
+              long-term performance.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* ════ SECTION 5 · TYPES OF SOLAR MODULE MOUNTING SYSTEMS ════ */}
       <section className={styles.splitSec}>
         <div className={styles.splitContainer}>
+          {/* LEFT · text + bullet list */}
           <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Types of Solar Module <br /><span>Mounting Systems</span></h2>
+            <h2 className={styles.secTitle}>
+              Types of Solar Module <br />
+              <span className={styles.accentText}>Mounting Systems</span>
+            </h2>
             <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>We manufacture and supply mounting structures for every solar application — from residential rooftops to utility-scale solar farms.</p>
-            <div className={styles.typesGrid}>
-              {mountingTypes.map((mt, i) => (
-                <div key={i} className={styles.typeCard}>
-                  <h4>{mt.type}</h4>
-                  <ul>
-                    {mt.items.map((item, j) => (
-                      <li key={j}><span className={styles.typeDot}>•</span>{item}</li>
-                    ))}
-                  </ul>
+            <p className={styles.normalPara} style={{ marginTop: "30px" }}>
+              Solar module mounting structures provide strong support,
+              stability, and proper alignment for maximum solar efficiency. At
+              L&amp;R Green Pvt Ltd, we offer durable solutions for all types of
+              solar projects.
+            </p>
+            <div className={styles.bulletListSingle}>
+              {typesList.map((item, i) => (
+                <div key={i} className={styles.bulletItem}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{ flexShrink: 0 }}
+                  >
+                    <circle cx="12" cy="12" r="10" fill="#233a5e" />
+                    <path
+                      d="M8 12.5L10.5 15L16 9"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className={styles.bulletLabel}>{item}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className={styles.imgCol} style={{ display: "flex", justifyContent: "center" }}>
-            <img src="/Images/mounttypes.jpg" alt="Types of solar mounting" style={{ width: "100%", maxWidth: "500px", height: "auto", objectFit: "cover", borderRadius: "14px" }} />
+
+          {/* RIGHT · image with vertical bar */}
+          <div className={styles.imgDecorWrap}>
+            <div className={styles.verticalBar} />
+            <Img url="" alt="Types of Mounting Systems" height={380} />
           </div>
         </div>
       </section>
 
-      <section className={styles.splitSecAlt}>
+      {/* ════ SECTION 6 · WHY CHOOSE SOLAR EPC SERVICES ════ */}
+      <section className={styles.splitSec} style={{ background: "#f8fafc" }}>
         <div className={styles.splitContainer}>
-          <div className={styles.imgCol}>
-            <div className={styles.multiImgWrap}>
-              <div className={styles.mainImg}><img src="/Images/whymount1.jpg" alt="Why choose L&R solar mounting" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "14px" }} /></div>
-              <div className={styles.smallImg}><img src="/Images/whymount2.jpg" alt="Solar mounting installed" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} /></div>
+          {/* LEFT · heading on top, image below */}
+          <div>
+            <h2 className={styles.secTitle}>
+              Why Choose Solar <br />
+              <span className={styles.accentText}>EPC Services</span>
+            </h2>
+            <div className={styles.divider} />
+            <div className={styles.imgDecorWrap}>
+              <div className={styles.verticalBar} />
+              <Img url="" alt="Why Choose Solar EPC Services" height={340} />
             </div>
           </div>
+
+          {/* RIGHT · paragraphs */}
           <div className={styles.textCol}>
-            <h2 className={styles.secTitle}>Why Choose Solar <br /><span>EPC Services</span></h2>
-            <div className={styles.divider} />
-            <p style={{ marginTop: "30px" }}>L&amp;R Green India Pvt Ltd brings deep engineering expertise and in-house manufacturing capabilities to deliver solar mounting structures that are precision-built, cost-effective, and backed by end-to-end service.</p>
-            <p>From small rooftop systems to multi-megawatt ground-mounted farms, we design and supply structures that maximize energy yield and structural reliability across the plant's 25+ year lifespan.</p>
+            <p
+              className={styles.highlightPara}
+              style={{ marginTop: "10px", fontWeight: "400" }}
+            >
+              Solar module mounting structures are essential for ensuring the
+              safety, stability, and efficiency of any solar power system. They
+              provide a strong foundation that keeps panels securely fixed and
+              properly aligned for maximum energy generation. At L&amp;R Green
+              Pvt Ltd, we design advanced mounting systems that enhance
+              performance, durability, and long-term reliability while ensuring
+              proper tilt and orientation for maximum sunlight capture
+              throughout the day.
+            </p>
+            <p className={styles.normalPara}>
+              These structures are built to withstand harsh weather conditions
+              like strong winds, heavy rain, and extreme heat, ensuring
+              uninterrupted performance for years. Made using high-quality
+              materials such as aluminum and galvanized steel, they offer
+              excellent corrosion resistance and low maintenance requirements.
+              Choosing the right mounting structure ensures better energy
+              output, longer system life, and safe installation for residential,
+              commercial, and industrial solar projects.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* ════ SECTION 7 · FAQ ════ */}
       <section className={styles.faqSec}>
         <div className={styles.faqContainer}>
-          <span className={styles.faqTag}>• FAQs</span>
-          <div className={styles.faqHeaderRow}>
-            <div className={styles.faqHeaderLeft}>
-              <h2 className={styles.secTitle}>Frequently Asked <br /><span>Questions</span></h2>
-              <div className={styles.divider} />
-            </div>
-            <p className={styles.faqDesc}>Common questions about our solar module mounting structures — materials, wind rating, and installation.</p>
-          </div>
           <div className={styles.faqContent}>
-            <div className={styles.faqImgOuter} style={{ width: "100%", height: "480px", overflow: "hidden", borderRadius: "12px" }}>
-              <img src="/Images/faqmount.jpg" alt="FAQ solar mounting" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div key={faq.id} className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}>
-                  <div className={styles.faqHeader} onClick={() => setOpenFaq(faq.id === openFaq ? -1 : faq.id)}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>{openFaq === faq.id ? "↓" : "↑"}</span>
+            {/* LEFT · tag + heading + divider + accordion */}
+            <div>
+              <span className={styles.faqTag}>• FQS</span>
+              <h2 className={styles.secTitle} style={{ marginTop: "10px" }}>
+                Frequently Asked <br />
+                <span className={styles.accentText}>Questions</span>
+              </h2>
+              <div className={styles.divider} />
+
+              <div className={styles.faqList} style={{ marginTop: "40px" }}>
+                {faqs.map((faq) => (
+                  <div
+                    key={faq.id}
+                    className={`${styles.faqItem} ${openFaq === faq.id ? styles.faqItemActive : ""}`}
+                  >
+                    <div
+                      className={styles.faqHeader}
+                      onClick={() =>
+                        setOpenFaq(faq.id === openFaq ? -1 : faq.id)
+                      }
+                    >
+                      <span>{faq.q}</span>
+                      <span className={styles.faqArrow}>
+                        {openFaq === faq.id ? "↓" : "↑"}
+                      </span>
+                    </div>
+                    {openFaq === faq.id && (
+                      <div className={styles.faqBody}>
+                        <p>{faq.a}</p>
+                      </div>
+                    )}
                   </div>
-                  {openFaq === faq.id && <div className={styles.faqBody}><p>{faq.a}</p></div>}
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT · description + image */}
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "24px" }}
+            >
+              <p
+                style={{
+                  fontSize: "0.95rem",
+                  lineHeight: "1.8",
+                  color: "#64748b",
+                }}
+              >
+                Solar module mounting structures ensure strong support, safety,
+                and efficient solar energy generation. At L&amp;R Green Pvt Ltd,
+                we provide durable and weather-resistant mounting solutions for
+                all installations.
+              </p>
+              <div className={styles.faqImgOuter}>
+                {img.faqImage ? (
+                  <img src="" alt="FAQ" className={styles.faqImg} />
+                ) : (
+                  <Placeholder height={420} />
+                )}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className={styles.ctaBanner} style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/Images/ctamount.jpg')" }}>
+      {/* ════ SECTION 8 · CTA BANNER ════ */}
+      <section
+        className={styles.ctaBanner}
+        style={{
+          backgroundImage: img.ctaBg
+            ? `linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(''}')`
+            : "linear-gradient(135deg, #10192e 0%, #1e3a63 100%)",
+        }}
+      >
         <div className={styles.ctaInner}>
           <h2>Ready for Your Module mounting structure?</h2>
-          <p>Connect with our team to design and supply precision-engineered solar module mounting structures for your project.</p>
-          <button className={styles.btnSecondary}>Contact US &nbsp;→</button>
+          <p>
+            Connect with our team to design and deliver durable, efficient, and
+            fully customized insulated Solar Module mounting structure solutions
+            tailored to your site needs.
+          </p>
+          <button className={styles.btnSecondary}>
+            Contact US &nbsp;
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
         </div>
       </section>
 

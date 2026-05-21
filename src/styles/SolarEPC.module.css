@@ -1,6 +1,3 @@
-/* ===========================
-   BASE
-=========================== */
 .wrapper {
   font-family: 'Outfit', sans-serif;
   color: #1e293b;
@@ -16,7 +13,16 @@
 .divider {
   width: 60px;
   height: 4px;
-  background: #233a5e;
+  background: #3164a6;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+
+.dividerWhite {
+  width: 60px;
+  height: 4px;
+  background: #ffffff;
   margin-top: 15px;
   margin-bottom: 25px;
   border-radius: 2px;
@@ -25,6 +31,7 @@
 /* ===========================
    HERO SECTION
 =========================== */
+
 .heroSec {
   position: relative;
   min-height: 85vh;
@@ -38,9 +45,11 @@
 
 .heroOverlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(15, 23, 42, 0.65);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 18, 35, 0.7);
   z-index: 1;
 }
 
@@ -56,6 +65,9 @@
   letter-spacing: 0.15em;
   font-weight: 700;
   color: #f1f5f9;
+  padding: 6px 16px;
+  margin-left: -2%;
+  border-radius: 20px;
   display: inline-block;
   margin-bottom: 24px;
 }
@@ -69,20 +81,23 @@
   text-transform: uppercase;
 }
 
+.mainTitle span {
+  color: #60a5fa;
+}
+
 .subtitle {
   font-size: 1.15rem;
   line-height: 1.7;
   color: #e2e8f0;
   margin-bottom: 38px;
   font-weight: 300;
-  max-width: 600px;
 }
 
 .btnPrimary {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #233a5e;
+  background: #3164a6;
   color: #fff;
   border: none;
   padding: 15px 36px;
@@ -91,21 +106,37 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(35, 58, 94, 0.4);
 }
 
 .btnPrimary:hover {
-  background: #192b47;
+  background: #254d82;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(35, 58, 94, 0.5);
 }
 
 /* ===========================
-   SPLIT SECTION
+   SPLIT SECTION & GRIDS
 =========================== */
+
 .splitSec {
   padding: 100px 8%;
   background: #ffffff;
+}
+
+.splitContainer {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.twoColRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .secTitle {
@@ -117,29 +148,20 @@
 }
 
 .accentText {
-  color: #233a5e;
+  color: #3164a6;
   font-weight: 800;
 }
 
-.twoColRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
-  margin-top: 40px;
-}
-
 .textCol {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .highlightPara {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #475569;
-  font-weight: 400;
-  margin-bottom: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
 
 .normalPara {
@@ -162,7 +184,6 @@
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: flex-start;
 }
 
 .btnPill:hover {
@@ -171,8 +192,9 @@
 }
 
 /* ===========================
-   IMAGE DECOR (OFFSET EFFECT)
+   IMAGE DECOR ACCENT BOX (OFFSET TOP-LEFT)
 =========================== */
+
 .imgCol {
   position: relative;
   display: flex;
@@ -185,14 +207,14 @@
   position: relative;
   width: 100%;
   max-width: 500px;
-  padding-bottom: 24px;
-  padding-right: 24px;
+  padding-top: 24px;
+  padding-left: 24px;
 }
 
 .decorBox {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
   width: 90%;
   height: 60%;
   background: #233a5e;
@@ -214,8 +236,9 @@
 }
 
 /* ===========================
-   ENGINEERING SECTION HEADER ROW
+   SECTION HEADERS FOR GRIDS
 =========================== */
+
 .sectionHeaderRow {
   display: flex;
   justify-content: space-between;
@@ -241,35 +264,34 @@
 }
 
 /* ===========================
-   CARD GRID (4 CARDS)
+   ENGINEERING CARD GRID (SECTION 3)
 =========================== */
+
 .cardGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .strengthCard {
-  background: #233a5e;
+  background: #1e3a63;
   border-radius: 14px;
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .strengthCard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .cardImageWrap {
   width: 100%;
   height: 180px;
   overflow: hidden;
-  background: #e2e8f0;
 }
 
 .cardImage {
@@ -286,32 +308,30 @@
 .cardContent {
   padding: 24px;
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .cardContent h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 12px;
   line-height: 1.4;
-  margin-top: 0;
 }
 
 .cardContent p {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   line-height: 1.6;
   color: #cbd5e1;
   margin: 0;
 }
 
 /* ===========================
-   DARK BLUE BANNER — FINAL TESTING
+   DARK BLUE BANNER (SECTION 4)
 =========================== */
+
 .blueBannerSec {
-  background: #233a5e;
-  padding: 100px 8%;
+  background: #1e3a63;
+  padding: 100px 8% 120px 8%;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -319,12 +339,12 @@
 
 .watermark {
   position: absolute;
-  left: 50%;
+  right: 5%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 6.5rem;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.04);
+  transform: translateY(-50%);
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.025);
   white-space: nowrap;
   pointer-events: none;
   letter-spacing: 0.15em;
@@ -333,45 +353,32 @@
 }
 
 .blueBannerInner {
-  max-width: 1320px;
-  margin: 0 auto;
+  max-width: 800px;
   position: relative;
   z-index: 2;
-  max-width: 700px;
 }
 
 .blueBannerText h2 {
   font-size: 2.8rem;
   line-height: 1.2;
-  margin-bottom: 0;
+  margin-bottom: 22px;
   font-weight: 300;
-  color: #ffffff;
-  margin-top: 0;
 }
 
-.blueBannerText strong {
+.blueBannerText h2 strong {
   font-weight: 800;
-}
-
-.dividerWhite {
-  width: 60px;
-  height: 4px;
-  background: #ffffff;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  border-radius: 2px;
 }
 
 .blueBannerText p {
   color: #e2e8f0;
   line-height: 1.8;
   font-size: 1rem;
-  margin: 0;
 }
 
 /* ===========================
-   BULLET LIST (SINGLE COLUMN)
+   BULLET LISTS
 =========================== */
+
 .bulletListSingle {
   display: flex;
   flex-direction: column;
@@ -386,14 +393,15 @@
 }
 
 .bulletLabel {
-  font-size: 0.98rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: #1e293b;
 }
 
 /* ===========================
    FAQ SECTION
 =========================== */
+
 .faqSec {
   padding: 110px 8%;
   background: #ffffff;
@@ -428,20 +436,19 @@
 }
 
 .faqHeaderLeft {
-  flex: 1.2;
+  flex: 1;
 }
 
 .faqDesc {
-  flex: 0.8;
   max-width: 480px;
   color: #64748b;
   line-height: 1.8;
-  margin: 0;
+  font-size: 15px;
 }
 
 .faqContent {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1.1fr 1.3fr;
   gap: 60px;
   align-items: start;
 }
@@ -449,16 +456,15 @@
 .faqImgOuter {
   width: 100%;
   height: 480px;
+  border-radius: 20px;
   overflow: hidden;
-  border-radius: 12px;
-  background: #e2e8f0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .faqImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .faqList {
@@ -478,7 +484,6 @@
 .faqItemActive {
   background: #233a5e;
   border-color: #233a5e;
-  box-shadow: 0 10px 30px rgba(35, 58, 94, 0.12);
 }
 
 .faqHeader {
@@ -489,8 +494,7 @@
   cursor: pointer;
   font-weight: 600;
   color: #1e293b;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  font-size: 1.05rem;
 }
 
 .faqItemActive .faqHeader {
@@ -512,7 +516,6 @@
   font-size: 1.15rem;
   color: #233a5e;
   font-weight: 700;
-  transition: all 0.3s ease;
 }
 
 .faqItemActive .faqArrow {
@@ -522,29 +525,30 @@
 /* ===========================
    CTA BANNER
 =========================== */
+
 .ctaBanner {
   position: relative;
   background-size: cover;
   background-position: center;
-  background-color: #0f172a;
-  padding: 80px 8%;
+  padding: 20px 8%;
+
   text-align: center;
   color: #fff;
+  z-index: 2;
 }
 
 .ctaInner {
   max-width: 850px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
 
 .ctaInner h2 {
+  width: 100vw;
+  margin-left: -22vw;
   font-size: 3rem;
   line-height: 1.15;
   margin-bottom: 24px;
   font-weight: 300;
-  margin-top: 0;
 }
 
 .ctaInner p {
@@ -558,7 +562,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #233a5e;
+  background: #3164a6;
   color: #fff;
   border: none;
   padding: 15px 36px;
@@ -570,28 +574,25 @@
 }
 
 .btnSecondary:hover {
-  background: #192b47;
+  background: #254d82;
   transform: translateY(-2px);
 }
 
 /* ===========================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 =========================== */
+
 @media (max-width: 1024px) {
+
+  .splitContainer,
   .twoColRow,
   .faqContent {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 50px;
   }
 
   .cardGrid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sectionHeaderRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
   }
 
   .mainTitle {
@@ -621,14 +622,13 @@
     font-size: 2rem;
   }
 
+  .blueBannerSec,
   .splitSec,
-  .faqSec,
-  .blueBannerSec {
+  .faqSec {
     padding: 70px 5%;
   }
 
-  .faqHeaderRow {
-    flex-direction: column;
-    align-items: flex-start;
+  .faqImgOuter {
+    height: 320px;
   }
 }
