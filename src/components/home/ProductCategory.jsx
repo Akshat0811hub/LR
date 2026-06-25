@@ -6,18 +6,22 @@ const ProductCategory = () => {
     {
       title: "Pre-Engineered Buildings",
       img: "/Images/catlux.jpg",
+      desc: "Pre-Engineered Buildings are durable, flexible, and cost-efficient steel structures built for faster construction.",
     },
     {
       title: "Solar Structure",
       img: "/Images/mountcat.jpg",
+      desc: "",
     },
     {
       title: "MS Container",
       img: "/Images/cat.jpg",
+      desc: "Compact, secure storage and office solutions. Manufactured with Mild Steel for uncompromising security in the field.",
     },
     {
       title: "HVAC",
       img: "",
+      desc: "HVAC systems ensure comfortable environments. At L&R Green Pvt Ltd, we provide solutions for efficient performance.",
     },
   ];
 
@@ -25,13 +29,21 @@ const ProductCategory = () => {
     <section className={styles["products-section"]}>
       <div className={styles["section-head"]}>
         <div>
+          <span className={styles.tag}>• Our Products</span>
           <h2>
             Industrial Precision & <br />
             <span>Modular Innovation</span>
           </h2>
         </div>
 
-        <button className={styles["view-btn"]}>View All →</button>
+        <div className={styles["right-head"]}>
+          <p className={styles["head-desc"]}>
+            10 Years of Quality Products. Leading manufacturer of prefabricated structures in New Delhi.
+          </p>
+          <button className={styles["view-btn"]}>
+            View All <span className={styles["arrow-circle"]}>&gt;</span>
+          </button>
+        </div>
       </div>
 
       <div className={styles["product-grid"]}>
@@ -69,11 +81,11 @@ const ProductCategory = () => {
                 </div>
               )}
 
-              <div className={styles["desc-overlay"]}>
-                <p className={styles["product-desc"]}>
-                  High-quality engineered prefab structures for modern industry.
-                </p>
-              </div>
+              {item.desc && (
+                <div className={styles["desc-overlay"]}>
+                  <p className={styles["product-desc"]}>{item.desc}</p>
+                </div>
+              )}
             </div>
 
             <div className={styles.arrow}>→</div>

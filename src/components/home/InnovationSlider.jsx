@@ -1,87 +1,101 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../../styles/Slider.module.css";
 
 const slides = [
   {
-    title: "Pre-Engineered Buildings",
-    text: "Durable, fast-installation structures for industrial projects.",
+    label: "Multi Storey Building",
+    title: "Multi Storey Building",
+    desc: "Multi-storey pre-engineered buildings are designed for maximum vertical utilization. Our steel-frame systems provide robust, scalable solutions for commercial complexes, residential towers, and industrial facilities requiring multiple levels with open floor plans.",
     img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80",
   },
   {
-    title: "MS Containers",
-    text: "Portable and heavy-duty container solutions for offices and sites.",
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80",
+    label: "Pre-Engineered Building",
+    title: "Pre-Engineered Building",
+    desc: "Optimized steel structures are engineered to deliver superior strength, speed, and efficiency in modern construction. Designed for rapid assembly, these systems reduce build time while maintaining high precision and quality. Their clear-span capability maximizes usable space by eliminating unnecessary supports, allowing for flexible and open layouts.",
+    img: "/Images/catlux.jpg",
   },
   {
-    title: "Solar Structures",
-    text: "Reliable solar mounting and industrial energy support systems.",
-    img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=80",
+    label: "Metro Station",
+    title: "Metro Station",
+    desc: "Our pre-engineered structures are ideal for large-scale transit infrastructure. Engineered for high foot traffic, long spans, and seismic resilience, our metro station structures deliver both functional efficiency and architectural elegance for modern urban transport hubs.",
+    img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    label: "MS Container",
+    title: "MS Container",
+    desc: "Compact, secure, and versatile — our mild steel containers are manufactured for site offices, storage units, and portable workspaces. Built with heavy-gauge MS sheets and precision welding, they offer durability, weatherproofing, and rapid deployment for any project site.",
+    img: "/Images/cat.jpg",
+  },
+  {
+    label: "Solar Structure",
+    title: "Solar Mounting Structure",
+    desc: "Engineered for longevity and optimal angle precision, our solar mounting structures support rooftop and ground-mounted PV installations. Fabricated from hot-dip galvanized steel, they resist corrosion and withstand high wind loads across diverse climatic conditions.",
+    img: "/Images/mountcat.jpg",
   },
 ];
 
 const InnovationSlider = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1); // start at index 1 so index 0 is left and 2 is right
 
-  const nextSlide = () => {
-    setActive((prev) => (prev + 1) % slides.length);
-  };
+  const prevSlide = () => setActive((p) => (p - 1 + slides.length) % slides.length);
+  const nextSlide = () => setActive((p) => (p + 1) % slides.length);
 
-  const prevSlide = () => {
-    setActive((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % slides.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, []);
+  const leftSlide  = slides[(active - 1 + slides.length) % slides.length];
+  const centerSlide = slides[active];
+  const rightSlide = slides[(active + 1) % slides.length];
 
   return (
     <section className={styles["innovation-section"]}>
+      {/* Header */}
       <div className={styles["section-head"]}>
-        <div>
-          <span className={styles.tag}>• Innovation</span>
+        <div className={styles["head-left"]}>
+          <span className={styles.tag}>• Why Choose us</span>
           <h2>
-            Powering Innovation In <span>Every Structure</span>
+            Powering Sustainable<br />
+            <span>Innovation</span>
           </h2>
+          <div className={styles.divider} />
         </div>
-
-        <div className={styles["slider-controls"]}>
-          <button type="button" onClick={prevSlide}>←</button>
-          <button type="button" onClick={nextSlide}>→</button>
-        </div>
+        <p className={styles["head-desc"]}>
+          Engineering the next generation of structural systems
+          with a focus on longevity, efficiency, and industrial
+          precision.
+        </p>
       </div>
 
+      {/* 3-Card Layout */}
       <div className={styles["slider-wrap"]}>
-        {slides.map((slide, index) => (
-          <div
-            className={`${styles["innovation-card"]} ${
-              index === active ? styles["active-slide"] : ""
-            }`}
-            key={slide.title}
-          >
-            <img src={slide.img} alt={slide.title} />
-            <div className={styles["innovation-content"]}>
-              <h3>{slide.title}</h3>
-              <p>{slide.text}</p>
-              <button type="button">View Details →</button>
-            </div>
+        {/* Left image card */}
+        <div className={styles["img-card"]}>
+          <img src={leftSlide.img} alt={leftSlide.label} />
+          <div className={styles["img-label"]}>
+            <div className={styles["label-bar"]} />
+            <span>{leftSlide.label}</span>
           </div>
-        ))}
+        </div>
+
+        {/* Center featured navy card */}
+        <div className={styles["featured-card"]}>
+          <div className={styles["feat-bar"]} />
+          <h3>{centerSlide.title}</h3>
+          <p>{centerSlide.desc}</p>
+          <button className={styles["read-more"]}>Read More &nbsp;→</button>
+        </div>
+
+        {/* Right image card */}
+        <div className={styles["img-card"]}>
+          <img src={rightSlide.img} alt={rightSlide.label} />
+          <div className={styles["img-label"]}>
+            <div className={styles["label-bar"]} />
+            <span>{rightSlide.label}</span>
+          </div>
+        </div>
       </div>
 
-      <div className={styles["slider-dots"]}>
-        {slides.map((slide, index) => (
-          <span
-            key={slide.title}
-            onClick={() => setActive(index)}
-            className={`${styles.dot} ${
-              index === active ? styles["active-dot"] : ""
-            }`}
-          ></span>
-        ))}
+      {/* Navigation arrows bottom right */}
+      <div className={styles["slider-controls"]}>
+        <button type="button" onClick={prevSlide} aria-label="Previous">&#8592;</button>
+        <button type="button" onClick={nextSlide} aria-label="Next">&#8594;</button>
       </div>
     </section>
   );

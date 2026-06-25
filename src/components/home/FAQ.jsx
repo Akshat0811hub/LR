@@ -4,24 +4,28 @@ import styles from "../../styles/FAQ.module.css";
 const FAQ = () => {
   const faqs = [
     {
-      q: "What types of prefab structures do you manufacture?",
-      a: "We manufacture PEB buildings, site offices, labour hutments, MS containers, modular offices and solar support structures.",
+      q: "What are Pre-Engineered Buildings (PEB)?",
+      a: "Pre-Engineered Buildings (PEB) are steel structures designed and fabricated at the factory, then shipped and assembled on-site. They offer superior speed, durability, and cost-effectiveness compared to traditional construction.",
     },
     {
-      q: "Do you provide customized size and design?",
-      a: "Yes, every project can be customized according to client requirements, site conditions and usage needs.",
+      q: "What is Light Gauge Steel Framing (LGSF)?",
+      a: "Light Gauge Steel Framing is a sustainable, earthquake-resistant construction method for modern infra, utilizing cold-formed steel profiles to build lightweight yet incredibly strong structures.",
     },
     {
-      q: "Do you provide installation support?",
-      a: "Yes, we provide fabrication, delivery and installation support depending on the project scope.",
+      q: "What container sizes are available?",
+      a: "We provide containers in standard 20ft and 40ft sizes, as well as customized dimensions designed and manufactured to meet specific site office, storage, or accommodation requirements.",
     },
     {
-      q: "Where is your company located?",
-      a: "We are based in New Delhi and serve industrial, commercial and infrastructure clients.",
+      q: "Do you provide installation in New Delhi?",
+      a: "Yes, we provide end-to-end installation, shipping, and fabrication support throughout New Delhi, the NCR region, and across major industrial zones in India.",
+    },
+    {
+      q: "Does L&R Green India provide solutions for solar projects?",
+      a: "Yes, we design and manufacture high-performance solar mounting structures, fasteners, and specialized components for residential, commercial, and utility-scale solar installations.",
     },
   ];
 
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(1); // Second item open by default like in screenshot
 
   return (
     <section className={styles["faq-section"]}>
@@ -55,8 +59,8 @@ const FAQ = () => {
 
       <div className={styles["faq-right"]}>
         <img
-          src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=900&q=80"
-          alt="industrial work"
+          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+          alt="industrial steel building construction"
         />
       </div>
     </section>
