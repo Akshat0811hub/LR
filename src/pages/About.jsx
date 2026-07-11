@@ -1,7 +1,7 @@
 import styles from "../styles/AboutPage.module.css";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
-
+import { Building2, Package, Factory, House } from "lucide-react";
 import workImg from "../assets/aboutus-work.jpeg";
 import processBg from "../assets/process-bg.jpeg";
 
@@ -38,26 +38,26 @@ const About = () => {
       step: "STEP 01",
       title: "Requirement Analysis",
       text: "We begin by understanding your project needs, space requirements, and specifications to provide the most suitable prefabricated solution.",
-      icon: "▤",
+      icon: <Building2 size={28} strokeWidth={1.8} />,
     },
     {
       step: "STEP 02",
       title: "Design & Planning",
       text: "Our team creates detailed designs and structural plans using modern techniques to ensure accuracy, efficiency, and durability.",
-      icon: "⬡",
+      icon: <Package size={28} strokeWidth={1.8} />,
       active: true,
     },
     {
       step: "STEP 03",
       title: "Manufacturing",
       text: "Using high-quality materials and advanced fabrication methods, we manufacture structures and containers with precision and strict quality control.",
-      icon: "⌁",
+      icon: <Factory size={28} strokeWidth={1.8} />,
     },
     {
       step: "STEP 04",
       title: "Delivery & Installation",
       text: "We ensure timely delivery and provide smooth on-site installation, making the entire process quick, hassle-free, and reliable.",
-      icon: "⌂",
+      icon: <House size={28} strokeWidth={1.8} />,
     },
   ];
 
@@ -142,16 +142,26 @@ const About = () => {
             </h2>
             <p>
               L&R Green India Pvt Ltd is a New Delhi-based manufacturer
+              <br />
               specializing in prefabricated structures, mild steel containers,
+              <br />
               and prefabricated cabins. Established in 2015, we have built a
+              <br />
               strong reputation for delivering high-quality, cost-effective
+              <br />
               building solutions across India.
             </p>
+
             <p>
               Our extensive product range includes Prefab Site Office
+              <br />
               Structures, Pre Engineered Building Structures, Poultry Farm
+              <br />
               Sheds, Prefabricated Warehouse Sheds, Prefabricated Farm Houses,
-              and Prefabricated Control Rooms.
+              <br />
+              and Prefabricated Control Rooms — all manufactured with precision
+              <br />
+              engineering and the finest materials.
             </p>
             <button>
               Get Contact <span>↗</span>
@@ -195,10 +205,11 @@ const About = () => {
             </h2>
             <p>
               L&R Green India Pvt Ltd specializes in manufacturing high-quality
-              prefabricated structures and mild steel containers in New Delhi.
-              From site offices to warehouse sheds and portable containers, our
-              solutions are built for durability, flexibility, and modern
-              industrial use.
+              prefabricated
+              <br /> structures and mild steel containers in New Delhi. From
+              site offices to warehouse <br /> sheds and portable containers,
+              our solutions are built for durability, flexibility, and <br />
+              modern industrial use.
             </p>
           </div>
 
@@ -257,35 +268,104 @@ const About = () => {
 
           <div className={styles.smartBody}>
             <div className={styles.smartList}>
-              <div>
-                <h4>▤ Diverse Prefabricated Solutions</h4>
-                <p>
-                  Our mild steel containers are engineered to provide adaptable
-                  workspace and storage solutions for various applications.
-                </p>
+              <div className={styles.smartItem}>
+                {/* Building Icon */}
+                <div className={styles.icon}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18" />
+                    <path d="M6 12H4a2 2 0 0 0-2 2v8h20v-8a2 2 0 0 0-2-2h-2" />
+                    <path d="M10 6h4" />
+                    <path d="M10 10h4" />
+                    <path d="M10 14h4" />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4>Diverse Prefabricated Solutions</h4>
+                  <p>
+                    Our mild steel containers are engineered to provide
+                    adaptable workspace and storage solutions for various
+                    applications.
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h4>⌁ Advanced Manufacturing Approach</h4>
-                <p>
-                  We combine modern fabrication techniques with high-quality
-                  materials to deliver superior structural performance.
-                </p>
+              <div className={styles.smartItem}>
+                {/* Factory Icon */}
+                <div className={styles.icon}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M3 21h18" />
+                    <path d="M5 21V8l7 5V8l7 5v8" />
+                    <path d="M8 17h.01" />
+                    <path d="M12 17h.01" />
+                    <path d="M16 17h.01" />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4>Advanced Manufacturing Approach</h4>
+                  <p>
+                    We combine modern fabrication techniques with high-quality
+                    materials to deliver superior structural performance.
+                  </p>
+                </div>
               </div>
 
-              <div>
-                <h4>◇ Commitment to Client Success</h4>
-                <p>
-                  We believe strong relationships are built on trust,
-                  consistency, and dependable service.
-                </p>
+              <div className={styles.smartItem}>
+                {/* Heart Check Icon */}
+                <div className={styles.icon}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+                    <path d="m9.5 12.5 2 2 4-4" />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4>Commitment to Client Success</h4>
+                  <p>
+                    We believe strong relationships are built on trust,
+                    consistency, and dependable service. Through timely delivery
+                    and customized solutions, we continue to support businesses
+                    with structures built for the future.
+                  </p>
+                </div>
               </div>
             </div>
 
             <img src={workImg} alt="Work" />
           </div>
         </section>
-                         
+
         <section className={styles.commitment}>
           <div>
             <h2>
@@ -293,8 +373,11 @@ const About = () => {
             </h2>
             <p>
               At L & R Enterprises, we are committed to delivering high-quality
-              prefabricated structures and steel containers built with precision
-              and care.
+              prefabricated <br />
+              structures and steel containers built with precision and care. Our
+              focus on durability, <br /> timely execution, and customer
+              satisfaction makes us a trusted choice for modern <br />{" "}
+              construction needs.
             </p>
           </div>
 
@@ -303,29 +386,30 @@ const About = () => {
             alt="Structure"
           />
 
-          <h1>ENTERPRISES</h1>
+          <h1> L & R ENTERPRISES</h1>
         </section>
 
         <section className={styles.products}>
           <div className={styles.productHead}>
             <div>
-              <span className={styles.badge}>• our Product</span>
+              <span className={styles.badge}>• Our Product</span>
               <h2>
                 Quality Products <br />
                 We Offer
               </h2>
             </div>
-            <button>
-              View All <span>↗</span>
-            </button>
           </div>
 
           <div className={styles.productGrid}>
             {products.map((item) => (
               <div className={styles.productCard} key={item.title}>
                 <img src={item.img} alt={item.title} />
-                <button>↗</button>
-                <p>{item.title}</p>
+
+                <button className={styles.arrowBtn}>↗</button>
+
+                <div className={styles.productInfo}>
+                  <p>{item.title}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -341,8 +425,8 @@ const About = () => {
               </h2>
             </div>
             <p>
-              Find answers to common questions about our prefabricated
-              structures, containers, and services.
+              Find answers to common questions about our <br />
+              prefabricated structures, containers, and services.
             </p>
           </div>
 
