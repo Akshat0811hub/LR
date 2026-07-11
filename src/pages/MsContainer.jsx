@@ -99,11 +99,13 @@ const MsContainer = () => {
 
       {/* HERO */}
       <section className={styles.hero}>
+        <h3>L&R Green India Pvt Ltd </h3>
         <h1>MS CONTAINERS</h1>
         <p>
-          Portable Modular Steel Containers engineering for the Oil &amp; Gas, Renewable,
-          Construction, Railways, Refineries, Highways, Food and Cement industries — delivered
-          Pan-India under a Design &amp; Build model.
+          Portable Modular Steel Containers engineering for the Oil &amp; Gas,
+          Renewable, Construction,
+          <br /> Railways, Refineries, Highways, Food and Cement industries —
+          delivered Pan-India under a <br /> Design &amp; Build model.
         </p>
         <button className={styles.btnWhite}>Contact us &nbsp;→</button>
       </section>
@@ -111,28 +113,48 @@ const MsContainer = () => {
       {/* INTRO */}
       <section className={styles.intro}>
         <div className={styles.introTop}>
-          <h2>MS <span>Container</span></h2>
+          <h2>
+            MS <span>Container</span>
+          </h2>
           <div className={styles.introThumb} />
         </div>
+
         <div className={styles.introBody}>
-          <div className={styles.introImg} />
+          {/* Left Image */}
+          <div
+            className={styles.introImg}
+            style={{ backgroundImage: "url('/Images/wallapanel.jpg')" }}
+          ></div>
+
+          {/* Right Content */}
           <div className={styles.introText}>
             <p>
-              MS Containers (Mild Steel Containers) are portable and modular structures designed
-              for durable and flexible space solutions. Built with strong steel, they are widely
-              used in industrial, oil &amp; gas, construction, renewable energy, and infrastructure
-              projects where quick setup and versatility are important.
+              MS Containers (Mild Steel Containers) are portable and modular{" "}
+              <br />
+              structures designed for durable and flexible space solutions.{" "}
+              Built with <br />
+              strong steel, they are widely used in industrial, oil &amp; gas,{" "}
+              <br /> construction, renewable energy, and infrastructure projects
+              where quick <br />
+              setup and versatility are important.
             </p>
+
             <p>
-              These containers feature a skid-mounted design, allowing easy installation without
-              foundations and simple relocation using cranes or forklifts. Suitable for offices,
-              accommodation, and storage, MS Containers provide a cost-effective, low-maintenance,
-              and practical solution for modern project needs.
+              These containers feature a skid-mounted design, allowing easy{" "}
+              <br />
+              installation without foundations and simple relocation using
+              cranes or <br /> forklifts. Suitable for offices, accommodation,
+              and storage, MS <br /> Containers provide a cost-effective,
+              low-maintenance, and practical <br /> solution for modern project
+              needs.
             </p>
+
             <p>
-              With strong build quality and smart design, MS Containers ensure stability,
-              efficiency, and long-lasting use.
+              With strong build quality and smart design, MS Containers ensure{" "}
+              <br />
+              stability, efficiency, and long-lasting use.
             </p>
+
             <button className={styles.btnOutline}>Get Contact &nbsp;↗</button>
           </div>
         </div>
@@ -142,30 +164,64 @@ const MsContainer = () => {
       <section className={styles.typesSec}>
         <div className={styles.typesHeader}>
           <div>
-            <h2>Types of Modular<br /><span>MS Containers</span></h2>
+            <h2>
+              Types of Modular
+              <br />
+              <span>MS Containers</span>
+            </h2>
           </div>
+
           <p>
-            Discover a versatile range of modular MS containers built for industrial and commercial
-            use offering durable, mobile, and flexible solutions for offices, accommodation,
-            storage, and site operations.
+            Discover a versatile range of modular MS containers built <br />
+            for industrial and commercial use offering durable, mobile,
+            <br />
+            and flexible solutions for offices, accommodation, storage,
+            <br />
+            and site operations.
           </p>
         </div>
+
         <div className={styles.typesGrid}>
           {containerTypes.map((c) => (
             <div key={c.title} className={styles.typeCard}>
               <div
                 className={styles.typeImg}
-                style={{ backgroundImage: `url('${c.img}')` }}
+                style={{
+                  backgroundImage: `url(${
+                    c.title === "Premium Series Containers"
+                      ? "/Images/work1.jpg"
+                      : c.title === "Executive Series Containers"
+                        ? "/Images/work2.jpg"
+                        : "/Images/work3.jpg"
+                  })`,
+                }}
               />
+
               <div className={styles.typeBody}>
                 <h4>{c.title}</h4>
                 <p>{c.desc}</p>
+
                 {c.title === "Premium Series Containers" ? (
-                  <button className={styles.btnKnow} onClick={() => navigate("/puf-containers")}>Know More</button>
+                  <button
+                    className={styles.btnKnow}
+                    onClick={() => navigate("/puf-containers")}
+                  >
+                    Know More
+                  </button>
                 ) : c.title === "Executive Series Containers" ? (
-                  <button className={styles.btnKnow} onClick={() => navigate("/executive-containers")}>Know More</button>
+                  <button
+                    className={styles.btnKnow}
+                    onClick={() => navigate("/executive-containers")}
+                  >
+                    Know More
+                  </button>
                 ) : c.title === "L&R Value Series Containers" ? (
-                  <button className={styles.btnKnow} onClick={() => navigate("/lr-value-containers")}>Know More</button>
+                  <button
+                    className={styles.btnKnow}
+                    onClick={() => navigate("/lr-value-containers")}
+                  >
+                    Know More
+                  </button>
                 ) : (
                   <button className={styles.btnKnow}>Know More</button>
                 )}
@@ -178,20 +234,25 @@ const MsContainer = () => {
       {/* HIGH MOBILITY */}
       <section className={styles.mobility}>
         <div className={styles.mobilityText}>
-          <h2>High Mobility &amp; Flexible<br /><span>Modular Container Solutions</span></h2>
+          <h2>
+            High Mobility &amp; Flexible
+            <br />
+            <span>Modular Container Solutions</span>
+          </h2>
           <p>
-            Wall-mounted MS containers are designed for quick and safe placement without the need
-            for foundations. Their strong steel structure allows easy transportation and relocation
-            using cranes or forklifts.
+            Wall-mounted MS containers are designed for quick and safe placement
+            without the need for foundations. Their strong steel structure
+            allows easy transportation and relocation using cranes or forklifts.
           </p>
           <p>
-            These containers are ideal for remote and challenging environments such as oil &amp;
-            gas sites, energy projects, and temporary settlements where conventional construction
-            is impractical.
+            These containers are ideal for remote and challenging environments
+            such as oil &amp; gas sites, energy projects, and temporary
+            settlements where conventional construction is impractical.
           </p>
           <p>
-            Built for both accommodation and office use, the units offer efficient layouts, user
-            comfort, and durable, low-maintenance construction for long-term performance.
+            Built for both accommodation and office use, the units offer
+            efficient layouts, user comfort, and durable, low-maintenance
+            construction for long-term performance.
           </p>
         </div>
         <div className={styles.mobilityImgs}>
@@ -205,12 +266,18 @@ const MsContainer = () => {
         <div className={styles.structuralWatermark}>CONTAINER</div>
         <div className={styles.structuralContent}>
           <div className={styles.structuralText}>
-            <h2>Structural Strength for Harsh<br />Environmental &amp; Climatic Conditions</h2>
+            <h2>
+              Structural Strength for Harsh
+              <br />
+              Environmental &amp; Climatic Conditions
+            </h2>
             <p>
-              The skid-mounted containers produced within this project were designed to withstand
-              harsh climatic conditions, industrial environments, and intensive usage scenarios.
-              The steel structural system provides high structural strength while the modular
-              construction approach allows customised solutions in line with project requirements.
+              The skid-mounted containers produced within this project were
+              designed to withstand harsh climatic conditions, industrial
+              environments, and intensive usage scenarios. The steel structural
+              system provides high structural strength while the modular
+              construction approach allows customised solutions in line with
+              project requirements.
             </p>
           </div>
           <div className={styles.structuralImg} />
@@ -220,11 +287,16 @@ const MsContainer = () => {
       {/* EXPERTISE / INDUSTRY */}
       <section className={styles.expertise}>
         <div className={styles.expertiseHeader}>
-          <h2>Expertise Across Energy<br /><span>&amp; Industrial Projects</span></h2>
+          <h2>
+            Expertise Across Energy
+            <br />
+            <span>&amp; Industrial Projects</span>
+          </h2>
           <p>
-            L&amp;R delivers advanced modular container solutions for oil &amp; gas, energy, and
-            construction sectors, combining strong engineering, flexible design, and fast project
-            execution for demanding environments.
+            L&amp;R delivers advanced modular container solutions for oil &amp;
+            gas, energy, and construction sectors, combining strong engineering,
+            flexible design, and fast project execution for demanding
+            environments.
           </p>
         </div>
         <div className={styles.expertiseGrid}>
@@ -246,10 +318,14 @@ const MsContainer = () => {
       {/* FAST DELIVERY */}
       <section className={styles.delivery}>
         <div className={styles.deliveryHeader}>
-          <h2>Fast &amp; Integrated<br /><span>Project Delivery</span></h2>
+          <h2>
+            Fast &amp; Integrated
+            <br />
+            <span>Project Delivery</span>
+          </h2>
           <p>
-            Seamless execution from design to installation, ensuring quick deployment and timely
-            completion.
+            Seamless execution from design to installation, ensuring quick
+            deployment and timely completion.
           </p>
         </div>
         <div className={styles.deliveryGrid}>
@@ -267,10 +343,14 @@ const MsContainer = () => {
       <section className={styles.faqSec}>
         <span className={styles.introLabel}>FAQ</span>
         <div className={styles.faqHeader}>
-          <h2>Frequently Asked<br /><span>Questions</span></h2>
+          <h2>
+            Frequently Asked
+            <br />
+            <span>Questions</span>
+          </h2>
           <p>
-            Find answers to common questions about our container solutions, design process, and
-            performance benefits.
+            Find answers to common questions about our container solutions,
+            design process, and performance benefits.
           </p>
         </div>
         <div className={styles.faqBody}>
@@ -290,8 +370,8 @@ const MsContainer = () => {
       <section className={styles.cta}>
         <h2>Ready to Build Your Ms Containers?</h2>
         <p>
-          Connect with our team to design and deliver durable, efficient, and fully customised
-          ms containers tailored to your storage needs.
+          Connect with our team to design and deliver durable, efficient, and
+          fully customised ms containers tailored to your storage needs.
         </p>
         <button className={styles.btnBlue}>Contact US &nbsp;→</button>
       </section>

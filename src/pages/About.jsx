@@ -218,7 +218,7 @@ const About = () => {
             alt="Prefab Building"
           />
 
-          <h1>ENTERPRISES</h1>
+          <h1> L & R ENTERPRISES</h1>
         </section>
 
         <section
