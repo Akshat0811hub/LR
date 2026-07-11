@@ -13,7 +13,8 @@
   height: 100%;
   background-size: contain;
   background-position: right top;
-  opacity: 0.05; /* Faint blueprint look */
+  opacity: 0.05;
+  /* Faint blueprint look */
   pointer-events: none;
   z-index: 1;
 }
@@ -38,6 +39,7 @@
   background: #fff;
   padding: 6px 14px;
   border-radius: 20px;
+  font-weight: 700;
   font-size: 13px;
   color: #555;
   border: 1px solid #e5e7eb;
@@ -68,8 +70,10 @@
   font-size: 15px;
   color: #555;
   line-height: 1.7;
+  font-weight: 700;
   margin: 0;
-  padding-top: 56px; /* align with heading baseline */
+  padding-top: 56px;
+  /* align with heading baseline */
 }
 
 /* ── Main Contact Card ── */
@@ -266,11 +270,11 @@
   .contactCard {
     grid-template-columns: 1fr;
   }
-  
+
   .infoColumn {
     height: auto;
   }
-  
+
   .statsBox {
     padding: 30px 40px;
   }
@@ -281,7 +285,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .headerDesc {
     padding-top: 0;
   }
@@ -291,32 +295,32 @@
   .contactSection {
     padding: 60px 22px;
   }
-  
+
   .headerLeft h2 {
     font-size: 30px;
   }
-  
+
   .formColumn {
     padding: 30px 22px;
   }
-  
+
   .contactForm {
     grid-template-columns: 1fr;
   }
-  
+
   .fullWidth {
     grid-column: span 1;
   }
-  
+
   .submitBtn {
     grid-column: span 1;
     width: 100%;
   }
-  
+
   .infoBox {
     padding: 40px 22px;
   }
-  
+
   .statsBox {
     padding: 24px 22px;
   }

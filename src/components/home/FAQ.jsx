@@ -8,7 +8,7 @@ const FAQ = () => {
       a: "Pre-Engineered Buildings (PEB) are steel structures designed and fabricated at the factory, then shipped and assembled on-site. They offer superior speed, durability, and cost-effectiveness compared to traditional construction.",
     },
     {
-      q: "What is Light Gauge Steel Framing (LGSF)?",
+      q: "What are Pre-Engineered Buildings (PEB)?",
       a: "Light Gauge Steel Framing is a sustainable, earthquake-resistant construction method for modern infra, utilizing cold-formed steel profiles to build lightweight yet incredibly strong structures.",
     },
     {
@@ -30,7 +30,6 @@ const FAQ = () => {
   return (
     <section className={styles["faq-section"]}>
       <div className={styles["faq-left"]}>
-        <span className={styles.tag}>• FAQ</span>
         <h2>
           Frequently Asked <span>Questions</span>
         </h2>

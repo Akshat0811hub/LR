@@ -20,18 +20,6 @@ const slides = [
     desc: "Our pre-engineered structures are ideal for large-scale transit infrastructure. Engineered for high foot traffic, long spans, and seismic resilience, our metro station structures deliver both functional efficiency and architectural elegance for modern urban transport hubs.",
     img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80",
   },
-  {
-    label: "MS Container",
-    title: "MS Container",
-    desc: "Compact, secure, and versatile — our mild steel containers are manufactured for site offices, storage units, and portable workspaces. Built with heavy-gauge MS sheets and precision welding, they offer durability, weatherproofing, and rapid deployment for any project site.",
-    img: "/Images/cat.jpg",
-  },
-  {
-    label: "Solar Structure",
-    title: "Solar Mounting Structure",
-    desc: "Engineered for longevity and optimal angle precision, our solar mounting structures support rooftop and ground-mounted PV installations. Fabricated from hot-dip galvanized steel, they resist corrosion and withstand high wind loads across diverse climatic conditions.",
-    img: "/Images/mountcat.jpg",
-  },
 ];
 
 const InnovationSlider = () => {
