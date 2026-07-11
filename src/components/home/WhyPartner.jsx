@@ -1,9 +1,40 @@
 import styles from "../../styles/Why.module.css";
 
-import targetIcon from "../../assets/icons/target.png";
-import questionIcon from "../../assets/icons/question.png";
-import usersIcon from "../../assets/icons/users.png";
-import globeIcon from "../../assets/icons/globe.png";
+const GoalIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}>
+    <circle cx="12" cy="12" r="10" />
+    <circle cx="12" cy="12" r="6" />
+    <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+    <line x1="12" y1="12" x2="12" y2="4" />
+    <polygon points="12,4 17,6.5 12,9" fill="currentColor" strokeWidth="1" />
+  </svg>
+);
+
+const MissionIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}>
+    <line x1="4" y1="16" x2="20" y2="16" />
+    <line x1="12" y1="16" x2="12" y2="21" />
+    <line x1="8" y1="5" x2="11" y2="16" />
+    <line x1="12" y1="5" x2="15" y2="16" />
+    <line x1="16" y1="5" x2="19" y2="16" />
+  </svg>
+);
+
+const ClientIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}>
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+  </svg>
+);
+
+const VisionIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "100%", height: "100%" }}>
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+    <circle cx="12" cy="12" r="3.5" />
+  </svg>
+);
 
 const WhyPartner = () => {
   const items = [
@@ -11,26 +42,26 @@ const WhyPartner = () => {
       num: "01",
       title: "Our Goals",
       text: "Our goal is to provide excellent quality products, which satisfy every need of our clients adequately and serve them well.",
-      icon: targetIcon,
+      icon: <GoalIcon />,
     },
     {
       num: "02",
       title: "Our Mission",
       text: "Our mission is to work hard to take care of whatever our clients want now and in the future and prosper doing so.",
-      icon: questionIcon,
+      icon: <MissionIcon />,
       active: true,
     },
     {
       num: "03",
       title: "Our Client",
       text: "Our aim is to keep thriving tirelessly to reach the core of the satisfaction of our clients with our amazing services. We make client happy",
-      icon: usersIcon,
+      icon: <ClientIcon />,
     },
     {
       num: "04",
       title: "Our Vision",
       text: "Big or small we have delivered every project on time and to customers satisfaction.",
-      icon: globeIcon,
+      icon: <VisionIcon />,
     },
   ];
 
@@ -55,7 +86,7 @@ const WhyPartner = () => {
           <div className={`${styles["why-card"]} ${item.active ? styles["why-card-active"] : ""}`} key={item.title}>
             <div className={styles["card-top"]}>
               <div className={styles["why-icon"]}>
-                <img src={item.icon} alt={item.title} />
+                {item.icon}
               </div>
               <span className={styles["card-num"]}>{item.num}</span>
             </div>

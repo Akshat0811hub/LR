@@ -11,7 +11,6 @@ import HingeMsContainer from "./pages/HingeMsContainer";
 import PUFContainer from "./pages/PUFContainer";
 import PrefabLabour from "./pages/PrefabLabour";
 import PrefabSiteOffice from "./pages/PrefabSiteOffice";
-// Naya page yahan import karein
 import PrefabSandwichPanels from "./pages/PrefabSandwichPanels";
 import PrefabDryWall from "./pages/PrefabDryWall";
 import PrefabStaffCanteens from "./pages/PrefabStaffCanteens";

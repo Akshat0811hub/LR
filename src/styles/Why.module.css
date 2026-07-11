@@ -109,13 +109,25 @@
 }
 
 .why-card-active .why-icon {
-  background: rgba(255,255,255,0.15);
+  background: #fff;
 }
 
-.why-icon img {
+.why-icon img,
+.why-icon svg {
   width: 26px;
   height: 26px;
   object-fit: contain;
+}
+
+.why-icon svg {
+  color: #fff;
+}
+
+.why-card-active .why-icon svg {
+  color: #263f69;
+}
+
+.why-icon img {
   filter: brightness(0) invert(1);
 }
 
