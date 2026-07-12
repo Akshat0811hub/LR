@@ -260,66 +260,106 @@
 }
 
 /* ─── HIGH MOBILITY ──────────────────────────────────────── */
-.mobility {
-  padding: 72px 60px;
-  background: #fff;
+.mobilitySec {
+  padding: 80px 8%;
+  background: #f7f9fc;
+}
+
+.mobilityGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
 }
 
-.mobilityText h2 {
-  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
-  font-weight: 800;
-  color: #111;
-  line-height: 1.25;
-  margin-bottom: 24px;
+.mobilityDivider {
+  width: 50px;
+  height: 3px;
+  background: #1a3c6e;
+  margin: 16px 0 24px;
 }
 
-.mobilityText h2 span {
-  color: #1a3c6e;
-}
-
-.mobilityText p {
-  font-size: 0.93rem;
-  color: #444;
-  line-height: 1.75;
+.mobilityContent p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
   margin-bottom: 16px;
 }
 
-.mobilityImgs {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+.mobilityImagesCol {
+  display: flex;
+  flex-direction: column;
   gap: 14px;
-  height: 420px;
+  height: 400px;
 }
 
-.mobImg1 {
-  background: url("https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80") center/cover no-repeat;
+.mobilityImgTop {
+  position: relative;
+  width: 10vw;
+  left: 30vw;
+  height: 12vh !important;
+  background-size: cover;
+  background-position: center;
   border-radius: 6px;
 }
 
-.mobImg2 {
-  background: url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80") center/cover no-repeat;
-  border-radius: 6px;
+.mobilityImgWrapper {
+  position: relative;
+  width: 32vw;
+  height: 42vh;
 }
+
+.mobilityImgWrapper::before {
+  content: "";
+  position: absolute;
+  top: 5vh;
+  right: -8vw;
+  width: 100%;
+  height: 30vh;
+  background: #2f4a7d;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.mobilityImgBottom {
+  position: absolute;
+  left: 5vw;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.secTitle {
+  color: #1a3c6e;
+  font-size: 2.5vw;
+  font-weight: 400;
+
+}
+
+.secTitle span {
+  color: black;
+}
+
 
 /* ─── STRUCTURAL STRENGTH ────────────────────────────────── */
 .structural {
   background: #1a3c6e;
   color: #fff;
-  padding: 72px 60px;
+
+  padding: 20px 60px;
   position: relative;
   overflow: hidden;
 }
 
 .structuralWatermark {
   position: absolute;
-  bottom: -30px;
-  right: -20px;
-  font-size: clamp(5rem, 12vw, 10rem);
-  font-weight: 900;
+  bottom: 10vh;
+  font-size: 8vw;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.05);
   letter-spacing: 4px;
   pointer-events: none;
@@ -338,7 +378,7 @@
 
 .structuralText h2 {
   font-size: clamp(1.5rem, 2.8vw, 2.3rem);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.25;
   margin-bottom: 20px;
 }
@@ -351,11 +391,15 @@
 
 .structuralImg {
   background: url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=800&q=80") center/cover no-repeat;
-  height: 320px;
+  height: 40vh;
+  position: relative;
+  left: 8vw;
+  width: 35vw;
   border-radius: 6px;
 }
 
 /* ─── EXPERTISE ──────────────────────────────────────────── */
+
 .expertise {
   padding: 72px 60px;
   background: #fff;
@@ -412,21 +456,38 @@
 }
 
 .expLabel {
-  padding: 14px 16px;
-  background: #fff;
+  padding: 14px;
+  background: #1a3c6e;
+  min-height: 62px;
+  /* title ke liye fixed height */
+  transition: all 0.35s ease;
 }
 
 .expLabel h4 {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #111;
-  margin-bottom: 5px;
+  color: #fff;
+  margin: 0;
 }
 
+/* Hide description by default */
 .expLabel p {
+  color: #fff;
   font-size: 0.8rem;
-  color: #555;
   line-height: 1.55;
+  margin-top: 10px;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* Show description only on hover */
+.expCard:hover .expLabel p {
+  max-height: 120px;
+  /* enough for your text */
+  opacity: 1;
 }
 
 /* ─── FAST DELIVERY ──────────────────────────────────────── */
@@ -479,22 +540,39 @@
   transform: translateY(-3px);
 }
 
+
 .delivIcon {
-  font-size: 2rem;
-  margin-bottom: 14px;
+  margin-bottom: 2vw;
+}
+
+.iconimg:hover {
+  color: white;
 }
 
 .delivCard h4 {
-  font-size: 0.97rem;
-  font-weight: 700;
+  font-size: 1.5vw;
+  font-weight: 500;
   color: #111;
   margin-bottom: 10px;
 }
 
 .delivCard p {
-  font-size: 0.85rem;
+  font-size: 1vw;
   color: #555;
   line-height: 1.65;
+}
+
+.delivCard:hover {
+  background: #1a3c6e;
+  color: white;
+}
+
+.delivCard:hover h4 {
+  color: white;
+}
+
+.delivCard:hover p {
+  color: white;
 }
 
 /* ─── FAQ ────────────────────────────────────────────────── */
@@ -513,7 +591,7 @@
 
 .faqHeader h2 {
   font-size: clamp(1.6rem, 3vw, 2.3rem);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.2;
   color: #111;
 }
@@ -594,9 +672,13 @@
 }
 
 .faqImg {
-  background: url("https://images.unsplash.com/photo-1494587416117-f102a4f6f7b5?auto=format&fit=crop&w=800&q=80") center/cover no-repeat;
-  height: 380px;
-  border-radius: 6px;
+  width: 80%;
+  height: 50vh;
+  border-radius: 0;
+  margin-left: 5vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ─── CTA ────────────────────────────────────────────────── */
@@ -643,6 +725,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .expertiseGrid::before,
+  .expertiseGrid::after {
+    display: none;
+  }
+
   .deliveryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -654,7 +741,7 @@
   }
 
   .introBody,
-  .mobility,
+  .mobilityGrid,
   .structuralContent,
   .typesHeader,
   .expertiseHeader,
@@ -681,7 +768,7 @@
   .faqSec,
   .cta,
   .structural,
-  .mobility {
+  .mobilitySec {
     padding: 48px 24px;
   }
 
@@ -691,8 +778,8 @@
     grid-template-columns: 1fr;
   }
 
-  .mobilityImgs {
-    height: 280px;
+  .mobilityImagesCol {
+    height: 260px;
   }
 
   .structuralImg,

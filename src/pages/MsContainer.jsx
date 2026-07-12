@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import { useNavigate } from "react-router-dom";
@@ -7,17 +8,20 @@ const containerTypes = [
   {
     title: "Premium Series Containers",
     desc: "High-end modular MS containers built for durability, portability, and multi-application use for luxury offices, accommodation, control rooms, site service centres, with strong steel frames, insulation, and premium finishes.",
-    img: "https://images.unsplash.com/photo-1494587416117-f102a4f6f7b5?auto=format&fit=crop&w=600&q=80",
+    img: "/Images/work1.jpg",
+    path: "/puf-containers",
   },
   {
     title: "Executive Series Containers",
     desc: "Efficient prefabricated containers designed for offices, cabins, and site operations. Built with durable MS structures, they offer strength, weather resistance, and a practical cost-effective workspace solution.",
-    img: "https://images.unsplash.com/photo-1565636291267-b08e9c81e4ee?auto=format&fit=crop&w=600&q=80",
+    img: "/Images/work2.jpg",
+    path: "/executive-containers",
   },
   {
     title: "L&R Value Series Containers",
     desc: "Economical container solutions at sites, built for strength and flexibility—ideal for budget-friendly, durable, and quick-deployment projects across various industries and site conditions.",
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80",
+    img: "/Images/work3.jpg",
+    path: "/lr-value-containers",
   },
 ];
 
@@ -43,22 +47,22 @@ const industryProjects = [
 
 const deliveryFeatures = [
   {
-    icon: "⚙️",
+    img: "https://unpkg.com/lucide-static/icons/calendar-clock.svg",
     title: "End-to-End Execution",
     desc: "Complete project handling from design and engineering to manufacturing and final installation, ensuring a smooth and coordinated workflow.",
   },
   {
-    icon: "🏭",
+    img: "https://unpkg.com/lucide-static/icons/box.svg",
     title: "In-House Manufacturing",
     desc: "All container units are produced within dedicated facilities, maintaining strict quality control and faster production timelines.",
   },
   {
-    icon: "🏠",
+    img: "https://unpkg.com/lucide-static/icons/house-plug.svg",
     title: "Plug-and-Play Units",
     desc: "Pre-fabricated and mounted containers delivered ready-for-use, reducing on-site work and enabling quick setup.",
   },
   {
-    icon: "🚀",
+    img: "https://unpkg.com/lucide-static/icons/square-check.svg",
     title: "Rapid Project Completion",
     desc: "Efficient processes and minimal on-site labour ensure faster commissioning and timely project delivery.",
   },
@@ -89,14 +93,12 @@ const faqs = [
 
 const MsContainer = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />
-
-      <div className={styles.breadcrumb}>
-        L&amp;R Green India Pvt Ltd &rsaquo; <span>MS Container</span>
-      </div>
-
       {/* HERO */}
       <section className={styles.hero}>
         <h3>L&R Green India Pvt Ltd </h3>
@@ -109,7 +111,6 @@ const MsContainer = () => {
         </p>
         <button className={styles.btnWhite}>Contact us &nbsp;→</button>
       </section>
-
       {/* INTRO */}
       <section className={styles.intro}>
         <div className={styles.introTop}>
@@ -159,7 +160,6 @@ const MsContainer = () => {
           </div>
         </div>
       </section>
-
       {/* TYPES */}
       <section className={styles.typesSec}>
         <div className={styles.typesHeader}>
@@ -187,13 +187,7 @@ const MsContainer = () => {
               <div
                 className={styles.typeImg}
                 style={{
-                  backgroundImage: `url(${
-                    c.title === "Premium Series Containers"
-                      ? "/Images/work1.jpg"
-                      : c.title === "Executive Series Containers"
-                        ? "/Images/work2.jpg"
-                        : "/Images/work3.jpg"
-                  })`,
+                  backgroundImage: `url('${c.img}')`,
                 }}
               />
 
@@ -201,69 +195,71 @@ const MsContainer = () => {
                 <h4>{c.title}</h4>
                 <p>{c.desc}</p>
 
-                {c.title === "Premium Series Containers" ? (
-                  <button
-                    className={styles.btnKnow}
-                    onClick={() => navigate("/puf-containers")}
-                  >
-                    Know More
-                  </button>
-                ) : c.title === "Executive Series Containers" ? (
-                  <button
-                    className={styles.btnKnow}
-                    onClick={() => navigate("/executive-containers")}
-                  >
-                    Know More
-                  </button>
-                ) : c.title === "L&R Value Series Containers" ? (
-                  <button
-                    className={styles.btnKnow}
-                    onClick={() => navigate("/lr-value-containers")}
-                  >
-                    Know More
-                  </button>
-                ) : (
-                  <button className={styles.btnKnow}>Know More</button>
-                )}
+                <button
+                  className={styles.btnKnow}
+                  onClick={() => navigate(c.path)}
+                >
+                  Know More
+                </button>
               </div>
             </div>
           ))}
         </div>
       </section>
-
       {/* HIGH MOBILITY */}
-      <section className={styles.mobility}>
-        <div className={styles.mobilityText}>
-          <h2>
-            High Mobility &amp; Flexible
-            <br />
-            <span>Modular Container Solutions</span>
-          </h2>
-          <p>
-            Wall-mounted MS containers are designed for quick and safe placement
-            without the need for foundations. Their strong steel structure
-            allows easy transportation and relocation using cranes or forklifts.
-          </p>
-          <p>
-            These containers are ideal for remote and challenging environments
-            such as oil &amp; gas sites, energy projects, and temporary
-            settlements where conventional construction is impractical.
-          </p>
-          <p>
-            Built for both accommodation and office use, the units offer
-            efficient layouts, user comfort, and durable, low-maintenance
-            construction for long-term performance.
-          </p>
-        </div>
-        <div className={styles.mobilityImgs}>
-          <div className={styles.mobImg1} />
-          <div className={styles.mobImg2} />
+      <section className={styles.mobilitySec}>
+        <div className={styles.mobilityGrid}>
+          <div className={styles.mobilityContent}>
+            <h2 className={styles.secTitle}>
+              High Mobility &amp; Flexible <br />
+              <span>Modular Container Solutions</span>
+            </h2>
+            <div className={styles.mobilityDivider} />
+            <p>
+              Skid-mounted MS containers are designed for quick and safe
+              placement <br />
+              without the need for foundations. Their strong steel structure
+              allows easy transportation and relocation using cranes or
+              forklifts.
+            </p>
+            <p>
+              These containers are ideal for remote and challenging environments
+              such <br /> as oil & gas sites, energy projects, and temporary
+              settlements where <br />
+              mobility and fast setup are essential.
+            </p>
+            <p>
+              Built for both accommodation and office use, the units offer
+              efficient <br />
+              layouts, user comfort, and durable, low-maintenance construction
+              for <br />
+              long-term performance.
+            </p>
+          </div>
+          <div className={styles.mobilityImagesCol}>
+            <div
+              className={styles.mobilityImgTop}
+              style={{
+                backgroundImage:
+                  "url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80')",
+              }}
+            />
+
+            <div className={styles.mobilityImgWrapper}>
+              <div
+                className={styles.mobilityImgBottom}
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80')",
+                }}
+              />
+            </div>
+          </div>
         </div>
       </section>
-
       {/* STRUCTURAL STRENGTH BAND */}
       <section className={styles.structural}>
-        <div className={styles.structuralWatermark}>CONTAINER</div>
+        <div className={styles.structuralWatermark}> L&R MS CONTAINER</div>
         <div className={styles.structuralContent}>
           <div className={styles.structuralText}>
             <h2>
@@ -273,17 +269,16 @@ const MsContainer = () => {
             </h2>
             <p>
               The skid-mounted containers produced within this project were
-              designed to withstand harsh climatic conditions, industrial
-              environments, and intensive usage scenarios. The steel structural
-              system provides high structural strength while the modular
-              construction approach allows customised solutions in line with
-              project requirements.
+              designed to <br /> withstand harsh climatic conditions, industrial
+              environments, and intensive <br /> usage scenarios. The steel
+              structural system provides high structural strength
+              <br /> while the modular construction approach allows customised
+              solutions in line <br /> with project requirements.
             </p>
           </div>
           <div className={styles.structuralImg} />
         </div>
       </section>
-
       {/* EXPERTISE / INDUSTRY */}
       <section className={styles.expertise}>
         <div className={styles.expertiseHeader}>
@@ -331,7 +326,10 @@ const MsContainer = () => {
         <div className={styles.deliveryGrid}>
           {deliveryFeatures.map((f) => (
             <div key={f.title} className={styles.delivCard}>
-              <div className={styles.delivIcon}>{f.icon}</div>
+              <div className={styles.delivIcon}>
+                <img className="iconimg" src={f.img} alt={f.title} />
+              </div>
+
               <h4>{f.title}</h4>
               <p>{f.desc}</p>
             </div>
@@ -362,10 +360,13 @@ const MsContainer = () => {
               </details>
             ))}
           </div>
-          <div className={styles.faqImg} />
+
+          <div
+            className={styles.faqImg}
+            style={{ backgroundImage: "url('/Images/mscontianer.jpg')" }}
+          />
         </div>
       </section>
-
       {/* CTA */}
       <section className={styles.cta}>
         <h2>Ready to Build Your Ms Containers?</h2>
@@ -375,7 +376,6 @@ const MsContainer = () => {
         </p>
         <button className={styles.btnBlue}>Contact US &nbsp;→</button>
       </section>
-
       <Footer />
     </>
   );
