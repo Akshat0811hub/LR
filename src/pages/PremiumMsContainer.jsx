@@ -5,6 +5,8 @@ import styles from "../styles/PremiumMsContainer.module.css";
 
 const PremiumMsContainer = () => {
   const [openFaq, setOpenFaq] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const CARDS_PER_PAGE = 3;
 
   const containerSizes = [
     {
@@ -70,6 +72,33 @@ const PremiumMsContainer = () => {
         "Wash Room Block Containers",
         "Class Room  Containers",
         "General Residential Containers",
+      ],
+      highlight: false,
+    },
+    {
+      size: "6×6×8 Container",
+      features: [
+        "Toilet Cabin Containers",
+        "Guard Cabin Block Containers",
+        "Tube Well Residence  Containers",
+        "cement store Containers",
+        "Tube well  Pump Farm Store Containers",
+        "coffee Shop Containers",
+        "Wash Room Block Containers",
+        "Cafe Containers  Hall Containers",
+      ],
+      highlight: false,
+    },
+    {
+      size: "4×4×8 container",
+      features: [
+        "Toilet Cabin Containers",
+        "Guard Cabin Block Containers",
+        "Farming Store  Containers",
+        "Material store Containers",
+        "coffee Shop Containers",
+        "Wash Room Block Containers",
+        "Cafe Containers  Hall Containers",
       ],
       highlight: false,
     },
@@ -219,39 +248,67 @@ const PremiumMsContainer = () => {
             </div>
           </div>
 
+          {/* Nav arrows */}
+          <div className={styles.sizesNavRow}>
+            <button
+              className={styles.navArrowBtn}
+              onClick={() =>
+                setSlideIndex((prev) => Math.max(0, prev - CARDS_PER_PAGE))
+              }
+              disabled={slideIndex === 0}
+            >
+              &#8249;
+            </button>
+            <button
+              className={`${styles.navArrowBtn} ${styles.navArrowActive}`}
+              onClick={() =>
+                setSlideIndex((prev) =>
+                  prev + CARDS_PER_PAGE >= containerSizes.length
+                    ? prev
+                    : prev + CARDS_PER_PAGE,
+                )
+              }
+              disabled={slideIndex + CARDS_PER_PAGE >= containerSizes.length}
+            >
+              &#8250;
+            </button>
+          </div>
+
           <div className={styles.sizesGrid}>
-            {containerSizes.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.sizeCard} ${
-                  item.highlight ? styles.activeCard : ""
-                }`}
-              >
-                {/* Box outline SVG icon */}
-                <div className={styles.cardIcon}>
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke={item.highlight ? "#ffffff" : "#1e3a5f"}
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                    <line x1="12" y1="22.08" x2="12" y2="12" />
-                  </svg>
+            {containerSizes
+              .slice(slideIndex, slideIndex + CARDS_PER_PAGE)
+              .map((item, index) => (
+                <div
+                  key={slideIndex + index}
+                  className={`${styles.sizeCard} ${
+                    index === 0 ? styles.activeCard : ""
+                  }`}
+                >
+                  {/* Box outline SVG icon */}
+                  <div className={styles.cardIcon}>
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#1e3a5f"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                      <line x1="12" y1="22.08" x2="12" y2="12" />
+                    </svg>
+                  </div>
+                  <h3>{item.size}</h3>
+                  <ul className={styles.featureList}>
+                    {item.features.map((f, i) => (
+                      <li key={i}>{f}</li>
+                    ))}
+                  </ul>
                 </div>
-                <h3>{item.size}</h3>
-                <ul className={styles.featureList}>
-                  {item.features.map((f, i) => (
-                    <li key={i}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
