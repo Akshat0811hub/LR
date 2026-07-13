@@ -5,6 +5,8 @@ import styles from "../styles/ExecutiveMsContainer.module.css";
 
 const ExecutiveMsContainer = () => {
   const [openFaq, setOpenFaq] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const CARDS_PER_PAGE = 3;
 
   const containerSizes = [
     {
@@ -70,6 +72,33 @@ const ExecutiveMsContainer = () => {
         "Multi Store Block Containers",
         "Copy Room  Containers",
         "General Residential Containers",
+      ],
+      highlight: false,
+    },
+    {
+      size: "6×6×8 Foot Container",
+      features: [
+        "Toilet Cabin Containers",
+        "Guard Cabin Block Containers",
+        "Tube Well Residence  Containers",
+        "cement store Containers",
+        "Tube well  Pump Farm Store Containers",
+        "coffee Shop Containers",
+        "Wash Room Block Containers",
+        "Cafe Containers  Hall Containers",
+      ],
+      highlight: false,
+    },
+    {
+      size: "4×4×8 foot  container",
+      features: [
+        "Toilet Cabin Containers",
+        "Guard Cabin Block Containers",
+        "Farming Store  Containers",
+        "Material store Containers",
+        "coffee Shop Containers",
+        "Wash Room Block Containers",
+        "Cafe Containers  Hall Containers",
       ],
       highlight: false,
     },
@@ -152,28 +181,30 @@ const ExecutiveMsContainer = () => {
       {/* ── Intro ── */}
       <section className={styles.intro}>
         <div className={styles.introGrid}>
+          {/* Left: overlapping images */}
           <div className={styles.introVisuals}>
             <div
               className={styles.imgMain}
               style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80')",
+                backgroundImage: "url('/Images/servant5.png')",
               }}
             />
             <div
               className={styles.imgSub}
               style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=400&q=80')",
+                backgroundImage: "url('/Images/servant6.png')",
               }}
             />
           </div>
+
+          {/* Right: title + text */}
           <div className={styles.introContent}>
             <h2 className={styles.secTitle}>
               Executive <span>Ms Container</span>
             </h2>
+            <div className={styles.introTitleDivider} />
             <p>
-              L&R Green India Pvt Ltd&amp;R Containers are durable modular
+              L&R Green India Pvt LtdMS Containers are durable modular
               structures made using mild steel (MS), designed to deliver strong,
               reliable, and ready-to-use spaces. They are built for quick
               installation, easy relocation, and long service life, making them
@@ -181,7 +212,7 @@ const ExecutiveMsContainer = () => {
             </p>
             <p>
               These containers are widely used as executive cabins, staff
-              accommodation units, offices, dining halls, washrooms, storerooms,
+              accommodation units, offices, dining halls, washrooms, classrooms,
               storage spaces, and other functional setups. With a strong steel
               frame, insulation, electrical fittings, and proper ventilation,
               they ensure comfort, safety, and efficiency, making them ideal for
@@ -210,35 +241,62 @@ const ExecutiveMsContainer = () => {
             </p>
           </div>
           <div className={styles.sizesNavRow}>
-            <button className={styles.navBtn}>‹</button>
-            <button className={styles.navBtn}>›</button>
+            <button
+              className={styles.navBtn}
+              onClick={() =>
+                setSlideIndex((prev) => Math.max(0, prev - CARDS_PER_PAGE))
+              }
+              disabled={slideIndex === 0}
+            >
+              ‹
+            </button>
+
+            <button
+              className={styles.navBtn}
+              onClick={() =>
+                setSlideIndex((prev) =>
+                  prev + CARDS_PER_PAGE >= containerSizes.length
+                    ? prev
+                    : prev + CARDS_PER_PAGE,
+                )
+              }
+              disabled={slideIndex + CARDS_PER_PAGE >= containerSizes.length}
+            >
+              ›
+            </button>
           </div>
+
           <div className={styles.sizesGrid}>
-            {containerSizes.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.sizeCard} ${
-                  item.highlight ? styles.activeCard : ""
-                }`}
-              >
-                <div className={styles.cardIcon}>
-                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <rect x="2" y="10" width="32" height="18" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                    <rect x="6" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <rect x="16" y="14" width="8" height="10" rx="1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
-                    <line x1="2" y1="28" x2="34" y2="28" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="8" y1="28" x2="8" y2="32" stroke="currentColor" strokeWidth="2"/>
-                    <line x1="28" y1="28" x2="28" y2="32" stroke="currentColor" strokeWidth="2"/>
-                  </svg>
+            {containerSizes
+              .slice(slideIndex, slideIndex + CARDS_PER_PAGE)
+              .map((item, index) => (
+                <div key={slideIndex + index} className={styles.sizeCard}>
+                  <div className={styles.cardIcon}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-box-icon lucide-box"
+                    >
+                      <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                      <path d="m3.3 7 8.7 5 8.7-5" />
+                      <path d="M12 22V12" />
+                    </svg>
+                  </div>
+                  <h3>{item.size}</h3>
+                  <ul className={styles.featureList}>
+                    {item.features.map((f, i) => (
+                      <li key={i}>• {f}</li>
+                    ))}
+                  </ul>
                 </div>
-                <h3>{item.size}</h3>
-                <ul className={styles.featureList}>
-                  {item.features.map((f, i) => (
-                    <li key={i}>• {f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -255,17 +313,17 @@ const ExecutiveMsContainer = () => {
             <p>
               The Executive MS Container is built using high-quality mild steel,
               ensuring strong structural stability, long life, and excellent
-              resistance to tough site conditions. Each unit is manufactured with
-              precision to maintain durability, safety, and consistent performance
-              across all models including 40×10, 20×10, 10×10, 6×8, and 4×4
-              containers.
+              resistance to tough site conditions. Each unit is manufactured
+              with precision to maintain durability, safety, and consistent
+              performance across all models including 40×10, 20×10, 10×10, 6×8,
+              and 4×4 containers.
             </p>
             <p>
               It features premium finishing, proper insulation, and reliable
-              fittings that enhance comfort and usability. Designed for heavy-duty
-              applications such as staff offices, engineer cabins, worker
-              accommodation, dining halls, storage units, washrooms, and guard
-              cabins, it delivers a high standard of quality suitable for
+              fittings that enhance comfort and usability. Designed for
+              heavy-duty applications such as staff offices, engineer cabins,
+              worker accommodation, dining halls, storage units, washrooms, and
+              guard cabins, it delivers a high standard of quality suitable for
               construction, industrial, and remote site projects.
             </p>
           </div>
@@ -297,19 +355,19 @@ const ExecutiveMsContainer = () => {
               Executive MS Containers
             </h2>
             <p>
-              Executive MS Containers are manufactured using high-grade mild steel
-              with precision welding and strong structural design to ensure maximum
-              strength and stability. Each unit is built under strict quality
-              standards, making it durable, safe, and suitable for heavy-duty
-              construction and industrial-site applications.
+              Executive MS Containers are manufactured using high-grade mild
+              steel with precision welding and strong structural design to
+              ensure maximum strength and stability. Each unit is built under
+              strict quality standards, making it durable, safe, and suitable
+              for heavy-duty construction and industrial-site applications.
             </p>
           </div>
           <div className={styles.mfgImgWrapper}>
             <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
+              src="/Images/wallpuf.jpg"
               alt="Manufacturing Executive MS Container"
             />
-            <div className={styles.mfgWatermark}>CONTAINER</div>
+            <div className={styles.mfgWatermark}>L&R EXECUTIVE CONTAINER</div>
           </div>
         </div>
       </section>
@@ -362,9 +420,7 @@ const ExecutiveMsContainer = () => {
                   className={`${styles.faqItem} ${
                     openFaq === faq.id ? styles.faqOpen : ""
                   }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
+                  onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
                 >
                   <div className={styles.faqQuestion}>
                     <span>{faq.q}</span>
