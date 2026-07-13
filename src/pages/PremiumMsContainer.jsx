@@ -8,30 +8,46 @@ const PremiumMsContainer = () => {
 
   const containerSizes = [
     {
-      size: "40×10×8.5 / 40×8×8.5",
+      size: "40×10×8.5/40×8×8.5",
       features: [
         "Staff offices Containers",
-        "Engineer's Accommodation",
-        "Worker Accommodation",
-        "Dining Hall Containers",
-        "Battery Storage",
+        "Engineer's Accommodation Containers",
+        "Worker Accommodation Containers",
+        "Dinning Hall Containers",
+        "Battery Storage  Containers",
         "Gym Hall Containers",
-        "Cafe & Hall Units",
+        "Cafe Containers  Hall Containers",
         "Store Hall Containers",
+        "cement store Containers",
+        "Tube well  Pump Farm accommodation Containers",
+        "coffee Shop Containers",
+        "Baby Play Area Containers",
+        "Toilet Block Containers",
+        "Wash Room Block Containers",
+        "Class Room  Containers",
+        "General Residential Containers",
       ],
       highlight: false,
     },
     {
-      size: "20×10×8.5 / 20×8×8.5",
+      size: "20×10×8.5/20×8×8.5",
       features: [
         "Staff offices Containers",
-        "Engineer's Accommodation",
-        "Worker Accommodation",
-        "Dining Hall Containers",
-        "Battery Storage",
+        "Engineer's Accommodation Containers",
+        "Worker Accommodation Containers",
+        "Dinning Hall Containers",
+        "Battery Storage  Containers",
         "Gym Hall Containers",
-        "Cafe & Hall Units",
+        "Cafe Containers  Hall Containers",
         "Store Hall Containers",
+        "cement store Containers",
+        "Tube well  Pump Farm accommodation Containers",
+        "coffee Shop Containers",
+        "Baby Play Area Containers",
+        "Toilet Block Containers",
+        "Wash Room Block Containers",
+        "Class Room  Containers",
+        "General Residential Containers",
       ],
       highlight: true,
     },
@@ -39,13 +55,21 @@ const PremiumMsContainer = () => {
       size: "10×10×8",
       features: [
         "Staff offices Containers",
-        "Engineer's Accommodation",
-        "Worker Accommodation",
-        "Dining Hall Containers",
-        "Battery Storage",
+        "Engineer's Accommodation Containers",
+        "Worker Accommodation Containers",
+        "Dinning Hall Containers",
+        "Battery Storage  Containers",
         "Gym Hall Containers",
-        "Cafe & Hall Units",
+        "Cafe Containers  Hall Containers",
         "Store Hall Containers",
+        "cement store Containers",
+        "Tube well  Pump Farm accommodation Containers",
+        "coffee Shop Containers",
+        "Baby Play Area Containers",
+        "Toilet Block Containers",
+        "Wash Room Block Containers",
+        "Class Room  Containers",
+        "General Residential Containers",
       ],
       highlight: false,
     },
@@ -131,38 +155,103 @@ const PremiumMsContainer = () => {
 
       {/* ── Intro ── */}
       <section className={styles.intro}>
+        <h2 className={styles.secTitle}>
+          Premium Ms <span>Container</span>
+        </h2>
+        <div className={styles.introTitleDivider} />
         <div className={styles.introGrid}>
           <div className={styles.introVisuals}>
             <div
-              className={styles.imgMain}
+              className={styles.imgSub}
               style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1512412086192-36c1706696fa?auto=format&fit=crop&w=800&q=80')",
+                backgroundImage: "url('/Images/serv2.jpg')",
               }}
             />
             <div
-              className={styles.imgSub}
+              className={styles.imgMain}
               style={{
-                backgroundImage:
-                  "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80')",
+                backgroundImage: "url('/Images/serv1.png')",
               }}
             />
           </div>
           <div className={styles.introContent}>
-            <h2 className={styles.secTitle}>
-              Premium Ms <span>Container</span>
-            </h2>
             <p>
               L&R Premium Series containers are high-quality, durable modular
               structures built with strong mild steel frameworks, designed to
-              perform efficiently in demanding industrial environments.
+              perform efficiently in demanding industrial and commercial
+              environments. These containers are ideal for heavy-duty storage,
+              secure site offices, and comfortable accommodation, offering a
+              reliable and professional solution for both temporary and
+              long-term applications.
             </p>
             <p>
-              Equipped with advanced insulation, corrosion-resistant coatings,
-              and well-finished interiors that include electrical fittings and
-              customizable layouts.
+              They are equipped with advanced insulation, corrosion-resistant
+              coatings, and well-finished interiors that include electrical
+              fittings and customizable layouts. Built for strength, comfort,
+              and flexibility, these containers provide a modern, portable
+              solution that ensures safety, efficiency, and quick deployment
+              across various project sites.
             </p>
             <button className={styles.btnSecondary}>Get Contact &nbsp;↗</button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Sizes Grid ── */}
+      <section className={styles.sizesSec}>
+        <div className={styles.sizesInner}>
+          {/* Split header: title left, description right */}
+          <div className={styles.sizesHeader}>
+            <div className={styles.sizesHeaderLeft}>
+              <h2 className={styles.sizesTitleMain}>
+                The Types of Premium <br />
+                <span>MS Container Sizes</span>
+              </h2>
+              <div className={styles.sizesTitleDivider} />
+            </div>
+            <div className={styles.sizesHeaderRight}>
+              <p>
+                Every Premium MS container is offered in five core footprints,
+                each available in dozens of interior layouts from executive
+                offices to dining halls, sanitary blocks, storage and
+                accommodation.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.sizesGrid}>
+            {containerSizes.map((item, index) => (
+              <div
+                key={index}
+                className={`${styles.sizeCard} ${
+                  item.highlight ? styles.activeCard : ""
+                }`}
+              >
+                {/* Box outline SVG icon */}
+                <div className={styles.cardIcon}>
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke={item.highlight ? "#ffffff" : "#1e3a5f"}
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg>
+                </div>
+                <h3>{item.size}</h3>
+                <ul className={styles.featureList}>
+                  {item.features.map((f, i) => (
+                    <li key={i}>{f}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -178,10 +267,10 @@ const PremiumMsContainer = () => {
             <div className={styles.whyDivider} />
             <p>
               Premium Ms Containers are designed for superior quality, strength,
-              and modern functionality, making them ideal for high-end industrial
-              and commercial applications. Built with robust MS steel structure
-              and premium finishes, they ensure durability, safety, and comfort
-              even in extreme working conditions.
+              and modern functionality, making them ideal for high-end
+              industrial and commercial applications. Built with robust MS steel
+              structure and premium finishes, they ensure durability, safety,
+              and comfort even in extreme working conditions.
             </p>
             <p>
               They offer complete flexibility with customizable layouts for
@@ -210,42 +299,9 @@ const PremiumMsContainer = () => {
         </div>
       </section>
 
-      {/* ── Sizes Grid ── */}
-      <section className={styles.sizesSec}>
-        <div className={styles.sizesInner}>
-          <div className={styles.secHeaderCenter}>
-            <h2 className={styles.secTitle}>
-              The Types of Premium <br />
-              <span>MS Container Sizes</span>
-            </h2>
-            <p>
-              Five core footprints, available in dozens of interior layouts from
-              executive offices to dining halls.
-            </p>
-          </div>
-          <div className={styles.sizesGrid}>
-            {containerSizes.map((item, index) => (
-              <div
-                key={index}
-                className={`${styles.sizeCard} ${
-                  item.highlight ? styles.activeCard : ""
-                }`}
-              >
-                <div className={styles.cardIcon}>📦</div>
-                <h3>{item.size}</h3>
-                <ul className={styles.featureList}>
-                  {item.features.map((f, i) => (
-                    <li key={i}>✔ {f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Engineering Banner ── */}
       <section className={styles.engineeringBand}>
+        <div className={styles.bandWatermark}>L&R PREMIUM CONTAINER</div>
         <div className={styles.bandContainer}>
           <div className={styles.bandText}>
             <h2>
@@ -260,10 +316,7 @@ const PremiumMsContainer = () => {
             </p>
           </div>
           <div className={styles.bandImgWrapper}>
-            <img
-              src="https://images.unsplash.com/photo-1590986327572-887498c40713?auto=format&fit=crop&w=800&q=80"
-              alt="Premium MS Container"
-            />
+            <img src="/Images/serv1.png" alt="Premium MS Container" />
           </div>
         </div>
       </section>
@@ -277,8 +330,8 @@ const PremiumMsContainer = () => {
               <span>Applications Projects</span>
             </h2>
             <p>
-              High-quality MS container solutions designed for efficient, durable,
-              and flexible use across industrial and commercial project
+              High-quality MS container solutions designed for efficient,
+              durable, and flexible use across industrial and commercial project
               environments.
             </p>
           </div>
@@ -298,6 +351,25 @@ const PremiumMsContainer = () => {
 
       {/* ── FAQ ── */}
       <section className={styles.faqSec}>
+        {/* Header: full width above the grid */}
+        <div className={styles.faqHeader}>
+          <div className={styles.faqHeaderLeft}>
+            <span className={styles.faqBreadcrumb}>• FQS</span>
+            <h2 className={styles.faqTitle}>
+              Frequently Asked <br />
+              <span>Questions</span>
+            </h2>
+            <div className={styles.faqTitleDivider} />
+          </div>
+          <p className={styles.faqSubtext}>
+            Quick answers covering design, usage, durability,
+            <br /> customization, and advantages of Premium MS <br />
+            Containers for industrial and commercial <br />
+            applications.
+          </p>
+        </div>
+
+        {/* Body: image left + accordion right */}
         <div className={styles.faqInner}>
           <div
             className={styles.faqSideImg}
@@ -306,46 +378,28 @@ const PremiumMsContainer = () => {
                 "url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80')",
             }}
           />
-          <div className={styles.faqRight}>
-            <div className={styles.faqTopRow}>
-              <div>
-                <span className={styles.faqBreadcrumb}>• FQS</span>
-                <h2 className={styles.secTitle}>
-                  Frequently Asked <br />
-                  <span>Questions</span>
-                </h2>
-              </div>
-              <p className={styles.faqSubtext}>
-                Quick answers covering design, usage, durability, customization,
-                and advantages of Premium MS Containers for industrial and
-                commercial applications.
-              </p>
-            </div>
-            <div className={styles.faqList}>
-              {faqs.map((faq) => (
-                <div
-                  key={faq.id}
-                  className={`${styles.faqItem} ${
-                    openFaq === faq.id ? styles.faqOpen : ""
-                  }`}
-                  onClick={() =>
-                    setOpenFaq(openFaq === faq.id ? null : faq.id)
-                  }
-                >
-                  <div className={styles.faqQuestion}>
-                    <span>{faq.q}</span>
-                    <span className={styles.faqArrow}>
-                      {openFaq === faq.id ? "↑" : "↑"}
-                    </span>
-                  </div>
-                  {openFaq === faq.id && (
-                    <div className={styles.faqAnswer}>
-                      <p>{faq.a}</p>
-                    </div>
-                  )}
+          <div className={styles.faqList}>
+            {faqs.map((faq) => (
+              <div
+                key={faq.id}
+                className={`${styles.faqItem} ${
+                  openFaq === faq.id ? styles.faqOpen : ""
+                }`}
+                onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
+              >
+                <div className={styles.faqQuestion}>
+                  <span>{faq.q}</span>
+                  <span className={styles.faqArrow}>
+                    {openFaq === faq.id ? "↓" : "↑"}
+                  </span>
                 </div>
-              ))}
-            </div>
+                {openFaq === faq.id && (
+                  <div className={styles.faqAnswer}>
+                    <p>{faq.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

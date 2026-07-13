@@ -107,27 +107,34 @@
   margin-top: 40px;
 }
 
+/* Left visuals: small thumb + large main image */
+.introVisuals {
+  display: flex;
+  gap: 14px;
+  height: 360px;
+}
+
+.introImgSub {
+  flex: 0 0 36%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+
 .introImg {
-  width: 100%;
-  height: 550px;
-  border-radius: 12px;
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
 }
 
 .introText {
   max-width: 650px;
 }
 
-/* Left image */
-.introImg {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 360px;
-  border-radius: 6px;
-}
-
 .introText p {
-  margin-left: 10%;
   font-size: 0.93rem;
   color: #444;
   line-height: 1.75;
@@ -148,7 +155,6 @@
 
 .btnOutline {
   margin-top: 10px;
-  margin-left: 8%;
   background: #1a3c6e;
   border: 2px solid #1a3c6e;
   color: white;
