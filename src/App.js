@@ -50,13 +50,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/factory-building" element={<FactoryBuilding />} />
-        <Route
-          path="/executive-containers"
-          element={<ExecutiveMsContainer />}
-        />
+        <Route path="/executive-containers" element={<ExecutiveMsContainer />} />
         <Route path="/lr-value-containers" element={<LRValueContainer />} />
         <Route path="/warehouse" element={<Warehouse />} />
         <Route path="/puf-containers" element={<PUFContainer />} />
@@ -76,11 +74,9 @@ function App() {
         <Route path="/clean-rooms" element={<CleanRoomPage />} />
         <Route path="/prefab-railway-shelters" element={<PrefabRailwayShelters />} />
         <Route path="/prefab-sandwich-panels" element={<PrefabSandwichPanels />} />
-
         <Route path="/puf-sandwich-panels" element={<PufSandwich />} />
         <Route path="/wall-puf-panels" element={<WallPufPanels />} />
         <Route path="/roof-puf-panels" element={<RoofPufPanels />} />
-
         <Route path="/rockwool-panels" element={<RockwoolPanels />} />
         <Route path="/glasswool-panels" element={<GlasswoolPanels />} />
         <Route path="/rooftop-residential-flats" element={<RooftopResidential />} />
@@ -101,6 +97,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/brochure" element={<Brochure />} />
+
       </Routes>
     </BrowserRouter>
   );
