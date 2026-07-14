@@ -342,40 +342,43 @@ const HVACSolutions = () => {
       </section>
 
       {/* OUR CORE SERVICES */}
-      <div className={styles.servicesHeader}>
-        <div>
-          <h2 className={styles.secTitle}>
-            Our Core <br />
-            <span>HVAC Services</span>
-          </h2>
-          <div className={styles.divider}></div>
-        </div>
+      <section className={styles.servicesSec}>
+        <div className={styles.servicesWrap}>
+          <div className={styles.servicesHeader}>
+            <h2 className={styles.secTitle}>
+              Our Core <br />
+              <span>HVAC Services</span>
+            </h2>
 
-        <p className={styles.servicesDesc}>
-          Essential HVAC services focused on efficient airflow, ventilation, and
-          indoor comfort using high-quality installation and system design.
-        </p>
-      </div>
+            <div className={styles.servicedivider}></div>
 
-      <div className={styles.coreServicesGrid}>
-        {coreServices.map((svc, i) => (
-          <div
-            key={i}
-            className={`${styles.coreServiceCard} ${
-              i === 1 ? styles.activeCard : ""
-            }`}
-          >
-            <img
-              src={svc.icon}
-              alt={svc.title}
-              className={styles.serviceIcon}
-            />
-
-            <h4>{svc.title}</h4>
-            <p>{svc.desc}</p>
+            <p className={styles.servicesDesc}>
+              Essential HVAC services focused on efficient airflow, ventilation,
+              and indoor comfort using high-quality installation and system
+              design.
+            </p>
           </div>
-        ))}
-      </div>
+
+          <div className={styles.svcGrid}>
+            {coreServices.map((svc, i) => (
+              <div
+                key={i}
+                className={`${styles.coreServiceCard} ${
+                  i === 1 ? styles.activeCard : ""
+                }`}
+              >
+                <img
+                  src={svc.icon}
+                  alt={svc.title}
+                  className={styles.serviceIcon}
+                />
+                <h4>{svc.title}</h4>
+                <p>{svc.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* MAINTENANCE */}
       <section className={styles.splitSecAlt}>
