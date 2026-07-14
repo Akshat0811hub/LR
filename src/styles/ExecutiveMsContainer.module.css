@@ -575,6 +575,7 @@
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
   border: 1px solid #e8edf3;
   transition: all 0.2s;
+  width: 80%;
 }
 
 .faqOpen {
@@ -623,17 +624,19 @@
 }
 
 .faqSubtext {
-  font-size: 0.85rem;
+  font-size: 1vw;
+  width: 100%;
+  margin-left: 12vw;
   color: #666;
   line-height: 1.7;
-  margin: 0;
 }
 
 .faqSideImg {
-  flex: 1;
-  min-height: 300px;
-  background-size: cover;
+  margin-top: 8vh;
+  width: 35vw;
+  height: 50vh;
   background-position: center;
+  margin-left: -6vw;
   border-radius: 8px;
 }
 
@@ -643,7 +646,7 @@
 .ctaBanner {
   background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
   position: relative;
-  padding: 90px 8%;
+  padding: 40px 8%;
   text-align: center;
   color: #fff;
 }
